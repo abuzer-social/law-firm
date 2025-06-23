@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+@import "utilities";
+
+body {
+    font-family: "Tajawal", sans-serif;
+    min-height: 100vh;
+}
+
+// Header Styles
+.navbar {
+    padding: 1rem 0;
+
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        color: $primary-color !important;
+    }
+
+    .navbar-nav {
+        .nav-link {
+            color: #333 !important;
+            font-weight: 500;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: $primary-color !important;
+            }
+        }
+    }
+
+    .navbar-collapse {
+        justify-content: center;
+    }
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    background-color: $primary-color;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.language-selector {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.user-icon {
+    background-color: $primary-color;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// Date Display
+.date-display {
+    text-align: center;
+    color: $text-muted;
+    font-size: 14px;
+    margin: 20px 0;
+}
+
+.login-page {
+    background-image: url("/assets/images/bg-pattern.png");
+    background-size: cover;
+    background-position: center;
+}
+
+// Login Form Styles
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 200px);
+    padding: 2rem 0;
+}
+
+.login-card {
+    background: white;
+    border-radius: 27px;
+    padding: 20px;
+    width: 100%;
+    max-width: 450px;
+    border: 1px solid #C3C3C3;
+}
+
+.login-title {
+    color: $primary-color;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.login-subtitle {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    font-size: 21px;
+
+    a {
+        color: $primary-color;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+// Form Styles
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.phone-input-group {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 0px;
+    overflow: hidden;
+
+    .country-code {
+        background-color: $light-bg;
+        border: none;
+        padding: 12px 15px;
+        color: #666;
+        font-size: 14px;
+        min-width: 80px;
+        text-align: center;
+    }
+
+    .phone-input {
+        flex: 1;
+        border: none;
+        padding: 12px 15px;
+        font-size: 14px;
+        outline: none;
+
+        &::placeholder {
+            color: #999;
+        }
+    }
+}
+
+.form-control {
+    border: 1px solid #ddd;
+    font-size: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+    &:focus {
+        border-color: $primary-color;
+        box-shadow: 0 0 0 0.2rem rgba(45, 156, 172, 0.25);
+    }
+}
+
+.btn-send-otp {
+    background-color: $primary-hover;
+    color: $primary-color;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 13px;
+    font-weight: 500;
+    width: 100%;
+    margin: 15px 0;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #dee2e6;
+    }
+}
+
+.btn-login {
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    border-radius: 13px;
+    padding: 13px;
+    font-weight: 600;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: $primary-hover;
+        color: $primary-color;
+    }
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #666;
+    font-size: 14px;
+
+    a {
+        color: $primary-color;
+        text-decoration: none;
+        font-weight: 500;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.language-dropdown {
+    border: 1px solid #DBDFE5;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.iti__flag {
+    display: none !important;
+}
+
+.iti__selected-dial-code {
+    margin-right: 10px !important;
+}
+
+.iti__selected-country-primary {
+    padding: 0;
+}
+
+.iti {
+    width: 100%;
+}
+
+input[id = 'phone'] {
+    height: 40px;
+}
+
+@import "media";

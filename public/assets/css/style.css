@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+/* Hide spin buttons in Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Hide in Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.form-control {
+  height: 40px;
+}
+
+body {
+  font-family: "Tajawal", sans-serif;
+  min-height: 100vh;
+}
+
+.navbar {
+  padding: 1rem 0;
+}
+.navbar .navbar-brand {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  color: #0F898C !important;
+}
+.navbar .navbar-nav .nav-link {
+  color: #333 !important;
+  font-weight: 500;
+  margin: 0 15px;
+  transition: color 0.3s ease;
+}
+.navbar .navbar-nav .nav-link:hover {
+  color: #0F898C !important;
+}
+.navbar .navbar-collapse {
+  justify-content: center;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  background-color: #0F898C;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.language-selector {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.user-icon {
+  background-color: #0F898C;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.date-display {
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+  margin: 20px 0;
+}
+
+.login-page {
+  background-image: url("/assets/images/bg-pattern.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 200px);
+  padding: 2rem 0;
+}
+
+.login-card {
+  background: white;
+  border-radius: 27px;
+  padding: 20px;
+  width: 100%;
+  max-width: 450px;
+  border: 1px solid #C3C3C3;
+}
+
+.login-title {
+  color: #0F898C;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.login-subtitle {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  font-size: 21px;
+}
+.login-subtitle a {
+  color: #0F898C;
+  text-decoration: none;
+}
+.login-subtitle a:hover {
+  text-decoration: underline;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.phone-input-group {
+  display: flex;
+  border: 1px solid #ddd;
+  border-radius: 0px;
+  overflow: hidden;
+}
+.phone-input-group .country-code {
+  background-color: #f8f9fa;
+  border: none;
+  padding: 12px 15px;
+  color: #666;
+  font-size: 14px;
+  min-width: 80px;
+  text-align: center;
+}
+.phone-input-group .phone-input {
+  flex: 1;
+  border: none;
+  padding: 12px 15px;
+  font-size: 14px;
+  outline: none;
+}
+.phone-input-group .phone-input::placeholder {
+  color: #999;
+}
+
+.form-control {
+  border: 1px solid #ddd;
+  font-size: 14px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.form-control:focus {
+  border-color: #0F898C;
+  box-shadow: 0 0 0 0.2rem rgba(45, 156, 172, 0.25);
+}
+
+.btn-send-otp {
+  background-color: #EFFAFA;
+  color: #0F898C;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 13px;
+  font-weight: 500;
+  width: 100%;
+  margin: 15px 0;
+  transition: background-color 0.3s ease;
+}
+.btn-send-otp:hover {
+  background-color: #dee2e6;
+}
+
+.btn-login {
+  background-color: #0F898C;
+  color: white;
+  border: none;
+  border-radius: 13px;
+  padding: 13px;
+  font-weight: 600;
+  font-size: 16px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+.btn-login:hover {
+  background-color: #EFFAFA;
+  color: #0F898C;
+}
+
+.signup-link {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #666;
+  font-size: 14px;
+}
+.signup-link a {
+  color: #0F898C;
+  text-decoration: none;
+  font-weight: 500;
+}
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+.language-dropdown {
+  border: 1px solid #DBDFE5;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.iti__flag {
+  display: none !important;
+}
+
+.iti__selected-dial-code {
+  margin-right: 10px !important;
+}
+
+.iti__selected-country-primary {
+  padding: 0;
+}
+
+.iti {
+  width: 100%;
+}
+
+input[id=phone] {
+  height: 40px;
+}
+
+@media (max-width: 768px) {
+  .login-card {
+    margin: 1rem;
+    padding: 2rem 1.5rem;
+  }
+  .navbar-nav {
+    text-align: center;
+    margin-top: 1rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

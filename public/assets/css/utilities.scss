@@ -1,0 +1,23 @@
+$primary-color: #0F898C;
+$primary-hover: #EFFAFA;
+$light-bg: #f8f9fa;
+$gray-light: #e9ecef;
+$gray-medium: #6c757d;
+$text-muted: #999;
+
+
+/* Hide spin buttons in Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Hide in Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.form-control {
+    height: 40px;
+}
