@@ -8,4 +8,17 @@
         text-align: center;
         margin-top: 1rem;
     }
+    .payment-methods {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .nav-links {
+        gap: 20px;
+        text-align: center;
+    }
+
+    .social-icons {
+        flex-wrap: wrap;
+    }
 }

@@ -20,7 +20,9 @@
     @yield('content')
 </main>
 
-@include('partials.footer')
+@if (!Route::is('login'))
+    @include('partials.footer')
+@endif
 <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/intlTelInput.min.js"></script>
 <script>
     const input = document.querySelector("#phone");

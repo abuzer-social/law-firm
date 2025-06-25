@@ -1,13 +1,30 @@
 .dropdown-item {
     text-align: right;
 }
-.iti__country-container{
+
+.iti__country-container {
     right: unset !important;
     left: 10px;
 }
+
 input[id = 'phone'] {
     padding-right: 10px !important;
 }
-.iti--inline-dropdown{
+
+.iti--inline-dropdown {
     direction: ltr !important;
+}
+
+.custom-tabs .nav-link.active {
+    border-radius: 0px 50px 50px 0px;
+    clip-path: polygon(100% 0, 58px 0, 0 0, 39px 100%, 100% 136%);
+}
+
+.custom-tabs .nav-item:nth-child(1) {
+    border-radius: 0 25px 0 0;
+}
+
+.form-check .form-check-input {
+    float: unset;
+    margin-left: unset;;
 }

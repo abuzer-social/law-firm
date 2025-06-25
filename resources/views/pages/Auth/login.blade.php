@@ -2,7 +2,7 @@
 @section('body-class', 'login-page') <!-- This adds the class to body -->
 
 @section('content')
-    <div class="d-flex flex-column justify-content-center">
+    <div class="d-flex flex-column justify-content-center login-wrapper">
         <div>
             <h1 class="login-title">{{ __('auth.login.title') }}</h1>
             <h5 class="login-subtitle">
@@ -28,7 +28,7 @@
                         </form>
 
                         <div class="signup-link">
-                            {{ __('auth.login.no_account') }} <a href="#">{{ __('auth.login.signup') }}</a>
+                            {{ __('auth.login.no_account') }} <a href="{{ route('signup.page') }}">{{ __('auth.login.signup') }}</a>
                         </div>
                     </div>
                 </div>

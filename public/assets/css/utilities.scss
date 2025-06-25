@@ -13,6 +13,10 @@ input[type="number"]::-webkit-inner-spin-button {
     margin: 0;
 }
 
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
 /* Hide in Firefox */
 input[type="number"] {
     -moz-appearance: textfield;
@@ -20,4 +24,22 @@ input[type="number"] {
 
 .form-control {
     height: 40px;
+}
+
+.card {
+    border: none;
+}
+
+.primary {
+    color: $primary-color;
+}
+
+.btn-primary {
+    background-color: $primary-color !important;
+}
+.fit-content{
+    max-width: fit-content;
+}
+.max-100{
+    max-width: 100%;
 }

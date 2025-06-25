@@ -100,6 +100,10 @@ body {
     padding: 2rem 0;
 }
 
+.login-wrapper {
+    min-height: 80vh;
+}
+
 .login-card {
     background: white;
     border-radius: 27px;
@@ -255,6 +259,368 @@ body {
 
 input[id = 'phone'] {
     height: 40px;
+}
+
+.signup-wrapper {
+    position: relative;
+    bottom: 90px;
+}
+
+.signup-header {
+    background-color: #12A1A5D1;
+    min-height: 410px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signup-card {
+    background-color: #FCFBF8;
+    border-radius: 15px;
+}
+
+.list-circle {
+    background-color: $primary-color;
+    max-width: 24px;
+    width: 100%;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.custom-tabs {
+    background-color: #fdfcfa;
+    border-radius: 50px;
+    width: 100%;
+    display: inline-flex;
+    overflow: hidden;
+
+    .nav-item {
+        flex: 1;
+        border-top: 2px solid $primary-color;
+    }
+
+    .nav-link {
+        background: none;
+        color: #000;
+        font-weight: 500;
+        padding: 0.75rem 1.5rem;
+        width: 100%;
+        transition: all 0.3s ease;
+        position: relative;
+        z-index: 1;
+        padding-right: 40px;
+
+        &.active {
+            //border-radius: 50px;
+            background-color: $primary-color;
+
+            color: #fff;
+            font-weight: 600;
+            border-radius: 50px 0 0 50px;
+
+            // Add custom clip path curve on the right
+            clip-path: polygon(0 0, calc(100% - -20px) 0, 100% 0%, calc(100% - 25px) 100%, 0 128%);
+            z-index: 2;
+        }
+    }
+}
+
+.home-header-desc {
+    line-height: 38px;
+    max-width: 70%;
+}
+
+.home-header-container {
+    background-image: url("/assets/images/bg-pattern.png");
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 150px;
+}
+
+.home-services-section {
+    background-image: url("/assets/images/service-bg.png");;
+    background-size: cover;
+    background-position: center;
+    background-color: #F9FAFB;
+    background-blend-mode: multiply;
+    padding: 50px 0;
+}
+
+.detail-section-container {
+    padding: 200px 0 400px 0;
+    background-image: url("/assets/images/detail-bg.png");;
+    background-position: top;
+    position: relative;
+}
+
+.detail-card {
+    background-color: white;
+    min-height: 220px;
+    padding: 20px 0;
+    border-radius: 30px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.detail-upper-pattern {
+    max-width: 100px;
+    position: absolute;
+    bottom: -20%;
+    right: 26%;
+    z-index: -1;
+}
+
+.detail-lower-pattern {
+    max-width: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 18%;
+}
+
+.solution-card {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    text-align: center;
+    min-height: 200px;
+
+    a {
+        font-size: 20px;
+        font-weight: 700;
+        color: black;
+    }
+
+    .lawyer {
+        background-color: #EFE5F9;
+    }
+
+    .language {
+        background-color: #E4E5E6;
+    }
+
+    .accounting {
+        background-color: #E2FDF9;
+    }
+
+    .contracts {
+        background-color: #EBF4E2;
+    }
+
+    .legal {
+        background-color: #F4EAFA;
+    }
+}
+
+.solution-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    width: 64px;
+    height: 64px;
+    margin: 20px auto;
+
+}
+
+.footer-section {
+    background-color: #F9F9F9;
+    padding-top: 50px;
+}
+
+.payment-methods {
+    //display: flex;
+    //align-items: center;
+    //gap: 15px;
+    margin-bottom: 20px;
+}
+
+.payment-icon {
+    height: 30px;
+    width: auto;
+    background: white;
+    padding: 5px 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.visa-icon {
+    color: #1a1f71;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.apple-pay-icon {
+    color: #000;
+    font-size: 20px;
+}
+
+.stc-pay {
+    background: #672d91;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.mada-icon {
+    background: #00a651;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.logo-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.law-firm-logo {
+    width: 80px;
+    height: 80px;
+    background: #2c9faf;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.logo-text {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+}
+
+.firm-text {
+    color: #2c9faf;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-weight: 500;
+    color: black;
+}
+
+.nav-links a:hover {
+    color: #2c9faf;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.social-icon:hover {
+    transform: translateY(-2px);
+}
+
+.social-icon.email {
+    background: #4285f4;
+    color: white;
+}
+
+.social-icon.whatsapp {
+    background: #25d366;
+    color: white;
+}
+
+.social-icon.linkedin {
+    background: #0077b5;
+    color: white;
+}
+
+.social-icon.twitter {
+    background: #1da1f2;
+    color: white;
+}
+
+.social-icon.instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: white;
+}
+
+.social-icon.facebook {
+    background: #1877f2;
+    color: white;
+}
+
+.copyright {
+    text-align: center;
+
+}
+
+.footer-icon {
+    border-radius: 10px;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-mail-icon {
+    background-color: #1673DF;
+}
+
+.footer-whatsapp-icon {
+    background-color: #46B04B;
+}
+
+.bottom-footer {
+    border-top: 1px solid #e9ecef;
+}
+
+.registering-section {
+    background-color: #0F898C;
+    background-image: url("/assets/images/registering-pattern.png");
+    background-size: cover;
+    background-position: center;
+    min-height: 188px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    top: 35px;
+}
+
+.footer-social {
+    border-radius: 9px;
+    border: 1px solid #F4F4F4;
+    width: 55px;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
 }
 
 @import "media";

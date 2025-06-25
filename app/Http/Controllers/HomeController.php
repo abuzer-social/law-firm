@@ -10,7 +10,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return view('pages.home');
+        return view('pages.homepage.index');
     }
 
     public function submit(Request $request)
