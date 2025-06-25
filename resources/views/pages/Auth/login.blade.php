@@ -18,7 +18,7 @@
                                 <input dir="rtl" type="number" id="phone" class="form-control" name="name" placeholder="{{ __('auth.login.phone') }}">
                             </div>
 
-                            <button type="button" class="btn-send-otp">{{ __('auth.login.send_otp') }}</button>
+                            <button type="button" class="fw-bold btn-send-otp">{{ __('auth.login.send_otp') }}</button>
 
                             <div class="form-group">
                                 <input type="text" class="form-control" placeholder="{{ __('auth.login.otp_code') }}" required>

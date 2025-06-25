@@ -17,7 +17,7 @@
                     <a class="nav-link" href="#">{{ __('navbar.about_us') }}</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                    <a class="nav-link dropdown-toggle nav-select" href="#" role="button" data-bs-toggle="dropdown">
                         {{ __('navbar.our_services') }}
                     </a>
                     <ul class="dropdown-menu">
@@ -26,7 +26,7 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                    <a class="nav-link dropdown-toggle nav-select" href="#" role="button" data-bs-toggle="dropdown">
                         {{ __('navbar.more') }}
                     </a>
                     <ul class="dropdown-menu">

@@ -20,7 +20,7 @@ body {
     .navbar-nav {
         .nav-link {
             color: #333 !important;
-            font-weight: 500;
+            font-weight: 700;
             margin: 0 15px;
             transition: color 0.3s ease;
 
@@ -33,6 +33,14 @@ body {
     .navbar-collapse {
         justify-content: center;
     }
+}
+
+.nav-select {
+    background: #FAFAFA;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .logo {

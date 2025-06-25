@@ -1,3 +1,18 @@
+.dropdown-item {
+  text-align: right;
+}
 
+.iti__country-container {
+  right: unset !important;
+  left: 10px;
+}
+
+input[id=phone] {
+  padding-right: 10px !important;
+}
+
+.iti--inline-dropdown {
+  direction: ltr !important;
+}
 
 /*# sourceMappingURL=rtl.css.map */
