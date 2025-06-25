@@ -12,26 +12,23 @@
                         <img class="fit-content" src="{{asset('assets/images/divider.svg')}}" alt="">
                     </div>
                 </div>
-
             </div>
             <div class="col-lg-7">
                 <div>
                     <h1 class="fw-bold pb-4">
-                        Defaa
+                        {{ __('home.header.title') }}
                     </h1>
                     <h4 class="primary fw-semibold pb-3">
-                        Your First Choice
+                        {{ __('home.header.subtitle') }}
                     </h4>
                     <p class="fw-semibold home-header-desc">
-                        Your legal rights deserve a true partnership with a team that understands your concerns, values
-                        your time, and respects your
-                        intelligence. We offer you smart legal solutions through an advanced platform that saves you
-                        time and gives you peace of mind every step of the way. Because every case matters to us, and
-                        every client deserves exceptional service.
+                        {{ __('home.header.description') }}
                     </p>
                     <div class="mt-3">
                         <button class="btn btn-primary btn-lg fw-bold d-flex align-items-center gap-3 rounded-4 px-4">
-                            Start with us <img src="{{asset('assets/images/arrow-right.svg')}}" alt=""></button>
+                            {{ __('home.header.button') }}
+                            <img src="{{asset('assets/images/arrow-right.svg')}}" alt="">
+                        </button>
                     </div>
                 </div>
             </div>
@@ -40,39 +37,77 @@
     <section class="home-services-section">
         <div class="text-center pb-5 ">
             <h1 class="fw-bold">
-                A New Vision for Legal Services
+                {{ __('home.services.title') }}
             </h1>
         </div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-3">
-                    <div class="text-center"><img src="{{asset('assets/images/service-card-1.svg')}}" alt=""></div>
+                    @if(app()->getLocale() === 'ar')
+                        <div class="text-center"><img src="{{asset('assets/images/service-card-ar-1.svg')}}" alt="">
+                        </div>
+                    @else
+                        <div class="text-center"><img src="{{asset('assets/images/service-card-1.svg')}}" alt=""></div>
+                    @endif
                 </div>
                 <div class="col-lg-3">
-                    <div class="text-center"><img src="{{asset('assets/images/service-card-2.svg')}}" alt=""></div>
+                    @if(app()->getLocale() === 'ar')
+                        <div class="text-center"><img src="{{asset('assets/images/service-card-ar-2.svg')}}" alt="">
+                        </div>
+                    @else
+                        <div class="text-center"><img src="{{asset('assets/images/service-card-2.svg')}}" alt=""></div>
+                    @endif
                 </div>
                 <div class="col-lg-3">
-                    <div class="text-center"><img src="{{asset('assets/images/service-card-3.svg')}}" alt=""></div>
+                    @if(app()->getLocale() === 'ar')
+                        <div class="text-center"><img src="{{asset('assets/images/service-card-ar-3.svg')}}" alt="">
+                        </div>
+                    @else
+                        <div class="text-center"><img src="{{asset('assets/images/service-card-3.svg')}}" alt=""></div>
+                    @endif
                 </div>
                 <div class="col-lg-3">
-                    <div class="text-center"><img src="{{asset('assets/images/service-card-4.svg')}}" alt=""></div>
+                    @if(app()->getLocale() === 'ar')
+                        <div class="text-center"><img src="{{asset('assets/images/service-card-ar-4.svg')}}" alt="">
+                        </div>
+                    @else
+                        <div class="text-center"><img src="{{asset('assets/images/service-card-4.svg')}}" alt=""></div>
+                    @endif
                 </div>
             </div>
             <div class="row">
                 <div class="col"></div>
                 <div class="col">
-                    <div class="col-lg-3">
-                        <div class="text-center"><img src="{{asset('assets/images/service-card-5.svg')}}" alt=""></div>
+                    <div>
+                        @if(app()->getLocale() === 'ar')
+                            <div class="text-center"><img src="{{asset('assets/images/service-card-ar-5.svg')}}" alt="">
+                            </div>
+                        @else
+                            <div class="text-center"><img src="{{asset('assets/images/service-card-5.svg')}}" alt="">
+                            </div>
+                        @endif
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        @if(app()->getLocale() === 'ar')
+                            <div class="text-center"><img src="{{asset('assets/images/service-card-ar-6.svg')}}" alt="">
+                            </div>
+                        @else
+                            <div class="text-center"><img src="{{asset('assets/images/service-card-6.svg')}}" alt="">
+                            </div>
+                        @endif
                     </div>
                 </div>
                 <div class="col">
                     <div class="col-lg-3">
-                        <div class="text-center"><img src="{{asset('assets/images/service-card-6.svg')}}" alt=""></div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="col-lg-3">
-                        <div class="text-center"><img src="{{asset('assets/images/service-card-7.svg')}}" alt=""></div>
+                        @if(app()->getLocale() === 'ar')
+                            <div class="text-center"><img src="{{asset('assets/images/service-card-ar-7.svg')}}" alt="">
+                            </div>
+                        @else
+                            <div class="text-center"><img src="{{asset('assets/images/service-card-7.svg')}}" alt="">
+                            </div>
+                        @endif
                     </div>
                 </div>
                 <div class="col"></div>
@@ -82,11 +117,12 @@
     <section class="detail-section-container">
         <div class="pb-5 text-center">
             <h1 class="fw-bold">
-                <span class="primary">Defaa’s</span> Strength Lies in the Details
+                {!! __('home.details.title') !!}
             </h1>
         </div>
         <div class="container">
             <div class="row position-relative">
+                <!-- Card 1 -->
                 <div class="col-lg-4">
                     <div class="card detail-card">
                         <div class="card-body text-center">
@@ -94,14 +130,16 @@
                                 <img src="{{asset('assets/images/detail-icon-1.svg')}}" alt="">
                             </div>
                             <h5 class="fw-semibold pb-3" style="color: #80C343">
-                                Track your Balance
+                                {{ __('home.details.card1.title') }}
                             </h5>
                             <p>
-                                and requests through your account.
+                                {{ __('home.details.card1.description') }}
                             </p>
                         </div>
                     </div>
                 </div>
+
+                <!-- Card 2 -->
                 <div class="col-lg-4">
                     <div class="card detail-card">
                         <div class="card-body text-center">
@@ -109,14 +147,16 @@
                                 <img src="{{asset('assets/images/detail-icon-2.svg')}}" alt="">
                             </div>
                             <h5 class="fw-semibold pb-3" style="color: #6CA6D1">
-                                Monitor the status of your requests online
+                                {{ __('home.details.card2.title') }}
                             </h5>
                             <p>
-                                Track your requests through your account
+                                {{ __('home.details.card2.description') }}
                             </p>
                         </div>
                     </div>
                 </div>
+
+                <!-- Card 3 -->
                 <div class="col-lg-4">
                     <div class="card detail-card">
                         <div class="card-body text-center">
@@ -124,14 +164,15 @@
                                 <img src="{{asset('assets/images/detail-icon-3.svg')}}" alt="">
                             </div>
                             <h5 class="fw-semibold pb-3" style="color: #37A592">
-                                Ease of Subscription
+                                {{ __('home.details.card3.title') }}
                             </h5>
                             <p>
-                                Enjoy instant access to our services upon subscription.
+                                {{ __('home.details.card3.description') }}
                             </p>
                         </div>
                     </div>
                 </div>
+
                 <img class="detail-upper-pattern" src="{{asset('assets/images/dotted-pattern.png')}}" alt="">
             </div>
         </div>
@@ -139,46 +180,11 @@
     </section>
     <section class="solution-sections py-5">
         <div class="text-center mb-4">
-            <h1 class="fw-bold primary">All Solutions in One Platform</h1>
+            <h1 class="fw-bold primary">{{ __('home.solutions.title') }}</h1>
         </div>
         <div class="container">
             <div class="row">
-                <div class="col">
-                    <div class="card solution-card">
-                        <div class="card-body">
-                            <div class="solution-icon-container lawyer">
-                                <img src="{{asset('assets/images/solution-icon-1.svg')}}" alt="">
-                            </div>
-                            <div>
-                                <a href="">Ask a Lawyer</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card solution-card">
-                        <div class="card-body">
-                            <div class="solution-icon-container language">
-                                <img src="{{asset('assets/images/solution-icon-2.svg')}}" alt="">
-                            </div>
-                            <div>
-                                <a href="">Translation Services</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card solution-card">
-                        <div class="card-body">
-                            <div class="solution-icon-container accounting">
-                                <img src="{{asset('assets/images/solution-icon-3.svg')}}" alt="">
-                            </div>
-                            <div>
-                                <a href="">Accounting Services</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <!-- Contracts Card -->
                 <div class="col">
                     <div class="card solution-card">
                         <div class="card-body">
@@ -186,11 +192,55 @@
                                 <img src="{{asset('assets/images/solution-icon-4.svg')}}" alt="">
                             </div>
                             <div>
-                                <a href="">Contracts and Documents</a>
+                                <a href="">{{ __('home.solutions.cards.contracts.title') }}</a>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Accounting Card -->
+                <div class="col">
+                    <div class="card solution-card">
+                        <div class="card-body">
+                            <div class="solution-icon-container accounting">
+                                <img src="{{asset('assets/images/solution-icon-3.svg')}}" alt="">
+                            </div>
+                            <div>
+                                <a href="">{{ __('home.solutions.cards.accounting.title') }}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Translation Card -->
+                <div class="col">
+                    <div class="card solution-card">
+                        <div class="card-body">
+                            <div class="solution-icon-container language">
+                                <img src="{{asset('assets/images/solution-icon-2.svg')}}" alt="">
+                            </div>
+                            <div>
+                                <a href="">{{ __('home.solutions.cards.translation.title') }}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lawyer Card -->
+                <div class="col">
+                    <div class="card solution-card">
+                        <div class="card-body">
+                            <div class="solution-icon-container lawyer">
+                                <img src="{{asset('assets/images/solution-icon-1.svg')}}" alt="">
+                            </div>
+                            <div>
+                                <a href="">{{ __('home.solutions.cards.lawyer.title') }}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plans Card -->
                 <div class="col">
                     <div class="card solution-card">
                         <div class="card-body">
@@ -198,7 +248,7 @@
                                 <img src="{{asset('assets/images/solution-icon-5.svg')}}" alt="">
                             </div>
                             <div>
-                                <a href="">Legal Plans</a>
+                                <a href="">{{ __('home.solutions.cards.plans.title') }}</a>
                             </div>
                         </div>
                     </div>
@@ -209,10 +259,10 @@
     <section class="container registering-section">
         <div class="text-white">
             <h2 class="fw-bold pb-3">
-                Do you think of registering
+                {{ __('home.registration_cta.title') }}
             </h2>
             <h5 class="fw-bold">
-                Let us handle your legal concerns—get solutions with just one click.
+                {{ __('home.registration_cta.subtitle') }}
             </h5>
         </div>
     </section>
