@@ -11,7 +11,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">{{ __('navbar.home') }}</a>
+                    <a class="nav-link" href="home">{{ __('navbar.home') }}</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">{{ __('navbar.about_us') }}</a>
