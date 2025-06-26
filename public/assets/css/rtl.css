@@ -29,4 +29,8 @@ input[id=phone] {
   margin-left: unset;
 }
 
+.home-header-btn-icon {
+  transform: rotate(180deg);
+}
+
 /*# sourceMappingURL=rtl.css.map */

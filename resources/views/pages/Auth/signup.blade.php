@@ -118,8 +118,8 @@
                                         </label>
                                     </div>
                                     <div class="text-center">
-                                        <button type="submit"
-                                                class="btn btn-primary px-5 rounded-3">{{ __('auth.signup.form.submit') }}</button>
+                                        <a href="{{route('home.index')}}" type="submit"
+                                           class="btn btn-primary px-5 rounded-3">{{ __('auth.signup.form.submit') }}</a>
                                     </div>
                                 </form>
                             </div>

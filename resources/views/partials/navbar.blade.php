@@ -58,9 +58,9 @@
                         </li>
                     </ul>
                 </div>
-                <div class="user-icon">
+                <a href="{{route('login.page')}}" class="user-icon">
                     <img src="{{ asset('assets/images/nav-person-icon.svg') }}">
-                </div>
+                </a>
             </div>
         </div>
     </div>

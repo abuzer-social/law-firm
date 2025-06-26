@@ -27,7 +27,7 @@
                     <div class="mt-3">
                         <button class="btn btn-primary btn-lg fw-bold d-flex align-items-center gap-3 rounded-4 px-4">
                             {{ __('home.header.button') }}
-                            <img src="{{asset('assets/images/arrow-right.svg')}}" alt="">
+                            <img class="home-header-btn-icon" src="{{asset('assets/images/arrow-right.svg')}}" alt="">
                         </button>
                     </div>
                 </div>

@@ -867,7 +867,8 @@ input[id = 'phone'] {
 .benefit-card {
     border-radius: 18px;
     padding: 10px;
-    label{
+
+    label {
         color: #6C6868;
         font-weight: 700;
     }
@@ -883,9 +884,11 @@ input[id = 'phone'] {
         background-color: #E2FDF9;
     }
 }
-.benefit-pattern{
+
+.benefit-pattern {
     position: absolute;
     bottom: 0;
     right: 0;
 }
+
 @import "media";

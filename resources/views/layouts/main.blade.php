@@ -20,7 +20,7 @@
     @yield('content')
 </main>
 
-@if (!Route::is('login'))
+@if (!Route::is('login') && !Route::is('login.page') && !Route::is('signup.page'))
     @include('partials.footer')
 @endif
 <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/intlTelInput.min.js"></script>

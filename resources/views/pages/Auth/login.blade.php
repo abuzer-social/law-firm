@@ -24,7 +24,7 @@
                                 <input type="text" class="form-control" placeholder="{{ __('auth.login.otp_code') }}" required>
                             </div>
 
-                            <button type="submit" class="btn-login">{{ __('auth.login.submit') }}</button>
+                            <a href="{{route('home.index')}}" type="submit" class="btn btn-login">{{ __('auth.login.submit') }}</a>
                         </form>
 
                         <div class="signup-link">
