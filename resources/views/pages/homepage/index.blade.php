@@ -256,6 +256,28 @@
             </div>
         </div>
     </section>
+    <section class="process-section">
+        <div class="text-center pb-5" @if(app()->getLocale() == 'ar') dir="rtl" @endif>
+            <h2 class="fw-bold pb-2">
+                {!! __('home.registration_section.title') !!}
+            </h2>
+            <h6>
+                {{ __('home.registration_section.subtitle') }}
+            </h6>
+        </div>
+        <div class="process-img py-4">
+            @if(app()->getLocale() === 'ar')
+                <img class="img-fluid" src="{{ asset('assets/images/processor-ar.svg') }}" alt="{{ __('home.registration_section.title') }}">
+            @else
+                <img class="img-fluid" src="{{ asset('assets/images/processor.svg') }}" alt="{{ __('home.registration_section.title') }}">
+            @endif
+        </div>
+        <div class="mt-5 text-center">
+            <button class="btn btn-primary btn-lg fw-semibold">
+                {{ __('home.registration_section.button') }}
+            </button>
+        </div>
+    </section>
     <section class="container registering-section">
         <div class="text-white">
             <h2 class="fw-bold pb-3">

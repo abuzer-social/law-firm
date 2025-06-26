@@ -34,12 +34,22 @@ input[type="number"] {
     color: $primary-color;
 }
 
+.brown {
+    color: #8F490F;
+}
+
+.navy {
+    color: #02015A;
+}
+
 .btn-primary {
     background-color: $primary-color !important;
 }
-.fit-content{
+
+.fit-content {
     max-width: fit-content;
 }
-.max-100{
+
+.max-100 {
     max-width: 100%;
 }

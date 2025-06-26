@@ -10,7 +10,7 @@ return [
     ],
     'more' => 'More',
     'more_options' => [
-        'option_1' => 'More Option 1',
+        'option_1' => 'Bussiness',
         'option_2' => 'More Option 2',
     ],
     'language' => [

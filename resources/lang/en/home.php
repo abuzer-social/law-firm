@@ -83,5 +83,10 @@ return [
     'registration_cta' => [
         'title' => 'Do you think of registering',
         'subtitle' => 'Let us handle your legal concerns—get solutions with just one click.'
-    ]
+    ],
+    'registration_section' => [
+        'title' => 'How to <span class="brown">Register</span> and Subscribe',
+        'subtitle' => 'With just a few simple steps, you can register and request your first legal service',
+        'button' => 'Subscribe Now'
+    ],
 ];

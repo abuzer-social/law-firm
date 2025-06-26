@@ -30,7 +30,7 @@
                         {{ __('navbar.more') }}
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">{{ __('navbar.more_options.option_1') }}</a></li>
+                        <li><a class="dropdown-item" href="business">{{ __('navbar.more_options.option_1') }}</a></li>
                         <li><a class="dropdown-item" href="#">{{ __('navbar.more_options.option_2') }}</a></li>
                     </ul>
                 </li>
