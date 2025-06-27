@@ -14,15 +14,15 @@
                     <a class="nav-link" href="home">{{ __('navbar.home') }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">{{ __('navbar.about_us') }}</a>
+                    <a class="nav-link" href="about">{{ __('navbar.about_us') }}</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle nav-select" href="#" role="button" data-bs-toggle="dropdown">
                         {{ __('navbar.our_services') }}
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">{{ __('navbar.services.service_1') }}</a></li>
-                        <li><a class="dropdown-item" href="#">{{ __('navbar.services.service_2') }}</a></li>
+                        <li><a class="dropdown-item" href="accounting">{{ __('navbar.services.service_1') }}</a></li>
+                        <li><a class="dropdown-item" href="translation">{{ __('navbar.services.service_2') }}</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -31,7 +31,7 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="business">{{ __('navbar.more_options.option_1') }}</a></li>
-                        <li><a class="dropdown-item" href="#">{{ __('navbar.more_options.option_2') }}</a></li>
+                        <li><a class="dropdown-item" href="contact">{{ __('navbar.more_options.option_2') }}</a></li>
                     </ul>
                 </li>
             </ul>

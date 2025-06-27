@@ -33,4 +33,26 @@ input[id=phone] {
   transform: rotate(180deg);
 }
 
+input[id=phone] {
+  direction: rtl;
+  padding-right: 65px !important;
+}
+
+.iti__country-container {
+  right: 5px !important;
+  left: unset;
+}
+
+.iti__dropdown-content {
+  direction: rtl;
+}
+
+.about-large-content {
+  padding: 80px 45px 150px 45px;
+}
+
+.about-content {
+  padding: 70px 45px 150px 45px;
+}
+
 /*# sourceMappingURL=rtl.css.map */

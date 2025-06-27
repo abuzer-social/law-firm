@@ -730,12 +730,58 @@ input[id = 'phone'] {
     color: white;
 }
 
+.plan-enable {
+    border-radius: 50%;
+    width: 100%;
+    max-width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.plan-disable {
+    border-radius: 50%;
+    width: 100%;
+    max-width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #C9C9C9 !important;
+}
+
 .essential-counter {
     background-color: #A3D9A5;
 }
 
 .pro-counter {
     background-color: #A3A8AC;
+}
+
+.premier-counter {
+    background-color: #2C3E50;
+}
+
+.premier-additional {
+    background-color: #EFEFEF;
+    border-radius: 9px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.essential-additional {
+    background-color: #EEFFF2;
+    border-radius: 9px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.growth-additional {
+    background-color: #F8F8F8;
+    border-radius: 9px;
+    padding: 20px;
+    margin-top: 20px;
 }
 
 .ticket-container {
@@ -889,6 +935,88 @@ input[id = 'phone'] {
     position: absolute;
     bottom: 0;
     right: 0;
+}
+
+.contact-container {
+    padding: 50px 0;
+    background-image: url("/assets/images/bg-pattern.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.contact-card-section {
+    background: none;
+    padding: 120px 0;
+    margin-bottom: 100px;
+}
+
+.about-container {
+    padding: 50px 0;
+    background-image: url("/assets/images/bg-pattern.png");
+    background-size: contain;
+    background-position: center;
+}
+
+.about-content {
+    background-image: url(/assets/images/small-about-pattern.png);
+    background-size: 100%;
+    padding: 40px 45px 120px 45px;
+    background-repeat: no-repeat;
+
+    p {
+        font-size: 16px;
+        color: #606060;
+        line-height: 31px;
+        font-weight: 700;
+    }
+}
+
+.about-large-content {
+    background-image: url(/assets/images/large-about-pattern.png);
+    background-size: 100%;
+    padding: 40px 45px 120px 45px;
+    background-repeat: no-repeat;
+
+    p {
+        font-size: 16px;
+        color: #606060;
+        line-height: 31px;
+        font-weight: 700;
+    }
+}
+
+.accounting-header {
+    padding: 50px 0;
+    background-image: url("/assets/images/bg-pattern.png");
+    background-size: contain;
+    background-position: center;
+
+    .header-desc {
+        line-height: 33px;
+        color: #565656;
+    }
+}
+
+.acounting-section {
+    background: url(/assets/images/accounting-showcase-bg.svg) left top no-repeat,
+    url("/assets/images/detail-bg.png") bottom no-repeat;
+    padding-bottom: 110px;
+    margin-bottom: 100px;
+}
+
+.accounting-pkg-card {
+    min-height: 950px;
+}
+.translation-header{
+    padding: 50px 0;
+    background-image: url("/assets/images/bg-pattern.png");
+    background-size: contain;
+    background-position: center;
+
+    .header-desc {
+        line-height: 33px;
+        color: #565656;
+    }
 }
 
 @import "media";

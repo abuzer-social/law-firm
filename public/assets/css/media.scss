@@ -22,3 +22,17 @@
         flex-wrap: wrap;
     }
 }
+@media (max-width: 1200px) {
+    .about-content{
+        padding: 40px 45px 80px 45px;
+        p{
+            line-height: unset;
+        }
+    }
+    .about-large-content{
+        padding: 40px 45px 80px 45px;
+        p{
+            line-height: unset;
+        }
+    }
+}

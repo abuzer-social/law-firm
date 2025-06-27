@@ -5,13 +5,13 @@ return [
     'about_us' => 'About Us',
     'our_services' => 'Our Services',
     'services' => [
-        'service_1' => 'Service 1',
-        'service_2' => 'Service 2',
+        'service_1' => 'Accounting',
+        'service_2' => 'Translation',
     ],
     'more' => 'More',
     'more_options' => [
         'option_1' => 'Bussiness',
-        'option_2' => 'More Option 2',
+        'option_2' => 'Contact us',
     ],
     'language' => [
         'english' => 'English',
