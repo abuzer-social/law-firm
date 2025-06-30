@@ -55,4 +55,16 @@ input[id=phone] {
   padding: 70px 45px 150px 45px;
 }
 
+.trans-stepper {
+  transform: rotate(180deg);
+}
+
+.file-upload-wrapper {
+  padding: 5px 20px 5px 5px;
+}
+
+.custom-dropdown-options .dropdown-item {
+  text-align: right;
+}
+
 /*# sourceMappingURL=rtl.css.map */

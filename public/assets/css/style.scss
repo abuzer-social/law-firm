@@ -1002,12 +1002,14 @@ input[id = 'phone'] {
     url("/assets/images/detail-bg.png") bottom no-repeat;
     padding-bottom: 110px;
     margin-bottom: 100px;
+    background-size: contain;
 }
 
 .accounting-pkg-card {
     min-height: 950px;
 }
-.translation-header{
+
+.translation-header {
     padding: 50px 0;
     background-image: url("/assets/images/bg-pattern.png");
     background-size: contain;
@@ -1019,4 +1021,225 @@ input[id = 'phone'] {
     }
 }
 
+.translation-service {
+    padding: 100px 0;
+}
+
+/* RTL specific styles */
+[dir="rtl"] .custom-dropdown-wrapper {
+    text-align: right;
+}
+
+[dir="rtl"] .custom-dropdown-toggle {
+    /* Move the background arrow to the left */
+    background-position: left 0.75rem center;
+    padding-right: 0.75rem;
+    padding-left: 1.75rem;
+    text-align: right;
+}
+
+/* Original styles with RTL adjustments */
+.custom-dropdown-wrapper {
+    width: 100%;
+}
+
+.custom-dropdown-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    background: white;
+    border: 1px solid #dee2e6;
+    border-radius: 7px;
+    z-index: 1000;
+    padding: 0.5rem 0;
+    text-align: right; /* Add this for RTL */
+}
+
+.custom-dropdown-wrapper.show .custom-dropdown-options {
+    display: block;
+    animation: fadeIn 0.15s ease-in-out;
+    top: 110%;
+    padding: 0 15px;
+}
+
+.custom-dropdown-options .dropdown-item {
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+    color: #6c757d;
+    text-align: left;
+}
+
+.custom-dropdown-options .dropdown-item:not(:last-child) {
+    border-bottom: 1px solid #EBEBEB;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.file-upload-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.file-upload-wrapper {
+    background: #FAFAFA;
+    border: 2px solid #e9ecef;
+    border-radius: 11px;
+    padding: 5px 5px 5px 20px;
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.file-upload-wrapper:hover {
+    border-color: #17a2b8;
+    box-shadow: 0 4px 20px rgba(23, 162, 184, 0.1);
+}
+
+.file-upload-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.file-upload-text {
+    color: #6C6868;
+    font-weight: 700;
+    margin: 0;
+}
+
+.select-file-btn {
+    background: #E2FDF9;
+    color: #0F898C;
+    border: none;
+    border-radius: 9px;
+    padding: 8px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+
+}
+
+.select-file-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(23, 162, 184, 0.4);
+}
+
+.upload-icon {
+    font-size: 18px;
+}
+
+.file-input {
+    display: none;
+}
+
+/* Active state when file is selected */
+.file-upload-wrapper.has-file {
+    border-color: #28a745;
+    background: #f8fff9;
+}
+
+.file-upload-wrapper.has-file .file-upload-text {
+    color: #28a745;
+}
+
+/* Drag and drop states */
+.file-upload-wrapper.drag-over {
+    border-color: #17a2b8;
+    background: #f0fcff;
+    transform: scale(1.02);
+}
+
+.translation-card-left {
+    padding: 55px;
+
+    h6 {
+        font-size: 17px;
+        font-weight: 700;
+    }
+}
+
+.translation-specialization {
+    background-image: url(/assets/images/service-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-color: #F9FAFB;
+    background-blend-mode: multiply;
+    padding: 50px 0;
+}
+
+.trans-spec-content {
+    position: relative;
+    text-align: center;
+
+    img {
+        height: auto;
+    }
+
+    p {
+        position: absolute;
+        top: 51%;
+        left: 48%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        font-size: 18px;
+        font-weight: 700;
+    }
+}
+
+.lawyer-header {
+    background-image: url(/assets/images/bg-pattern.png);
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+
+    .header-top {
+        h2 {
+            font-size: 70px;
+        }
+    }
+
+    .lawyer-points {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #E2FDF9;
+    }
+}
+
+.essential-bottom.lawyer-bottom {
+    .ticket-container {
+        background-color: #E2FDF9;
+    }
+}
+
+.lawyer-plan-section {
+    background: url(/assets/images/accounting-showcase-bg.svg) left top no-repeat, url(/assets/images/detail-bg.png) bottom no-repeat;
+    padding-bottom: 110px;
+    background-size: contain;
+}
+
+.benefit-pattern-left {
+    bottom: 0;
+    position: absolute;
+    left: 0;
+}
+.lawyer-form-section{
+    padding: 50px 0;
+}
 @import "media";

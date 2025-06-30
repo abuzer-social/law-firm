@@ -17,6 +17,7 @@ h1, h2, h3, h4, h5, h6, p {
     margin: 0;
 }
 
+
 /* Hide in Firefox */
 input[type="number"] {
     -moz-appearance: textfield;
@@ -24,6 +25,10 @@ input[type="number"] {
 
 .form-control {
     height: 40px;
+}
+
+textarea.form-control {
+    height: unset;
 }
 
 .card {
@@ -44,6 +49,7 @@ input[type="number"] {
 
 .btn-primary {
     background-color: $primary-color !important;
+    font-size: 15px;
 }
 
 .fit-content {
@@ -60,4 +66,31 @@ input[type="number"] {
 
 .max-50 {
     max-width: 50%;
+}
+
+input::placeholder {
+    color: #BCBCBC !important;
+}
+
+.form-select {
+    text-align: start;
+
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.fs-18 {
+    font-size: 18px;
+}
+
+.fs-16 {
+    font-size: 16px;
+}
+
+.dark-gray {
+    color: #68708C;
+}
+.essential-color{
+    color: #A3D9A5;
 }
