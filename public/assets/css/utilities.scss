@@ -50,6 +50,7 @@ textarea.form-control {
 .btn-primary {
     background-color: $primary-color !important;
     font-size: 15px;
+    border-color: $primary-color;
 }
 
 .fit-content {
@@ -93,4 +94,32 @@ input::placeholder {
 }
 .essential-color{
     color: #A3D9A5;
+}
+.navbar-nav{
+    .dropdown-toggle::after {
+        display: inline-block;
+        margin-left: 0.255em;
+        vertical-align: 0.255em;
+        content: "";
+        border-top: 0;
+        border-right: 0;
+        border-bottom: 0;
+        border-left: 0;
+        /* Add your custom icon here */
+        background-image: url('/assets/images/drop-icon.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 8px; /* Adjust as needed */
+        height: 8px; /* Adjust as needed */
+    }
+}
+
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+.btn-close:focus{
+    box-shadow: none;
+}
+.dropdown-item.active, .dropdown-item:active{
+    background-color: $primary-color;
 }

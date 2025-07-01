@@ -1,7 +1,14 @@
 @media (max-width: 768px) {
     .login-card {
-        margin: 1rem;
         padding: 2rem 1.5rem;
+        max-width: 100%;
+    }
+    .login-title{
+        font-size: 35px;
+    }
+    .login-subtitle{
+        font-size: 18px;
+        padding: 0 40px;
     }
 
     .navbar-nav {
@@ -21,17 +28,110 @@
     .social-icons {
         flex-wrap: wrap;
     }
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .contract-tags {
+        gap: 0.8rem;
+    }
+
+    .contract-tag {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    .login-card {
+        border-radius: 8px;
+    }
+    .navbar {
+        padding: 15px 20px;
+    }
+    .lf-offcanvas{
+        width: 100% !important;
+    }
+
 }
+
+@media (max-width: 992px) {
+    .lf-offcanvas {
+        .navbar-nav .nav-link {
+            color: white !important;
+            text-align: left;
+        }
+    }
+    .navbar .navbar-nav .nav-link:hover {
+        color: black !important;
+    }
+    .navbar .navbar-nav .nav-link.active,
+    .navbar .navbar-nav .dropdown-item.active {
+        color: black !important;
+    }
+    .nav-select {
+        background: transparent;
+        justify-content: space-between;
+    }
+    .login-btn-mob {
+        display: block;
+    }
+    .language-dropdown {
+        background-color: white;
+        justify-content: center;
+        height: 40px;
+
+    }
+    .lang-drop-container {
+        width: 100%;
+
+        .dropdown-menu.show {
+            width: 100%;
+        }
+    }
+    .login-btn-mob {
+        border: 1px solid #FFFFFF;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 15px;
+        border-radius: 9px;
+
+        &:hover {
+            background-color: white !important;
+            color: $primary-color;
+            border-color: white !important;
+        }
+    }
+    .navbar-nav {
+        .dropdown-toggle::after {
+            filter: brightness(100);
+        }
+    }
+
+    .btn-close {
+        filter: invert(1);
+        opacity: 1;
+    }
+
+}
+
 @media (max-width: 1200px) {
-    .about-content{
+    .about-content {
         padding: 40px 45px 80px 45px;
-        p{
+
+        p {
             line-height: unset;
         }
     }
-    .about-large-content{
+    .about-large-content {
         padding: 40px 45px 80px 45px;
-        p{
+
+        p {
             line-height: unset;
         }
     }

@@ -1,280 +1,302 @@
 @extends('layouts.main')
 
 @section('content')
-    <header class="lawyer-header" @if(app()->isLocale('ar')) dir="rtl" @endif>
+    <header class="document-header" @if(app()->isLocale('ar')) dir="rtl" @endif>
         <div>
             <div class="text-center header-top">
-                <h2 class="primary pb-3 fw-bold">{{ __('document.header.title') }}</h2>
-                <h5 class="max-50 m-auto">{{ __('document.header.subtitle') }}</h5>
+                <h2 class="pb-3 fw-bold">{{ __('document.title') }}</h2>
+                <h5 class="max-50 m-auto dark-gray">{{ __('document.subtitle') }}</h5>
             </div>
-            <div class="container">
-                <div class="row py-5">
-                    <div class="col-lg-6">
-                        <div @if(app()->isLocale('ar')) style="text-align: right;" @endif>
-                            <h2 class="pb-3 fw-bold">
-                                {{ __('document.header.service_title') }}
-                            </h2>
-                            <div>
-                                <div class="d-flex align-items-center gap-3 mb-3">
-                                    <div class="lawyer-points">
-                                        <img src="{{ asset('assets/images/blue-tick.svg') }}" alt="">
-                                    </div>
-                                    <h5>
-                                        {{ __('document.header.points.choose_package') }}
-                                    </h5>
-                                </div>
-                                <div class="d-flex align-items-center gap-3 mb-3">
-                                    <div class="lawyer-points">
-                                        <img src="{{ asset('assets/images/blue-tick.svg') }}" alt="">
-                                    </div>
-                                    <h5>
-                                        {{ __('document.header.points.submit_inquiry') }}
-                                    </h5>
-                                </div>
-                                <div class="d-flex align-items-center gap-3 mb-3">
-                                    <div class="lawyer-points">
-                                        <img src="{{ asset('assets/images/blue-tick.svg') }}" alt="">
-                                    </div>
-                                    <h5>
-                                        {{ __('document.header.points.receive_answers') }}
-                                    </h5>
-                                </div>
-                                <div class="d-flex align-items-center gap-3 mb-3">
-                                    <div class="lawyer-points">
-                                        <img src="{{ asset('assets/images/blue-tick.svg') }}" alt="">
-                                    </div>
-                                    <h5>
-                                        {{ __('document.header.points.solve_problem') }}
-                                    </h5>
+            <section class="legal-section">
+                <div class="container">
+                    <div class="search-container fade-in">
+                        <div class="input-group-search">
+                            <input type="text" class="form-control search-input"
+                                   placeholder="{{ __('document.search_placeholder') }}"
+                                   aria-label="Search Document">
+                            <button class="btn search-btn" type="button">{{ __('document.search_button') }}</button>
+                        </div>
+                    </div>
+
+                    <div class="category-grid fade-in">
+                        <div class="row g-2 mb-2">
+                            <div class="col-lg-4">
+                                <div class="category-card">
+                                    <h3 class="category-title">{{ __('document.categories.commercial') }}</h3>
                                 </div>
                             </div>
-                            <div class="mt-4">
-                                <button class="btn btn-primary btn-lg px-4 py-2 rounded-4 fw-semibold fs-18">
-                                    {{ __('document.header.button') }}
-                                </button>
+                            <div class="col-lg-4">
+                                <div class="category-card">
+                                    <h3 class="category-title">{{ __('document.categories.appropriate') }}</h3>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="category-card">
+                                    <h3 class="category-title">{{ __('document.categories.technical') }}</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row g-2">
+                            <div class="col-lg-4">
+                                <div class="category-card">
+                                    <h3 class="category-title">{{ __('document.categories.service') }}</h3>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="category-card">
+                                    <h3 class="category-title">{{ __('document.categories.general') }}</h3>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="category-card">
+                                    <h3 class="category-title">{{ __('document.categories.employment') }}</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <div>
-                            <img class="w-100 rounded-5" src="{{ asset('assets/images/lawyer-header.png') }}"
-                                 alt="{{ __('document.header.title') }}">
-                        </div>
+
+                    <div class="contract-tags fade-in">
+                        <a href="#" class="contract-tag">{{ __('document.contracts.freelance') }}</a>
+                        <a href="#" class="contract-tag">{{ __('document.contracts.website_development') }}</a>
+                        <a href="#" class="contract-tag">{{ __('document.contracts.website_development') }}</a>
+                        <a href="#" class="contract-tag">{{ __('document.contracts.equipment_rental') }}</a>
+                        <a href="#" class="contract-tag">{{ __('document.contracts.equipment_rental') }}</a>
+                        <a href="#" class="contract-tag">{{ __('document.contracts.marketing') }}</a>
+                        <a href="#" class="contract-tag">{{ __('document.contracts.supply') }}</a>
+                        <a href="#" class="contract-tag">{{ __('document.contracts.confidentiality') }}</a>
+                        <a href="#" class="contract-tag">{{ __('document.contracts.consultation') }}</a>
+                        <a href="#" class="contract-tag">{{ __('document.contracts.dates') }}</a>
+                        <a href="#" class="contract-tag">{{ __('document.contracts.goods_transport') }}</a>
+                        <a href="#" class="contract-tag">{{ __('document.contracts.marketing') }}</a>
+                        <a href="#" class="contract-tag">{{ __('document.contracts.supply') }}</a>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
     </header>
-    <section class="business-plan-section lawyer-plan-section" @if(app()->isLocale('ar')) dir="rtl" @endif>
-        <div class="text-center mb-5">
-            <h1 class="primary pb-3 fw-bold">
-                {{ __('document.packages.title') }}
-            </h1>
-        </div>
+    <section class="contract-section">
         <div class="container">
-            <div class="row">
-                <!-- Essential Plan -->
-                <div class="col-lg-4">
-                    <div class="plan-card essential-plan">
-                        <div class="flex-grow-1">
-                            <div class="plan-tag essential">{{ __('document.packages.plans.essential.name') }}</div>
-                            <div class="py-4 d-flex align-items-center gap-3 justify-content-center">
-                                <img src="{{ asset('assets/images/dinar.svg') }}" alt="">
-                                <h2 class="navy fw-bold">
-                                    {{ __('document.packages.plans.essential.price') }}
-                                </h2>
-                            </div>
-                            <div class="d-flex align-items-center gap-3 mb-3">
-                                <div class="plan-counter essential-counter">2</div>
-                                <h6>
-                                    {{ __('document.packages.plans.essential.consultations') }}
-                                </h6>
-                            </div>
-                            <p class="fw-bold py-3 dark-gray">يشمل</p>
-                            <div>
-                                <div class="d-flex align-items-center gap-3 mb-3">
-                                    <div class="plan-enable essential-counter">
-                                        <img src="{{ asset('assets/images/white-tick.svg') }}" alt="">
-                                    </div>
-                                    <h5>{{ __('document.packages.plans.essential.feature1') }}</h5>
-                                </div>
-                                <div class="d-flex align-items-center gap-3 mb-3">
-                                    <div class="plan-enable essential-counter">
-                                        <img src="{{ asset('assets/images/white-tick.svg') }}" alt="">
-                                    </div>
-                                    <h5>{{ __('document.packages.plans.essential.feature2') }}</h5>
-                                </div>
-                                <div class="d-flex align-items-center gap-3 mb-3">
-                                    <div class="plan-enable essential-counter">
-                                        <img src="{{ asset('assets/images/white-tick.svg') }}" alt="">
-                                    </div>
-                                    <h5>{{ __('document.packages.plans.essential.feature3') }}</h5>
-                                </div>
-                                <div class="d-flex align-items-center gap-3 mb-3">
-                                    <div class="plan-enable essential-counter">
-                                        <img src="{{ asset('assets/images/white-tick.svg') }}" alt="">
-                                    </div>
-                                    <h5>{{ __('document.packages.plans.essential.feature4') }}</h5>
-                                </div>
-                                <div class="d-flex align-items-center gap-3 mb-3">
-                                    <div class="plan-enable essential-counter">
-                                        <img src="{{ asset('assets/images/white-tick.svg') }}" alt="">
-                                    </div>
-                                    <h5>{{ __('document.packages.plans.essential.feature5') }}</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="essential-bottom lawyer-bottom">
-                            <div class="ticket-container">
-                                <div class="d-flex gap-2 align-items-start">
-                                    <img class="mt-1" src="{{ asset('assets/images/essential-clock.svg') }}" alt="">
-                                    <p class="fw-bold">
-                                        {{ __('document.packages.plans.essential.additional_time') }}
-                                    </p>
-                                </div>
-                            </div>
-                            <div>
-                                <button class="btn w-100 rounded-3">
-                                    {{ __('document.packages.plans.essential.button') }}
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+            <div class="pb-5 text-center">
+                <h2 class="fw-bold primary">{{ __('document.create_contract.title') }}</h2>
+            </div>
+            <div class="d-flex align-items-center">
+                <div>
+                    @if(app()->getLocale() === 'ar')
+                        <img class="img-fluid" src="{{ asset('assets/images/doc-step-ar1.svg') }}" alt="">
+                    @else
+                        <img class="img-fluid" src="{{ asset('assets/images/doc-step-1.svg') }}" alt="">
+                    @endif
                 </div>
-
-                <!-- Growth Plan -->
-                <div class="col-lg-4">
-                    <div class="plan-card pro-plan">
-                        <div class="flex-grow-1">
-                            <div class="plan-tag pro">{{ __('document.packages.plans.growth.name') }}</div>
-                            <div class="py-4 d-flex align-items-center gap-2 justify-content-center">
-                                <img src="{{ asset('assets/images/dinar.svg') }}" alt="">
-                                <h2 class="navy fw-bold">
-                                    {{ __('document.packages.plans.growth.price') }}
-                                </h2>
-                            </div>
-                            <div class="d-flex align-items-center gap-3 mb-3">
-                                <div class="plan-counter pro-counter">1</div>
-                                <h6>
-                                    {{ __('document.packages.plans.growth.consultations') }}
-                                </h6>
-                            </div>
-                            <p class="fw-bold py-3 dark-gray">يشمل</p>
-                            <div>
-                                <div class="d-flex align-items-center gap-3 mb-3">
-                                    <div class="plan-enable pro-counter">
-                                        <img src="{{ asset('assets/images/white-tick.svg') }}" alt="">
-                                    </div>
-                                    <h5>{{ __('document.packages.plans.growth.feature1') }}</h5>
-                                </div>
-                                <div class="d-flex align-items-center gap-3 mb-3">
-                                    <div class="plan-enable pro-counter">
-                                        <img src="{{ asset('assets/images/white-tick.svg') }}" alt="">
-                                    </div>
-                                    <h5>{{ __('document.packages.plans.growth.feature2') }}</h5>
-                                </div>
-                                <div class="d-flex align-items-center gap-3 mb-3">
-                                    <div class="plan-enable pro-counter">
-                                        <img src="{{ asset('assets/images/white-tick.svg') }}" alt="">
-                                    </div>
-                                    <h5>{{ __('document.packages.plans.growth.feature3') }}</h5>
-                                </div>
-                                <div class="d-flex align-items-center gap-3 mb-3">
-                                    <div class="plan-enable pro-counter">
-                                        <img src="{{ asset('assets/images/white-tick.svg') }}" alt="">
-                                    </div>
-                                    <h5>{{ __('document.packages.plans.growth.feature4') }}</h5>
-                                </div>
-                                <div class="d-flex align-items-center gap-3 mb-3">
-                                    <div class="plan-enable pro-counter">
-                                        <img src="{{ asset('assets/images/white-tick.svg') }}" alt="">
-                                    </div>
-                                    <h5>{{ __('document.packages.plans.growth.feature5') }}</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="pro-bottom">
-                            <div class="ticket-container" style="background-color: #F8F8F8">
-                                <img src="{{ asset('assets/images/pro-ticket.svg') }}" alt="">
-                                <h6 class="fw-bold">{{ __('document.packages.plans.growth.discount') }}</h6>
-                            </div>
-                            <div>
-                                <button class="btn w-100 rounded-3">
-                                    {{ __('document.packages.plans.growth.button') }}
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                <div>
+                    @if(app()->getLocale() === 'ar')
+                        <img class="img-fluid" src="{{ asset('assets/images/doc-step-ar2.svg') }}" alt="">
+                    @else
+                        <img class="img-fluid" src="{{ asset('assets/images/doc-step-2.svg') }}" alt="">
+                    @endif
                 </div>
-
-                <!-- Premier Plan -->
-                <div class="col-lg-4">
-                    <div class="plan-card flexible-plan">
-                        <div class="flex-grow-1">
-                            <div class="plan-tag flexible">{{ __('document.packages.plans.premier.name') }}</div>
-                            <div class="py-4 d-flex align-items-center gap-2 justify-content-center">
-                                <img src="{{ asset('assets/images/dinar.svg') }}" alt="">
-                                <h2 class="navy fw-bold">
-                                    {{ __('document.packages.plans.premier.price') }}
-                                </h2>
-                            </div>
-                            <div class="d-flex align-items-center gap-3 mb-3">
-                                <div class="plan-counter premier-counter">6</div>
-                                <h6>
-                                    {{ __('document.packages.plans.premier.consultations') }}
-                                </h6>
-                            </div>
-                            <p class="fw-bold py-3 dark-gray">يشمل</p>
-                            <div>
-                                <div class="d-flex align-items-center gap-3 mb-3">
-                                    <div class="plan-enable premier-counter">
-                                        <img src="{{ asset('assets/images/white-tick.svg') }}" alt="">
-                                    </div>
-                                    <h5>{{ __('document.packages.plans.premier.feature1') }}</h5>
-                                </div>
-                                <div class="d-flex align-items-center gap-3 mb-3">
-                                    <div class="plan-enable premier-counter">
-                                        <img src="{{ asset('assets/images/white-tick.svg') }}" alt="">
-                                    </div>
-                                    <h5>{{ __('document.packages.plans.premier.feature2') }}</h5>
-                                </div>
-                                <div class="d-flex align-items-center gap-3 mb-3">
-                                    <div class="plan-enable premier-counter">
-                                        <img src="{{ asset('assets/images/white-tick.svg') }}" alt="">
-                                    </div>
-                                    <h5>{{ __('document.packages.plans.premier.feature3') }}</h5>
-                                </div>
-                                <div class="d-flex align-items-center gap-3 mb-3">
-                                    <div class="plan-enable premier-counter">
-                                        <img src="{{ asset('assets/images/white-tick.svg') }}" alt="">
-                                    </div>
-                                    <h5>{{ __('document.packages.plans.premier.feature4') }}</h5>
-                                </div>
-                                <div class="d-flex align-items-center gap-3 mb-3">
-                                    <div class="plan-enable premier-counter">
-                                        <img src="{{ asset('assets/images/white-tick.svg') }}" alt="">
-                                    </div>
-                                    <h5>{{ __('document.packages.plans.premier.feature5') }}</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flexible-bottom">
-                            <div class="ticket-container" style="background-color: #EFEFEF">
-                                <img src="{{ asset('assets/images/flexible-ticket.svg') }}" alt="">
-                                <h6 class="fw-bold">{{ __('document.packages.plans.premier.discount') }}</h6>
-                            </div>
-                            <div>
-                                <button class="btn w-100 rounded-3">
-                                    {{ __('document.packages.plans.premier.button') }}
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                <img class="mt-5 trans-stepper" src="{{ asset('assets/images/proceed.svg') }}" alt="">
+                <div>
+                    @if(app()->getLocale() === 'ar')
+                        <img class="img-fluid" src="{{ asset('assets/images/doc-step-ar3.svg') }}" alt="">
+                    @else
+                        <img class="img-fluid" src="{{ asset('assets/images/doc-step-3.svg') }}" alt="">
+                    @endif
+                </div>
+                <div>
+                    @if(app()->getLocale() === 'ar')
+                        <img class="img-fluid" src="{{ asset('assets/images/doc-step-ar4.svg') }}" alt="">
+                    @else
+                        <img class="img-fluid" src="{{ asset('assets/images/doc-step-4.svg') }}" alt="">
+                    @endif
                 </div>
             </div>
         </div>
     </section>
-    <section class="benefit-section lawyer-form-section" @if(app()->isLocale('ar')) dir="rtl" @endif>
+    <section class="business-plan-section document-section" @if(app()->isLocale('ar')) dir="rtl" @endif>
+        <div class="text-center header">
+            <h2 class="primary pb-3 fw-bold">
+                {{ __('document.packages.title') }}
+            </h2>
+            <h5>
+                {{ __('document.packages.subtitle') }}
+            </h5>
+        </div>
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-lg-12 text-center">
+                    <ul class="nav nav-pills mb-3 subscription-toggle" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-home"
+                                    type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                                {{ __('document.packages.subscription.annual') }}
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-profile"
+                                    type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+                                {{ __('document.packages.subscription.six_months') }}
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab-content mt-5" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                     aria-labelledby="pills-home-tab"
+                     tabindex="0">
+                    <div class="row">
+                        <!-- Launch Plan -->
+                        <div class="col-lg-4">
+                            <div class="plan-card essential-plan document-plan-card">
+                                <div class="flex-grow-1">
+                                    <div class="plan-tag essential">{{ __('document.packages.plans.launch.name') }}</div>
+                                    <div class="py-4 d-flex align-items-center gap-2 justify-content-center">
+                                        <img src="{{asset('assets/images/dinar.svg')}}" alt="">
+                                        <h2 class="navy fw-bold">
+                                            200
+                                        </h2>
+                                    </div>
+                                    <div>
+                                        <div class="d-flex align-items-center gap-3 mb-3">
+                                            <div class="plan-enable essential-counter"><img
+                                                    src="{{asset('assets/images/white-tick.svg')}}" alt=""></div>
+                                            <h5>{{ __('document.packages.features.creation') }}</h5>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-3 mb-3">
+                                            <div class="plan-enable essential-counter"><img
+                                                    src="{{asset('assets/images/white-tick.svg')}}" alt=""></div>
+                                            <h5>{{ __('document.packages.features.one_document') }}</h5>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-3 mb-3">
+                                            <div class="plan-enable essential-counter"><img
+                                                    src="{{asset('assets/images/white-tick.svg')}}" alt=""></div>
+                                            <h5>{{ __('document.packages.features.single_user') }}</h5>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-3 mb-3">
+                                            <div class="plan-enable essential-counter"><img
+                                                    src="{{asset('assets/images/white-tick.svg')}}" alt=""></div>
+                                            <h5>{{ __('document.packages.features.share_download') }}</h5>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-3 mb-3">
+                                            <div class="plan-enable essential-counter"><img
+                                                    src="{{asset('assets/images/white-tick.svg')}}" alt=""></div>
+                                            <h5>{{ __('document.packages.features.management') }}</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="essential-bottom">
+                                    <div>
+                                        <button class="btn w-100 rounded-3">{{ __('document.packages.subscribe') }}</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Growth Plan -->
+                        <div class="col-lg-4">
+                            <div class="plan-card pro-plan document-plan-card">
+                                <div class="flex-grow-1">
+                                    <div class="plan-tag pro">{{ __('document.packages.plans.growth.name') }}</div>
+                                    <div class="py-4 d-flex align-items-center gap-2 justify-content-center">
+                                        <img src="{{asset('assets/images/dinar.svg')}}" alt="">
+                                        <h2 class="navy fw-bold">
+                                            1000
+                                        </h2>
+                                    </div>
+                                    <div>
+                                        <div class="d-flex align-items-center gap-3 mb-3">
+                                            <div class="plan-enable pro-counter"><img
+                                                    src="{{asset('assets/images/white-tick.svg')}}" alt=""></div>
+                                            <h5>{{ __('document.packages.features.creation') }}</h5>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-3 mb-3">
+                                            <div class="plan-enable pro-counter"><img
+                                                    src="{{asset('assets/images/white-tick.svg')}}" alt=""></div>
+                                            <h5>{{ __('document.packages.features.one_document') }}</h5>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-3 mb-3">
+                                            <div class="plan-enable pro-counter"><img
+                                                    src="{{asset('assets/images/white-tick.svg')}}" alt=""></div>
+                                            <h5>{{ __('document.packages.features.single_user') }}</h5>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-3 mb-3">
+                                            <div class="plan-enable pro-counter"><img
+                                                    src="{{asset('assets/images/white-tick.svg')}}" alt=""></div>
+                                            <h5>{{ __('document.packages.features.share_download') }}</h5>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-3 mb-3">
+                                            <div class="plan-enable pro-counter"><img
+                                                    src="{{asset('assets/images/white-tick.svg')}}" alt=""></div>
+                                            <h5>{{ __('document.packages.features.management') }}</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pro-bottom">
+                                    <div>
+                                        <button class="btn w-100 rounded-3">{{ __('document.packages.subscribe') }}</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Premier Plan -->
+                        <div class="col-lg-4">
+                            <div class="plan-card flexible-plan document-plan-card">
+                                <div class="flex-grow-1">
+                                    <div class="plan-tag flexible">{{ __('document.packages.plans.premier.name') }}</div>
+                                    <div class="py-4 d-flex align-items-center gap-2 justify-content-center">
+                                        <img src="{{asset('assets/images/dinar.svg')}}" alt="">
+                                        <h2 class="navy fw-bold">
+                                            2000
+                                        </h2>
+                                    </div>
+                                    <div>
+                                        <div class="d-flex align-items-center gap-3 mb-3">
+                                            <div class="plan-enable premier-counter"><img
+                                                    src="{{asset('assets/images/white-tick.svg')}}" alt=""></div>
+                                            <h5>{{ __('document.packages.features.creation') }}</h5>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-3 mb-3">
+                                            <div class="plan-enable premier-counter"><img
+                                                    src="{{asset('assets/images/white-tick.svg')}}" alt=""></div>
+                                            <h5>{{ __('document.packages.features.multiple_documents') }}</h5>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-3 mb-3">
+                                            <div class="plan-enable premier-counter"><img
+                                                    src="{{asset('assets/images/white-tick.svg')}}" alt=""></div>
+                                            <h5>{{ __('document.packages.features.multiple_users') }}</h5>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-3 mb-3">
+                                            <div class="plan-enable premier-counter"><img
+                                                    src="{{asset('assets/images/white-tick.svg')}}" alt=""></div>
+                                            <h5>{{ __('document.packages.features.share_download') }}</h5>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-3 mb-3">
+                                            <div class="plan-enable premier-counter"><img
+                                                    src="{{asset('assets/images/white-tick.svg')}}" alt=""></div>
+                                            <h5>{{ __('document.packages.features.management') }}</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flexible-bottom">
+                                    <div>
+                                        <button class="btn w-100 rounded-3">{{ __('document.packages.subscribe') }}</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
+                     tabindex="0">
+                    <!-- Monthly subscription content would go here -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="benefit-section document-form-section" @if(app()->isLocale('ar')) dir="rtl" @endif>
         <div class="container">
             <div class="card benefit-card">
                 <div class="row">
@@ -285,6 +307,9 @@
                                 <img src="{{asset("assets/images/lawyer-art.svg")}}" alt="">
                             </div>
                             <div class="text-white">
+                                <h2 class="fw-bold pb-4">
+                                    {{ __('document.form.found_question') }}
+                                </h2>
                                 <h5 class="fw-bold">
                                     {{ __('document.form.contact_text') }}
                                 </h5>
@@ -294,60 +319,31 @@
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="px-5 py-3">
+                        <div class="p-3">
                             <h5 class="fw-bold pb-4">
                                 {{ __('document.form.title') }}
                             </h5>
                             <form action="">
                                 <div class="mb-3">
-                                    <label for=""
-                                           class="form-label fw-semibold">{{ __('document.form.lawsuit_question') }}</label>
-                                    <div class="custom-dropdown-wrapper position-relative">
-                                        <button class="form-select custom-dropdown-toggle" type="button">
-                                            {{ __('document.form.yes_no_placeholder') }}
-                                        </button>
-                                        <ul class="custom-dropdown-options list-unstyled shadow-sm">
-                                            <li class="dropdown-item">{{ __('document.form.yes') }}</li>
-                                            <li class="dropdown-item">{{ __('document.form.no') }}</li>
-                                        </ul>
-                                    </div>
+                                    <label for="" class="form-label fw-semibold">{{ __('document.form.name_label') }}</label>
+                                    <input class="form-control" type="text">
                                 </div>
                                 <div class="mb-3">
-                                    <label for=""
-                                           class="form-label fw-semibold">{{ __('document.form.consultation_type') }}</label>
-                                    <div class="custom-dropdown-wrapper position-relative">
-                                        <button class="form-select custom-dropdown-toggle" type="button">
-                                            {{ __('document.form.select_case_placeholder') }}
-                                        </button>
-                                        <ul class="custom-dropdown-options list-unstyled shadow-sm">
-                                            <li class="dropdown-item">{{ __('document.form.commercial_case') }}</li>
-                                            <li class="dropdown-item">{{ __('document.form.commercial_case') }}</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="mb-3">
-                                    <label for=""
-                                           class="form-label fw-semibold">{{ __('document.form.consultation_details') }}</label>
-                                    <textarea class="form-control" name="" id="" rows="3"></textarea>
+                                    <label for="" class="form-label fw-semibold">{{ __('document.form.phone_label') }}</label>
+                                    <input type="number" id="phone" class="form-control" name="name"
+                                           placeholder="{{ __('document.form.phone_placeholder') }}">
                                 </div>
                                 <div class="mb-4">
-                                    <div class="file-upload-container">
-                                        <div class="file-upload-wrapper" id="fileUploadWrapper">
-                                            <input type="file" class="file-input" id="fileInput" multiple>
-                                            <div class="file-upload-content">
-                                                <p class="file-upload-text"
-                                                   id="fileUploadText">{{ __('document.form.file_upload') }}</p>
-                                                <button type="button" class="select-file-btn" id="selectFileBtn">
-                                                    <img src="{{asset('assets/images/uploader-icon.svg')}}" alt="">
-                                                    {{ __('document.form.select_file') }}
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <label for="" class="form-label">{{ __('document.form.email_label') }}</label>
+                                    <input type="email" class="form-control">
+                                </div>
+                                <div class="mb-4">
+                                    <label for="" class="form-label">{{ __('document.form.description_label') }}</label>
+                                    <textarea name="" class="form-control" id="" rows="3"></textarea>
                                 </div>
                                 <div class="{{ app()->getLocale() == 'ar' ? 'text-start' : 'text-end' }}">
                                     <button class="btn btn-primary rounded-4 btn-lg px-5 py-3 fw-semibold">
-                                        {{ __('document.form.send_button') }}
+                                        {{ __('document.form.submit_button') }}
                                     </button>
                                 </div>
                             </form>
@@ -357,4 +353,4 @@
             </div>
         </div>
     </section>
-@endsection 
+@endsection

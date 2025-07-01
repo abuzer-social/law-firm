@@ -12,6 +12,8 @@ return [
     'more_options' => [
         'option_1' => 'Bussiness',
         'option_2' => 'Contact us',
+        'option_3' => 'Legal Document',
+        'option_4' => 'Ask Lawyer',
     ],
     'language' => [
         'english' => 'English',

@@ -11,17 +11,17 @@
         </div>
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-12 col-md-6 col-lg-5">
+                <div class="col-12 col-md-12 col-lg-5">
                     <div class="login-card">
                         <form>
                             <div class="">
-                                <input dir="rtl" type="number" id="phone" class="form-control" name="name" placeholder="{{ __('auth.login.phone') }}">
+                                <input type="number" id="phone" class="form-control" name="name" placeholder="{{ __('auth.login.phone') }}">
                             </div>
 
                             <button type="button" class="fw-bold btn-send-otp">{{ __('auth.login.send_otp') }}</button>
 
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="{{ __('auth.login.otp_code') }}" required>
+                                <input type="number" class="form-control" placeholder="{{ __('auth.login.otp_code') }}" required>
                             </div>
 
                             <a href="{{route('home.index')}}" type="submit" class="btn btn-login">{{ __('auth.login.submit') }}</a>
