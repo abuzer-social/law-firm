@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="{{ asset('assets/css/rtl.css') }}">
     @endif
 </head>
-<body class="d-flex flex-column @yield('body-class')">
+<body class="d-flex flex-column overflow-x-hidden @yield('body-class')">
 @include('partials.navbar')
 
 <main class="flex-grow-1">
@@ -138,6 +138,28 @@
     // Handle click on wrapper or button
     fileUploadWrapper.addEventListener('click', function() {
         fileInput.click();
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.btn-login').forEach(button => {
+            button.addEventListener('click', function (e) {
+                // Prevent double activation
+                if (button.classList.contains('btn-loading')) return;
+
+                // Wrap text in span if not already wrapped
+                if (!button.querySelector('span')) {
+                    const text = button.textContent.trim();
+                    button.textContent = '';
+                    const span = document.createElement('span');
+                    span.textContent = text;
+                    button.appendChild(span);
+                }
+
+                // Add loading class
+                button.classList.add('btn-loading');
+            });
+        });
     });
 </script>
 <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>

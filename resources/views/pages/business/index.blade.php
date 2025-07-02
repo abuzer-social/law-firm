@@ -11,7 +11,7 @@
                 <div class="row g-4 py-5">
                     <div class="col-lg-6 order-2 order-lg-1">
                         <div>
-                            <h1 class="pb-3 fw-bold">
+                            <h1 class="pb-3 fw-bold position-relative">
                                 {!! __('business.header.main_title') !!}
                             </h1>
                             <h5 class="pb-4 text-justify d-text-gray">

@@ -59,6 +59,16 @@ textarea.form-control {
     background-color: $primary-color !important;
     font-size: 15px;
     border-color: $primary-color;
+    border: none;
+
+    &:hover {
+        background-color: #2C3E50 !important;
+        color: white;
+    }
+    &:focus{
+        background-color: #24B4B7 !important;
+        color: white ;
+    }
 }
 
 .fit-content {
@@ -135,7 +145,9 @@ input::placeholder {
 .btn-close:focus {
     box-shadow: none;
 }
-
+.btn{
+    position: relative;
+}
 .dropdown-item.active, .dropdown-item:active {
     background-color: $primary-color;
 }

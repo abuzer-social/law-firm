@@ -18,13 +18,16 @@
                                 <input type="number" id="phone" class="form-control" name="name" placeholder="{{ __('auth.login.phone') }}">
                             </div>
 
-                            <button type="button" class="fw-bold btn-send-otp">{{ __('auth.login.send_otp') }}</button>
+                            <button type="button" class="fw-bold btn-send-otp btn-loader">{{ __('auth.login.send_otp') }}</button>
 
                             <div class="form-group">
                                 <input type="number" class="form-control" placeholder="{{ __('auth.login.otp_code') }}" required>
                             </div>
 
-                            <a href="{{route('home.index')}}" type="submit" class="btn btn-login">{{ __('auth.login.submit') }}</a>
+                            <button type="submit" class="btn btn-login btn-primary btn-loader">
+                                {{ __('auth.login.submit') }}
+
+                            </button>
                         </form>
 
                         <div class="signup-link">

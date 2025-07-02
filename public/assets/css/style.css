@@ -51,6 +51,15 @@ textarea.form-control {
   background-color: #0F898C !important;
   font-size: 15px;
   border-color: #0F898C;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: #2C3E50 !important;
+  color: white;
+}
+.btn-primary:focus {
+  background-color: #24B4B7 !important;
+  color: white;
 }
 
 .fit-content {
@@ -123,6 +132,10 @@ input::placeholder {
 
 .btn-close:focus {
   box-shadow: none;
+}
+
+.btn {
+  position: relative;
 }
 
 .dropdown-item.active, .dropdown-item:active {
@@ -372,10 +385,6 @@ body {
   font-size: 16px;
   width: 100%;
   transition: background-color 0.3s ease;
-}
-.btn-login:hover {
-  background-color: #EFFAFA;
-  color: #0F898C;
 }
 
 .signup-link {
@@ -799,6 +808,11 @@ input[id=phone] {
 
 .process-section {
   padding: 100px 0;
+}
+.process-section .btn {
+  font-size: 20px;
+  border-radius: 18px;
+  padding: 15px 25px;
 }
 
 .process-img img {
@@ -1602,16 +1616,36 @@ input[id=phone] {
   font-size: 20px;
 }
 
-.business-header-content-span::before {
-  content: url("/assets/images/red-underline.svg"); /* or an asset() URL if using Laravel + Blade */
-  display: inline-block; /* or block depending on layout */
-  width: 20px; /* optional: control image size */
-  height: 20px;
-  margin-right: 8px; /* spacing between image and text */
-  vertical-align: middle; /* align with text */
+/* Centered dot loader using box-shadow animation */
+.btn-loading::after {
+  content: "";
   position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: currentColor;
+  color: #fff; /* Match your button text color */
+  transform: translate(-50%, -50%) translateX(-38px); /* Center all 3 dots */
+  box-shadow: 19px 0 0 7px, 38px 0 0 3px, 57px 0 0 0;
+  animation: l21 0.5s infinite alternate linear;
 }
 
+/* Hide original button text */
+.btn-loading span {
+  visibility: hidden;
+}
+
+/* Your animation as-is */
+@keyframes l21 {
+  50% {
+    box-shadow: 19px 0 0 3px, 38px 0 0 7px, 57px 0 0 3px;
+  }
+  100% {
+    box-shadow: 19px 0 0 0, 38px 0 0 3px, 57px 0 0 7px;
+  }
+}
 @media (max-width: 1200px) {
   .about-content {
     padding: 40px 45px 80px 45px;
