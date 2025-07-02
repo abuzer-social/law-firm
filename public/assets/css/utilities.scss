@@ -92,10 +92,16 @@ input::placeholder {
 .dark-gray {
     color: #68708C;
 }
-.essential-color{
+
+.d-text-gray {
+    color: #565656;
+}
+
+.essential-color {
     color: #A3D9A5;
 }
-.navbar-nav{
+
+.navbar-nav {
     .dropdown-toggle::after {
         display: inline-block;
         margin-left: 0.255em;
@@ -114,12 +120,18 @@ input::placeholder {
     }
 }
 
-.navbar-toggler:focus{
+.navbar-toggler:focus {
     box-shadow: none;
 }
-.btn-close:focus{
+
+.btn-close:focus {
     box-shadow: none;
 }
-.dropdown-item.active, .dropdown-item:active{
+
+.dropdown-item.active, .dropdown-item:active {
     background-color: $primary-color;
+}
+
+.text-justify {
+    text-align: justify;
 }

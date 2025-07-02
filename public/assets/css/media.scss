@@ -1,60 +1,18 @@
-@media (max-width: 768px) {
-    .login-card {
-        padding: 2rem 1.5rem;
-        max-width: 100%;
-    }
-    .login-title{
-        font-size: 35px;
-    }
-    .login-subtitle{
-        font-size: 18px;
-        padding: 0 40px;
-    }
+@media (max-width: 1200px) {
+    .about-content {
+        padding: 40px 45px 80px 45px;
 
-    .navbar-nav {
-        text-align: center;
-        margin-top: 1rem;
+        p {
+            line-height: unset;
+        }
     }
-    .payment-methods {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
+    .about-large-content {
+        padding: 40px 45px 80px 45px;
 
-    .nav-links {
-        gap: 20px;
-        text-align: center;
+        p {
+            line-height: unset;
+        }
     }
-
-    .social-icons {
-        flex-wrap: wrap;
-    }
-    .main-title {
-        font-size: 2rem;
-    }
-
-    .category-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .contract-tags {
-        gap: 0.8rem;
-    }
-
-    .contract-tag {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-    }
-    .login-card {
-        border-radius: 8px;
-    }
-    .navbar {
-        padding: 15px 20px;
-    }
-    .lf-offcanvas{
-        width: 100% !important;
-    }
-
 }
 
 @media (max-width: 992px) {
@@ -117,22 +75,169 @@
         filter: invert(1);
         opacity: 1;
     }
+    .mob-btn-full {
+        width: 100%;
+    }
+    .signup-header {
+        min-height: 230px;
+    }
+    .signup-wrapper {
+        bottom: unset;
+        margin-top: 30px;
+    }
+    .home-header-container {
+        text-align: center;
+    }
+    .home-header-desc {
+        text-align: center;
+        max-width: 100%;
+        padding: 0 50px;
+    }
+    .home-pattern-img {
+        text-align: right;
 
-}
-
-@media (max-width: 1200px) {
-    .about-content {
-        padding: 40px 45px 80px 45px;
-
-        p {
-            line-height: unset;
+        img {
+            transform: scaleX(-1);
         }
     }
-    .about-large-content {
-        padding: 40px 45px 80px 45px;
+    .home-img-section {
+        margin-top: 70px;
+    }
+    .detail-section-container {
+        h5 {
+            font-size: 26px;
+        }
 
         p {
-            line-height: unset;
+            font-size: 23px;
+            font-weight: 700;
+            color: #B0B0B0;
         }
     }
+    .detail-section-container {
+        padding: 60px 0 100px 0;
+    }
+    .detail-lower-pattern, .detail-upper-pattern {
+        display: none;
+    }
+    .solution-card {
+        a {
+            text-decoration: none;
+            font-size: 21px;
+        }
+    }
+    .business-plan-section {
+        padding: 50px 0 50px 0;
+        background-image: url(/assets/images/accounting-showcase-bg.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top;
+    }
+    .benefit-section {
+        padding: 80px 0;
+    }
+    .document-header h2 {
+        font-size: 35px;
+    }
+    .document-header h5 {
+        font-size: 18px !important;
+    }
+    .contract-tags{
+        max-width: 100%;
+    }
+    .document-header, .contract-section{
+        padding: 70px 0;
+    }
+    .business-plan-section.document-section{
+        background-size: contain;
+        padding: 50px 0;
+    }
 }
+
+// CSS below and on 768 breakpoint //
+
+
+@media (max-width: 768px) {
+    .login-card {
+        padding: 2rem 1.5rem;
+        max-width: 100%;
+    }
+    .login-title {
+        font-size: 35px;
+    }
+    .login-subtitle {
+        font-size: 18px;
+        padding: 0 40px;
+    }
+
+    .navbar-nav {
+        text-align: center;
+        margin-top: 1rem;
+    }
+    .payment-methods {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .nav-links {
+        gap: 20px;
+        text-align: center;
+    }
+
+    .social-icons {
+        flex-wrap: wrap;
+    }
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .contract-tags {
+        gap: 0.8rem;
+    }
+
+    .contract-tag {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    .login-card {
+        border-radius: 8px;
+    }
+    .navbar {
+        padding: 15px 20px;
+    }
+    .lf-offcanvas {
+        width: 100% !important;
+    }
+    .custom-tabs .nav-link {
+        font-size: 15px;
+    }
+    .registering-section {
+        min-height: 350px;
+        border-radius: 0;
+        top: unset;
+    }
+    .home-services-section {
+        img {
+            max-width: 180px;
+        }
+    }
+    .lawyer-underline {
+        background-size: 65%;
+        background-position: 90%;
+    }
+    .benefit-section {
+        padding: 80px 10px;
+    }
+    .business-plan-section.document-section .header h2{
+        font-size: 30px;
+    }
+    .business-plan-section.document-section .header h5{
+        font-size: 18px !important;
+    }
+}
+

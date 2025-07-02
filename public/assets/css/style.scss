@@ -40,9 +40,11 @@ body {
     color: #0F898C !important;
     font-weight: bold;
 }
-.login-btn-mob{
+
+.login-btn-mob {
     display: none;
 }
+
 .navbar .navbar-nav .dropdown > .nav-link.active {
     background-color: transparent;
 }
@@ -297,7 +299,8 @@ input[id = 'phone'] {
 }
 
 .signup-header {
-    background-color: #12A1A5D1;
+    background-image: url("/assets/images/signup-bg.png");
+    background-size: cover;
     min-height: 410px;
     display: flex;
     align-items: center;
@@ -326,10 +329,15 @@ input[id = 'phone'] {
     width: 100%;
     display: inline-flex;
     overflow: hidden;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 0;
 
     .nav-item {
         flex: 1;
         border-top: 2px solid $primary-color;
+        background: white;
     }
 
     .nav-link {
@@ -368,6 +376,10 @@ input[id = 'phone'] {
     background-size: cover;
     background-position: center;
     padding-bottom: 150px;
+
+    .btn-primary {
+        font-size: 20px;
+    }
 }
 
 .home-services-section {
@@ -380,10 +392,11 @@ input[id = 'phone'] {
 }
 
 .detail-section-container {
-    padding: 200px 0 400px 0;
+    padding: 200px 0 270px 0;
     background-image: url("/assets/images/detail-bg.png");;
     background-position: top;
     position: relative;
+    background-size: cover;
 }
 
 .detail-card {
@@ -668,10 +681,35 @@ input[id = 'phone'] {
     background-size: cover;
     background-position: center;
     padding: 50px 0;
+
+    .header {
+        padding: 0 20px;
+
+        h1 {
+            font-size: 40px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+    }
+}
+
+.business-header-content-span {
+    white-space: nowrap;
+    background-image: url("/assets/images/red-underline.svg");
+    background-size: 95%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .business-plan-section {
     padding: 50px 0;
+    background-image: url("/assets/images/detail-bg.png");;
+    background-position: top;
+    position: relative;
+    background-size: cover;
+    padding-bottom: 100px;
 }
 
 .nav-pills.subscription-toggle {
@@ -706,13 +744,6 @@ input[id = 'phone'] {
     background-color: transparent;
 }
 
-.business-tab-pane {
-    background-image: url("/assets/images/detail-bg.png");;
-    background-position: top;
-    position: relative;
-    background-size: cover;
-    padding-bottom: 100px;
-}
 
 .plan-card {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
@@ -868,7 +899,13 @@ input[id = 'phone'] {
 .lawyer-section {
     padding: 50px 0;
 }
-
+.lawyer-underline{
+    white-space: nowrap;
+    background-image: url("/assets/images/black-underline.svg");
+    background-size: 45%;
+    background-repeat: no-repeat;
+    background-position: right;
+}
 .counter-component {
     display: inline-flex;
     border-radius: 12px;
@@ -1437,6 +1474,7 @@ input[id = 'phone'] {
 
 .document-form-section {
     padding: 100px 0;
+    margin-top: 60px;
 }
 
 .iti__country-container {

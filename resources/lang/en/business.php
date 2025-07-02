@@ -4,7 +4,7 @@ return [
     'header' => [
         'title' => 'Business Plans',
         'subtitle' => 'Experience peace of mind with our reliable and affordable legal services.',
-        'main_title' => 'Achieve your business goals with ease and security!',
+        'main_title' => 'Achieve your <span class="business-header-content-span">Business goals</span> with ease and security!',
         'description' => 'Within the framework of our vision to be "Your Best Partner," we believe that your success is our success. We understand that every riyal you invest should bring you value. Therefore, we don\'t just act as a service provider; instead, we strive to address gaps before they arise and protect your business from any potential risks through flexible legal packages tailored to your needs and budget. Let us handle the legal aspects, so you can focus on growing your business.',
         'button' => 'Get Your Plan Now'
     ],
@@ -63,7 +63,7 @@ return [
         ]
     ],
     'lawyer_section' => [
-        'title' => 'Part-Time Lawyer',
+        'title' => '<span class="lawyer-underline">Part-Time Lawyer</span>',
         'subtitle' => 'For flexible legal services that meet your needs',
         'description' => 'Maximize efficiency and minimize legal department costs by contracting a part-time lawyer from our elite legal team. We provide you with specialized legal support at a professional level without the full-time employment costs.'
     ],

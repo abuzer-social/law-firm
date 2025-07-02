@@ -5,7 +5,7 @@
         <h1 class="fw-bold text-white">{{ __('auth.signup.title') }}</h1>
     </header>
     <div class="container">
-        <div class="row signup-wrapper">
+        <div class="row g-3 signup-wrapper">
             <div class="col-lg-4">
                 <div class="card signup-card">
                     <div class="card-body">
@@ -104,7 +104,7 @@
                                                 <label for=""
                                                        class="form-label fw-semibold">{{ __('auth.signup.form.mobile') }}</label>
                                                 <div class="">
-                                                    <input dir="rtl" type="number" id="phone" class="form-control"
+                                                    <input type="number" id="phone" class="form-control"
                                                            name="name"
                                                            placeholder="{{ __('auth.signup.form.mobile') }}">
                                                 </div>

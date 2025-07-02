@@ -79,7 +79,7 @@
             <div class="pb-5 text-center">
                 <h2 class="fw-bold primary">{{ __('document.create_contract.title') }}</h2>
             </div>
-            <div class="d-flex align-items-center">
+            <div class="d-flex align-items-center flex-column flex-lg-row gap-5 gap-lg-0">
                 <div>
                     @if(app()->getLocale() === 'ar')
                         <img class="img-fluid" src="{{ asset('assets/images/doc-step-ar1.svg') }}" alt="">
@@ -94,7 +94,7 @@
                         <img class="img-fluid" src="{{ asset('assets/images/doc-step-2.svg') }}" alt="">
                     @endif
                 </div>
-                <img class="mt-5 trans-stepper" src="{{ asset('assets/images/proceed.svg') }}" alt="">
+                <img class="mt-0 mt-lg-5 d-none d-lg-block trans-stepper" src="{{ asset('assets/images/proceed.svg') }}" alt="">
                 <div>
                     @if(app()->getLocale() === 'ar')
                         <img class="img-fluid" src="{{ asset('assets/images/doc-step-ar3.svg') }}" alt="">
@@ -146,7 +146,7 @@
                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
                      aria-labelledby="pills-home-tab"
                      tabindex="0">
-                    <div class="row">
+                    <div class="row g-3">
                         <!-- Launch Plan -->
                         <div class="col-lg-4">
                             <div class="plan-card essential-plan document-plan-card">

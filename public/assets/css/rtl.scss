@@ -54,39 +54,59 @@ input[id='phone'] {
 .about-content {
     padding: 70px 45px 150px 45px;
 }
-.trans-stepper{
+
+.trans-stepper {
     transform: rotate(180deg);
 }
-.file-upload-wrapper{
+
+.file-upload-wrapper {
     padding: 5px 20px 5px 5px;
 }
-.custom-dropdown-options .dropdown-item{
+
+.custom-dropdown-options .dropdown-item {
     text-align: right;
 }
-.search-btn{
+
+.search-btn {
     left: 15px;
     right: unset;
 }
-.search-input{
+
+.search-input {
     padding: 25px 25px 25px 135px;
 }
-.iti--inline-dropdown .iti__dropdown-content{
+
+.iti--inline-dropdown .iti__dropdown-content {
     right: 0;
 }
-.iti__country-container{
+
+.iti__country-container {
     left: unset !important;
 }
+.lawyer-underline{
+    background-position: left;
+    background-size: 64%;
+}
+.recommend-tag {
+    position: absolute;
+    right: unset;
+    top: -20px;
+    left: -20px;
+}
+
 @media (max-width: 992px) {
-    .offcanvas-header .btn-close{
+    .offcanvas-header .btn-close {
         margin-right: auto;
         margin-left: unset;
     }
-}
-@media (max-width: 768px) {
-    .lf-offcanvas .navbar-nav .nav-link{
+    .lf-offcanvas .navbar-nav .nav-link {
         text-align: right;
     }
-    .navbar-nav{
+}
+
+@media (max-width: 768px) {
+
+    .navbar-nav {
         padding-right: 0;
     }
 }

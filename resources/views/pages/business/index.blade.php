@@ -3,18 +3,18 @@
 @section('content')
     <header class="business-header" @if(app()->isLocale('ar')) dir="rtl" @endif>
         <div>
-            <div class="text-center">
-                <h2 class="primary pb-3 fw-bold">{{ __('business.header.title') }}</h2>
+            <div class="text-center header">
+                <h1 class="primary pb-3 fw-bold">{{ __('business.header.title') }}</h1>
                 <h5 class="fw-semibold">{{ __('business.header.subtitle') }}</h5>
             </div>
             <div class="container">
-                <div class="row py-5">
-                    <div class="col-lg-6">
+                <div class="row g-4 py-5">
+                    <div class="col-lg-6 order-2 order-lg-1">
                         <div>
                             <h1 class="pb-3 fw-bold">
-                                {{ __('business.header.main_title') }}
+                                {!! __('business.header.main_title') !!}
                             </h1>
-                            <h5 class="pb-4">
+                            <h5 class="pb-4 text-justify d-text-gray">
                                 {{ __('business.header.description') }}
                             </h5>
                             <div>
@@ -24,7 +24,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 order-1 order-lg-2">
                         <div>
                             <img class="img-fluid rounded-5" src="{{asset('assets/images/bussiness-header-img.png')}}"
                                  alt="{{ __('business.header.title') }}">
@@ -35,7 +35,7 @@
         </div>
     </header>
     <section class="business-plan-section" @if(app()->isLocale('ar')) dir="rtl" @endif>
-        <div class="text-center">
+        <div class="text-start text-md-center container">
             <h1 class="primary pb-3 fw-bold">
                 {{ __('business.packages.title') }}
             </h1>
@@ -71,11 +71,12 @@
                 <div class="tab-pane fade show active business-tab-pane" id="pills-home" role="tabpanel"
                      aria-labelledby="pills-home-tab"
                      tabindex="0">
-                    <div class="row">
+                    <div class="row g-4">
                         <div class="col-lg-4">
                             <div class="plan-card essential-plan">
                                 <div class="flex-grow-1">
-                                    <div class="plan-tag essential">{{ __('business.packages.plans.essential.name') }}</div>
+                                    <div
+                                        class="plan-tag essential">{{ __('business.packages.plans.essential.name') }}</div>
                                     <div class="py-4 d-flex align-items-center gap-2 justify-content-center">
                                         <img src="{{asset('assets/images/dinar.svg')}}" alt="">
                                         <h2 class="navy fw-bold">
@@ -128,7 +129,8 @@
                                         <p>{{ __('business.packages.plans.essential.discount') }}</p>
                                     </div>
                                     <div>
-                                        <button class="btn w-100 rounded-3">{{ __('business.packages.plans.essential.button') }}</button>
+                                        <button
+                                            class="btn w-100 rounded-3">{{ __('business.packages.plans.essential.button') }}</button>
                                     </div>
                                 </div>
                             </div>
@@ -136,7 +138,8 @@
                         <div class="col-lg-4">
                             <div class="plan-card pro-plan">
                                 <div class="flex-grow-1">
-                                    <div class="plan-tag pro">{{ __('business.packages.plans.professional.name') }}</div>
+                                    <div
+                                        class="plan-tag pro">{{ __('business.packages.plans.professional.name') }}</div>
                                     <div class="py-4 d-flex align-items-center gap-2 justify-content-center">
                                         <img src="{{asset('assets/images/dinar.svg')}}" alt="">
                                         <h2 class="navy fw-bold">
@@ -189,16 +192,22 @@
                                         <p>{{ __('business.packages.plans.professional.discount') }}</p>
                                     </div>
                                     <div>
-                                        <button class="btn w-100 rounded-3">{{ __('business.packages.plans.professional.button') }}</button>
+                                        <button
+                                            class="btn w-100 rounded-3">{{ __('business.packages.plans.professional.button') }}</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="plan-card flexible-plan">
-                                <img class="recommend-tag" src="{{asset("assets/images/recommend.svg")}}" alt="">
+                                @if(app()->getLocale() === 'ar')
+                                    <img class="recommend-tag" src="{{asset("assets/images/recommend-ar.svg")}}" alt="">
+                                @else
+                                    <img class="recommend-tag" src="{{asset("assets/images/recommend.svg")}}" alt="">
+                                @endif
                                 <div class="flex-grow-1">
-                                    <div class="plan-tag flexible">{{ __('business.packages.plans.flexible.name') }}</div>
+                                    <div
+                                        class="plan-tag flexible">{{ __('business.packages.plans.flexible.name') }}</div>
                                     <div class="py-4 d-flex align-items-center gap-2 justify-content-center">
                                         <img src="{{asset('assets/images/dinar.svg')}}" alt="">
                                         <h2 class="navy fw-bold">
@@ -295,7 +304,8 @@
                                         </button>
                                     </div>
                                     <div>
-                                        <button class="btn w-100 rounded-3">{{ __('business.packages.plans.flexible.button') }}</button>
+                                        <button
+                                            class="btn w-100 rounded-3">{{ __('business.packages.plans.flexible.button') }}</button>
                                     </div>
                                 </div>
                             </div>
@@ -310,23 +320,24 @@
     </section>
     <section class="lawyer-section">
         <div class="container">
-            <div class="row py-5 align-items-center">
-                <div class="col-lg-6">
+            <div class="row g-3 align-items-center">
+                <div class="col-lg-6 order-2 order-lg-1">
                     <div @if(app()->getLocale() == 'ar') dir="rtl" style="text-align: right;" @endif>
                         <h1 class="pb-3 primary fw-bold">
-                            {{ __('business.lawyer_section.title') }}
+                            {!! __('business.lawyer_section.title') !!}
                         </h1>
                         <h2 class="pb-3 fw-semibold">
                             {{ __('business.lawyer_section.subtitle') }}
                         </h2>
-                        <h5 class="pb-4">
+                        <h5 class="pb-4 text-justify">
                             {{ __('business.lawyer_section.description') }}
                         </h5>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 order-1 order-lg-2">
                     <div>
-                        <img class="img-fluid rounded-4" src="{{ asset('assets/images/lawyer-image.png') }}" alt="{{ __('business.lawyer_section.title') }}">
+                        <img class="img-fluid rounded-4" src="{{ asset('assets/images/lawyer-image.png') }}"
+                             alt="{{ __('business.lawyer_section.title') }}">
                     </div>
                 </div>
             </div>
@@ -337,7 +348,8 @@
             <div class="card benefit-card">
                 <div class="row">
                     <div class="col-lg-6">
-                        <div class="benefit-card-left position-relative" @if(app()->getLocale() == 'ar') dir="rtl" style="text-align: right;" @endif>
+                        <div class="benefit-card-left position-relative" @if(app()->getLocale() == 'ar') dir="rtl"
+                             style="text-align: right;" @endif>
                             <div>
                                 <h1 class="fw-bold pb-4 text-white">
                                     {{ __('business.benefits_section.title') }}
@@ -372,32 +384,39 @@
                             </div>
                             <form action="">
                                 <div class="mb-3">
-                                    <label for="" class="form-label fw-semibold">{{ __('business.benefits_section.form_labels.name') }}</label>
+                                    <label for=""
+                                           class="form-label fw-semibold">{{ __('business.benefits_section.form_labels.name') }}</label>
                                     <input type="text" class="form-control">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="" class="form-label fw-semibold">{{ __('business.benefits_section.form_labels.phone') }}</label>
-                                    <div class="input-group">
-                                        @if(app()->getLocale() == 'ar')
-                                            <span class="input-group-text">+966</span>
-                                        @endif
-                                        <input type="text" class="form-control">
-                                        @if(app()->getLocale() != 'ar')
-                                            <span class="input-group-text">+966</span>
-                                        @endif
-                                    </div>
+                                    <label for=""
+                                           class="form-label fw-semibold">{{ __('business.benefits_section.form_labels.phone') }}</label>
+                                    <input type="number" id="phone" class="form-control" name="name"
+                                           placeholder="{{ __('auth.login.phone') }}">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="" class="form-label fw-semibold">{{ __('business.benefits_section.form_labels.city') }}</label>
-                                    <select name="" class="form-select" id="">
-                                        <option value="">{{ __('business.benefits_section.form_labels.city') }}</option>
-                                    </select>
+                                    <label for=""
+                                           class="form-label fw-semibold">{{ __('business.benefits_section.form_labels.city') }}</label>
+                                    <div class="custom-dropdown-wrapper position-relative">
+                                        <button class="form-select custom-dropdown-toggle" type="button">
+                                            {{ __('business.benefits_section.form_labels.city') }}
+                                        </button>
+                                        <ul class="custom-dropdown-options list-unstyled shadow-sm">
+                                            <li class="dropdown-item">{{ __('business.benefits_section.form_labels.city') }}</li>
+                                        </ul>
+                                    </div>
                                 </div>
                                 <div class="mb-4">
-                                    <label for="" class="form-label fw-semibold">{{ __('business.benefits_section.form_labels.entity_type') }}</label>
-                                    <select name="" class="form-select" id="">
-                                        <option value="">{{ __('business.benefits_section.form_labels.entity_type') }}</option>
-                                    </select>
+                                    <label for=""
+                                           class="form-label fw-semibold">{{ __('business.benefits_section.form_labels.entity_type') }}</label>
+                                    <div class="custom-dropdown-wrapper position-relative">
+                                        <button class="form-select custom-dropdown-toggle" type="button">
+                                            {{ __('business.benefits_section.form_labels.entity_type') }}
+                                        </button>
+                                        <ul class="custom-dropdown-options list-unstyled shadow-sm">
+                                            <li class="dropdown-item">{{ __('business.benefits_section.form_labels.entity_type') }}</li>
+                                        </ul>
+                                    </div>
                                 </div>
                                 <div class="text-end">
                                     <button class="btn btn-primary rounded-4 btn-lg px-5 py-3 fw-semibold">

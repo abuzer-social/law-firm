@@ -3,28 +3,31 @@
 @section('content')
     <div class="container-fluid home-header-container">
         <div class="row align-items-center">
-            <div class="col-lg-5">
-                <div class="d-flex align-items-end gap-3">
-                    <div>
-                        <img class="max-100" src="{{asset('assets/images/homepage-pattern.svg')}}" alt="">
+            <div class="col-lg-5 col-md-12 order-2 order-lg-1 home-img-section">
+                <div class="d-block d-lg-flex align-items-end gap-3">
+                    <div class="d-flex justify-content-center mb-3">
+                        <img class=" max-100 d-block d-lg-none" src="{{asset('assets/images/horizontal-divider.svg')}}" alt="">
+                    </div>
+                    <div class="home-pattern-img">
+                        <img class="max-100 " src="{{asset('assets/images/homepage-pattern.svg')}}" alt="">
                     </div>
                     <div>
-                        <img class="fit-content" src="{{asset('assets/images/divider.svg')}}" alt="">
+                        <img class="fit-content d-none d-lg-block" src="{{asset('assets/images/divider.svg')}}" alt="">
                     </div>
                 </div>
             </div>
-            <div class="col-lg-7">
+            <div class="col-lg-7 col-md-12 order-1 order-lg-2">
                 <div>
                     <h1 class="fw-bold pb-4">
                         {{ __('home.header.title') }}
                     </h1>
-                    <h4 class="primary fw-semibold pb-3">
+                    <h4 class="primary fw-semibold pb-3 ">
                         {{ __('home.header.subtitle') }}
                     </h4>
-                    <p class="fw-semibold home-header-desc">
+                    <p class="fw-semibold home-header-desc text-justify">
                         {{ __('home.header.description') }}
                     </p>
-                    <div class="mt-3">
+                    <div class="mt-3 d-flex justify-content-center justify-content-lg-start">
                         <button class="btn btn-primary btn-lg fw-bold d-flex align-items-center gap-3 rounded-4 px-4">
                             {{ __('home.header.button') }}
                             <img class="home-header-btn-icon" src="{{asset('assets/images/arrow-right.svg')}}" alt="">
@@ -42,7 +45,7 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-12">
                     @if(app()->getLocale() === 'ar')
                         <div class="text-center"><img src="{{asset('assets/images/service-card-ar-1.svg')}}" alt="">
                         </div>
@@ -50,7 +53,7 @@
                         <div class="text-center"><img src="{{asset('assets/images/service-card-1.svg')}}" alt=""></div>
                     @endif
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-6 col-6">
                     @if(app()->getLocale() === 'ar')
                         <div class="text-center"><img src="{{asset('assets/images/service-card-ar-2.svg')}}" alt="">
                         </div>
@@ -58,7 +61,7 @@
                         <div class="text-center"><img src="{{asset('assets/images/service-card-2.svg')}}" alt=""></div>
                     @endif
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-6 col-6">
                     @if(app()->getLocale() === 'ar')
                         <div class="text-center"><img src="{{asset('assets/images/service-card-ar-3.svg')}}" alt="">
                         </div>
@@ -66,7 +69,7 @@
                         <div class="text-center"><img src="{{asset('assets/images/service-card-3.svg')}}" alt=""></div>
                     @endif
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-12">
                     @if(app()->getLocale() === 'ar')
                         <div class="text-center"><img src="{{asset('assets/images/service-card-ar-4.svg')}}" alt="">
                         </div>
@@ -76,8 +79,8 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col"></div>
-                <div class="col">
+                <div class="col d-none d-lg-block"></div>
+                <div class="col-lg-3 col-md-6 col-6">
                     <div>
                         @if(app()->getLocale() === 'ar')
                             <div class="text-center"><img src="{{asset('assets/images/service-card-ar-5.svg')}}" alt="">
@@ -88,7 +91,7 @@
                         @endif
                     </div>
                 </div>
-                <div class="col">
+                <div class="col-lg-3 col-md-6 col-6">
                     <div>
                         @if(app()->getLocale() === 'ar')
                             <div class="text-center"><img src="{{asset('assets/images/service-card-ar-6.svg')}}" alt="">
@@ -99,7 +102,7 @@
                         @endif
                     </div>
                 </div>
-                <div class="col">
+                <div class="col-lg-3 col-md-12 col-12">
                     <div class="col-lg-3">
                         @if(app()->getLocale() === 'ar')
                             <div class="text-center"><img src="{{asset('assets/images/service-card-ar-7.svg')}}" alt="">
@@ -110,7 +113,7 @@
                         @endif
                     </div>
                 </div>
-                <div class="col"></div>
+                <div class="col d-none d-lg-block"></div>
             </div>
         </div>
     </section>
@@ -121,7 +124,7 @@
             </h1>
         </div>
         <div class="container">
-            <div class="row position-relative">
+            <div class="row g-4 position-relative">
                 <!-- Card 1 -->
                 <div class="col-lg-4">
                     <div class="card detail-card">
@@ -183,9 +186,9 @@
             <h1 class="fw-bold primary">{{ __('home.solutions.title') }}</h1>
         </div>
         <div class="container">
-            <div class="row">
+            <div class="row justify-content-between g-3">
                 <!-- Contracts Card -->
-                <div class="col">
+                <div class="flex-grow-1 col-lg-2 col-md-6">
                     <div class="card solution-card">
                         <div class="card-body">
                             <div class="solution-icon-container contracts">
@@ -199,7 +202,7 @@
                 </div>
 
                 <!-- Accounting Card -->
-                <div class="col">
+                <div class="flex-grow-1 col-lg-2 col-md-6">
                     <div class="card solution-card">
                         <div class="card-body">
                             <div class="solution-icon-container accounting">
@@ -213,7 +216,7 @@
                 </div>
 
                 <!-- Translation Card -->
-                <div class="col">
+                <div class=" flex-grow-1 col-lg-2 col-md-6">
                     <div class="card solution-card">
                         <div class="card-body">
                             <div class="solution-icon-container language">
@@ -227,7 +230,7 @@
                 </div>
 
                 <!-- Lawyer Card -->
-                <div class="col">
+                <div class="flex-grow-1 col-lg-2 col-md-6">
                     <div class="card solution-card">
                         <div class="card-body">
                             <div class="solution-icon-container lawyer">
@@ -241,7 +244,7 @@
                 </div>
 
                 <!-- Plans Card -->
-                <div class="col">
+                <div class="flex-grow-1 col-lg-2 col-md-6">
                     <div class="card solution-card">
                         <div class="card-body">
                             <div class="solution-icon-container legal">
@@ -265,11 +268,18 @@
                 {{ __('home.registration_section.subtitle') }}
             </h6>
         </div>
-        <div class="process-img py-4">
+        <div class="process-img py-4 d-none d-md-block">
             @if(app()->getLocale() === 'ar')
                 <img class="img-fluid" src="{{ asset('assets/images/processor-ar.svg') }}" alt="{{ __('home.registration_section.title') }}">
             @else
                 <img class="img-fluid" src="{{ asset('assets/images/processor.svg') }}" alt="{{ __('home.registration_section.title') }}">
+            @endif
+        </div>
+        <div class="text-center py-4 d-block d-md-none">
+            @if(app()->getLocale() === 'ar')
+                <img class="img-fluid" src="{{ asset('assets/images/processor-ar-mobile.svg') }}" alt="{{ __('home.registration_section.title') }}">
+            @else
+                <img class="img-fluid" src="{{ asset('assets/images/processor-mobile.svg') }}" alt="{{ __('home.registration_section.title') }}">
             @endif
         </div>
         <div class="mt-5 text-center">

@@ -11,6 +11,13 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
+        // Trust ngrok hosts
+        $middleware->trustHosts(at: [
+            '*.ngrok-free.app',
+            '*.ngrok.io',
+            '*.ngrok.app',
+        ]);
+
         $middleware->web(append: [
             \App\Http\Middleware\SetLocale::class,
         ]);
