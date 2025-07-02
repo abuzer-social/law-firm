@@ -4,25 +4,25 @@
     <div class="accounting-container">
         <header class="accounting-header" @if(app()->isLocale('ar')) dir="rtl" @endif>
             <div>
-                <div class="text-center">
-                    <h2 class="primary pb-3 fw-bold">{{ __('accounting.header.title') }}</h2>
+                <div class="text-center header-top">
+                    <h2 class="primary pb-3 saudi">{{ __('accounting.header.title') }}</h2>
                     <h5 class="fw-semibold">{{ __('accounting.header.subtitle') }}</h5>
                 </div>
                 <div class="container">
-                    <div class="row align-items-center py-5">
-                        <div class="col-lg-6">
+                    <div class="row g-4 align-items-center py-5">
+                        <div class="col-lg-6 order-2 order-lg-1">
                             <div @if(app()->isLocale('ar')) style="text-align: right;" @endif>
-                                <h5 class="header-desc pb-4">
+                                <h5 class="header-desc d-text-gray pb-4 text-justify">
                                     {{ __('accounting.header.description') }}
                                 </h5>
-                                <div>
+                                <div class="text-center text-lg-start">
                                     <button class="btn btn-primary btn-lg px-4 rounded-4 fw-semibold">
                                         {{ __('accounting.header.button') }}
                                     </button>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 order-1 order-lg-2">
                             <div>
                                 <img class="img-fluid rounded-5"
                                      src="{{ asset('assets/images/accounting-header.png') }}"
@@ -67,9 +67,9 @@
                     <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
                          aria-labelledby="pills-home-tab"
                          tabindex="0">
-                        <div class="row">
+                        <div class="row g-3">
                             <!-- Launch Plan -->
-                            <div class="col-lg-4">
+                            <div class="col-lg-4 col-md-12">
                                 <div class="plan-card essential-plan accounting-pkg-card">
                                     <div class="flex-grow-1">
                                         <div class="plan-tag essential">{{ __('accounting.packages.plans.launch.name') }}</div>
@@ -142,7 +142,7 @@
                             </div>
 
                             <!-- Growth Plan -->
-                            <div class="col-lg-4">
+                            <div class="col-lg-4 col-md-12">
                                 <div class="plan-card pro-plan accounting-pkg-card">
                                     <div class="flex-grow-1">
                                         <div class="plan-tag pro">{{ __('accounting.packages.plans.growth.name') }}</div>
@@ -211,7 +211,7 @@
                             </div>
 
                             <!-- Premier Plan -->
-                            <div class="col-lg-4">
+                            <div class="col-lg-4 col-md-12">
                                 <div class="plan-card flexible-plan accounting-pkg-card">
                                     <div class="flex-grow-1">
                                         <div class="plan-tag flexible">{{ __('accounting.packages.plans.premier.name') }}</div>

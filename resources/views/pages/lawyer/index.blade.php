@@ -4,12 +4,12 @@
     <header class="lawyer-header" @if(app()->isLocale('ar')) dir="rtl" @endif>
         <div>
             <div class="text-center header-top">
-                <h2 class="primary pb-3 fw-bold">{{ __('lawyer.header.title') }}</h2>
+                <h2 class="primary pb-3 saudi">{{ __('lawyer.header.title') }}</h2>
                 <h5 class="max-50 m-auto">{{ __('lawyer.header.subtitle') }}</h5>
             </div>
             <div class="container">
-                <div class="row py-5">
-                    <div class="col-lg-6">
+                <div class="row g-4 py-5">
+                    <div class="col-lg-6 order-2 order-lg-1">
                         <div @if(app()->isLocale('ar')) style="text-align: right;" @endif>
                             <h2 class="pb-3 fw-bold">
                                 {{ __('lawyer.header.service_title') }}
@@ -55,7 +55,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 order-1 order-lg-2">
                         <div>
                             <img class="w-100 rounded-5" src="{{ asset('assets/images/lawyer-header.png') }}"
                                  alt="{{ __('lawyer.header.title') }}">
@@ -72,7 +72,7 @@
             </h1>
         </div>
         <div class="container">
-            <div class="row">
+            <div class="row g-3">
                 <!-- Essential Plan -->
                 <div class="col-lg-4">
                     <div class="plan-card essential-plan">
@@ -296,7 +296,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="px-5 py-3">
+                        <div class="px-4 px-md-5 py-3">
                             <h5 class="fw-bold pb-4">
                                 {{ __('lawyer.form.title') }}
                             </h5>

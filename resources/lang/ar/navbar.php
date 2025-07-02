@@ -25,4 +25,8 @@ return [
         'en' => 'English', // This is how Arabic locale would refer to English
         'ar' => 'العربية',
     ],
+    'auth' => [
+        'login' => 'تسجيل الدخول',
+        'register' => 'إنشاء حساب',
+    ],
 ];

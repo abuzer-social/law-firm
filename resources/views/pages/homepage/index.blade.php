@@ -3,11 +3,11 @@
 @section('content')
     <div class="container-fluid home-header-container">
         <div class="row align-items-center">
-            <div class="col-lg-5 col-md-12 order-2 order-lg-1 home-img-section">
-                <div class="d-block d-lg-flex align-items-end gap-3">
-                    <div class="d-flex justify-content-center mb-3">
-                        <img class=" max-100 d-block d-lg-none" src="{{asset('assets/images/horizontal-divider.svg')}}" alt="">
-                    </div>
+            <div class="col-lg-5 col-md-12 order-2 order-lg-1 home-img-section p-0">
+                <div class="d-flex justify-content-center mb-3">
+                    <img class=" max-100 d-block d-lg-none" src="{{asset('assets/images/horizontal-divider.svg')}}" alt="">
+                </div>
+                <div class="d-block d-lg-flex justify-content-between align-items-end gap-3">
                     <div class="home-pattern-img">
                         <img class="max-100 " src="{{asset('assets/images/homepage-pattern.svg')}}" alt="">
                     </div>
@@ -16,9 +16,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-7 col-md-12 order-1 order-lg-2">
+            <div class="col-lg-7 col-md-12 order-1 order-lg-2 px-4 px-lg-5">
                 <div>
-                    <h1 class="fw-bold pb-4">
+                    <h1 class="pb-4 saudi">
                         {{ __('home.header.title') }}
                     </h1>
                     <h4 class="primary fw-semibold pb-3 ">
@@ -39,7 +39,7 @@
     </div>
     <section class="home-services-section">
         <div class="text-center pb-5 ">
-            <h1 class="fw-bold">
+            <h1 class="saudi">
                 {{ __('home.services.title') }}
             </h1>
         </div>
@@ -119,7 +119,7 @@
     </section>
     <section class="detail-section-container">
         <div class="pb-5 text-center">
-            <h1 class="fw-bold">
+            <h1 class="saudi">
                 {!! __('home.details.title') !!}
             </h1>
         </div>
@@ -183,7 +183,7 @@
     </section>
     <section class="solution-sections py-5">
         <div class="text-center mb-4">
-            <h1 class="fw-bold primary">{{ __('home.solutions.title') }}</h1>
+            <h1 class="saudi primary">{{ __('home.solutions.title') }}</h1>
         </div>
         <div class="container">
             <div class="row justify-content-between g-3">
@@ -261,7 +261,7 @@
     </section>
     <section class="process-section">
         <div class="text-center pb-5" @if(app()->getLocale() == 'ar') dir="rtl" @endif>
-            <h2 class="fw-bold pb-2">
+            <h2 class="saudi pb-2">
                 {!! __('home.registration_section.title') !!}
             </h2>
             <h6>

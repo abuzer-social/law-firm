@@ -9,7 +9,8 @@
         </a>
 
         <!-- OFFCANVAS START -->
-        <div class="offcanvas {{app()->getLocale() == 'ar' ? 'offcanvas-end' : 'offcanvas-start' }}  lf-offcanvas" tabindex="-1" id="navbarOffcanvas">
+        <div class="offcanvas {{app()->getLocale() == 'ar' ? 'offcanvas-end' : 'offcanvas-start' }}  lf-offcanvas"
+             tabindex="-1" id="navbarOffcanvas">
             <div class="offcanvas-header">
                 <img src="{{asset("assets/images/white-logo.svg")}}" alt="">
                 <button type="button" class="btn-close " data-bs-dismiss="offcanvas"></button>
@@ -64,9 +65,9 @@
                             <img src="{{ asset('assets/images/' . app()->getLocale() . '-icon.svg') }}"
                                  alt="{{ __('navbar.language.' . app()->getLocale() . '_flag') }}">
                         </div>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu custom-center-dropdown">
                             <li>
-                                <a class="dropdown-item {{ app()->getLocale() == 'en' ? 'active' : '' }}"
+                                <a class="dropdown-item mb-1 {{ app()->getLocale() == 'en' ? 'active' : '' }}"
                                    href="{{ route('set.locale', 'en') }}">
                                     <img src="{{ asset('assets/images/en-icon.svg') }}" width="20">
                                     {{ __('navbar.language.english') }}
@@ -81,9 +82,23 @@
                             </li>
                         </ul>
                     </div>
-                    <a href="{{ route('login.page') }}" class="user-icon d-none d-lg-flex">
-                        <img src="{{ asset('assets/images/nav-person-icon.svg') }}">
-                    </a>
+                    <div class="dropdown d-none d-lg-flex lang-drop-container">
+                        <a href="#" class="user-icon dropdown-toggle no-caret" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="{{ asset('assets/images/nav-person-icon.svg') }}" alt="User Icon">
+                        </a>
+                        <ul class="dropdown-menu custom-center-dropdown">
+                            <li>
+                                <a class="dropdown-item mb-1 {{ request()->is('login') ? 'active' : '' }}" href="{{ route('login.page') }}">
+                                    {{ __('navbar.auth.login') }}
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item {{ request()->is('signup') ? 'active' : '' }}" href="{{ route('signup.page') }}">
+                                    {{ __('navbar.auth.register') }}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

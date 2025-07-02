@@ -4,8 +4,8 @@
     <div class="translation-container">
         <header class="translation-header" @if(app()->isLocale('ar')) dir="rtl" @endif>
             <div>
-                <div class="text-center">
-                    <h2 class="primary pb-3 fw-bold">
+                <div class="text-center header-top">
+                    <h2 class="primary pb-3 saudi">
                         {{ __('translation.header.title') }}
                     </h2>
                     <h5 class="fw-semibold">
@@ -13,15 +13,15 @@
                     </h5>
                 </div>
                 <div class="container">
-                    <div class="row align-items-center py-5">
-                        <div class="col-lg-6">
+                    <div class="row align-items-center g-4 py-5">
+                        <div class="col-lg-6 order-2 order-lg-1">
                             <div @if(app()->isLocale('ar')) style="text-align: right;" @endif>
-                                <h5 class="header-desc pb-4">
+                                <h5 class="header-desc text-justify pb-4">
                                     {{ __('translation.header.description') }}
                                 </h5>
                             </div>
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 order-1 order-lg-2">
                             <div>
                                 <img class="img-fluid rounded-5"
                                      src="{{ asset('assets/images/translation-header.png') }}"
@@ -38,27 +38,27 @@
                     {{ __('translation.specializations.title') }}
                 </h1>
             </div>
-            <div class="container">
+            <div class="container d-none d-lg-block">
                 <div class="row {{ app()->getLocale() == 'ar' ? 'flex-row-reverse' : 'flex-row' }}">
-                    <div class="col">
+                    <div class="col-lg-3 col-md-6">
                         <div class="trans-spec-content">
                             <img src="{{ asset('assets/images/translation-s-1.svg') }}" alt="">
                             <p>{!! __('translation.specializations.types.website') !!}</p>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col-lg-3 col-md-6">
                         <div class="trans-spec-content">
                             <img src="{{ asset('assets/images/translation-s-2.svg') }}" alt="">
                             <p>{!! __('translation.specializations.types.technical') !!}</p>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col-lg-3 col-md-12">
                         <div class="trans-spec-content">
                             <img src="{{ asset('assets/images/translation-s-3.svg') }}" alt="">
                             <p>{!! __('translation.specializations.types.medical') !!}</p>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col-lg-3 col-md-6">
                         <div class="trans-spec-content">
                             <img src="{{ asset('assets/images/translation-s-4.svg') }}" alt="">
                             <p>{!! __('translation.specializations.types.legal') !!}</p>
@@ -66,22 +66,63 @@
                     </div>
                 </div>
                 <div class="row {{ app()->getLocale() == 'ar' ? 'flex-row-reverse' : 'flex-row' }}">
-                    <div class="col"></div>
-                    <div class="col">
+                    <div class="col d-none d-lg-block"></div>
+                    <div class="col col-lg-3 col-md-6">
                         <div class="trans-spec-content">
                             <img src="{{ asset('assets/images/translation-s-5.svg') }}" alt="">
                             <p>{!! __('translation.specializations.types.financial') !!}</p>
                         </div>
                     </div>
-                    <div class="col"></div>
-                    <div class="col"></div>
-                    <div class="col">
+                    <div class="col d-none d-lg-block"></div>
+                    <div class="col d-none d-lg-block"></div>
+                    <div class="col-lg-3">
                         <div class="trans-spec-content">
                             <img src="{{ asset('assets/images/translation-s-6.svg') }}" alt="">
                             <p>{!! __('translation.specializations.types.commercial') !!}</p>
                         </div>
                     </div>
-                    <div class="col"></div>
+                    <div class="col d-none d-lg-block"></div>
+                </div>
+            </div>
+            <div class="container d-block d-lg-none">
+                <div class="row {{ app()->getLocale() == 'ar' ? 'flex-row-reverse' : 'flex-row' }}">
+                    <div class="col-6 col-lg-3 col-md-6">
+                        <div class="trans-spec-content">
+                            <img src="{{ asset('assets/images/translation-s-1.svg') }}" alt="">
+                            <p>{!! __('translation.specializations.types.website') !!}</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3 col-md-6">
+                        <div class="trans-spec-content">
+                            <img src="{{ asset('assets/images/translation-s-2.svg') }}" alt="">
+                            <p>{!! __('translation.specializations.types.technical') !!}</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-3 col-md-12">
+                        <div class="trans-spec-content">
+                            <img src="{{ asset('assets/images/translation-s-5.svg') }}" alt="">
+                            <p>{!! __('translation.specializations.types.financial') !!}</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3 col-md-6">
+                        <div class="trans-spec-content">
+                            <img src="{{ asset('assets/images/translation-s-3.svg') }}" alt="">
+                            <p>{!! __('translation.specializations.types.medical') !!}</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3 col-md-6">
+                        <div class="trans-spec-content">
+                            <img src="{{ asset('assets/images/translation-s-4.svg') }}" alt="">
+                            <p>{!! __('translation.specializations.types.legal') !!}</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-3 col-md-12">
+                        <div class="trans-spec-content">
+                            <img src="{{ asset('assets/images/translation-s-6.svg') }}" alt="">
+                            <p>{!! __('translation.specializations.types.commercial') !!}</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -90,7 +131,7 @@
                 <div class="pb-5 text-center">
                     <h2 class="fw-bold primary">How the Service Works</h2>
                 </div>
-                <div class="d-flex align-items-center">
+                <div class="d-flex align-items-center flex-column flex-lg-row gap-5 gap-lg-0">
                     <div>
                         @if(app()->getLocale() === 'ar')
                             <img class="img-fluid" src="{{ asset('assets/images/ts-ar-1.svg') }}" alt="">
@@ -98,7 +139,7 @@
                             <img class="img-fluid" src="{{ asset('assets/images/ts-1.svg') }}" alt="">
                         @endif
                     </div>
-                    <img class="mt-5 trans-stepper" src="{{ asset('assets/images/proceed.svg') }}" alt="">
+                    <img class="mt-0 mt-lg-5 trans-stepper" src="{{ asset('assets/images/proceed.svg') }}" alt="">
                     <div>
                         @if(app()->getLocale() === 'ar')
                             <img class="img-fluid" src="{{ asset('assets/images/ts-ar-2.svg') }}" alt="">
@@ -106,7 +147,7 @@
                             <img class="img-fluid" src="{{ asset('assets/images/ts-2.svg') }}" alt="">
                         @endif
                     </div>
-                    <img class="mt-5 trans-stepper" src="{{ asset('assets/images/proceed.svg') }}" alt="">
+                    <img class="mt-0 mt-lg-5 trans-stepper" src="{{ asset('assets/images/proceed.svg') }}" alt="">
                     <div>
                         @if(app()->getLocale() === 'ar')
                             <img class="img-fluid" src="{{ asset('assets/images/ts-ar-3.svg') }}" alt="">
@@ -114,7 +155,7 @@
                             <img class="img-fluid" src="{{ asset('assets/images/ts-3.svg') }}" alt="">
                         @endif
                     </div>
-                    <img class="mt-5 trans-stepper" src="{{ asset('assets/images/proceed.svg') }}" alt="">
+                    <img class="mt-0 mt-lg-5 trans-stepper" src="{{ asset('assets/images/proceed.svg') }}" alt="">
                     <div>
                         @if(app()->getLocale() === 'ar')
                             <img class="img-fluid" src="{{ asset('assets/images/ts-ar-4.svg') }}" alt="">
@@ -164,7 +205,7 @@
                                                placeholder="{{ __('translation.form.fields.file_name') }}">
                                     </div>
                                     <div class="row g-2">
-                                        <div class="col-lg-6">
+                                        <div class="col-6 col-lg-6 col-md-6">
                                             <div class="mb-4">
                                                 <div class="custom-dropdown-wrapper position-relative">
                                                     <button class="form-select custom-dropdown-toggle" type="button">
@@ -177,7 +218,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-6">
+                                        <div class="col-6 col-lg-6 col-md-6">
                                             <div class="mb-4">
                                                 <div class="custom-dropdown-wrapper position-relative">
                                                     <button class="form-select custom-dropdown-toggle" type="button">
@@ -192,7 +233,7 @@
                                         </div>
                                     </div>
                                     <div class="row g-2">
-                                        <div class="col-lg-6">
+                                        <div class="col-6 col-lg-6 col-md-6">
                                             <div class="mb-4">
                                                 <div class="custom-dropdown-wrapper position-relative">
                                                     <button class="form-select custom-dropdown-toggle" type="button">
@@ -205,7 +246,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-6">
+                                        <div class="col-6 col-lg-6 col-md-6">
                                             <div class="mb-4">
                                                 <div class="custom-dropdown-wrapper position-relative">
                                                     <button class="form-select custom-dropdown-toggle" type="button">

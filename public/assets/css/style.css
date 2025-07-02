@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+@font-face {
+  font-family: "Saudi";
+  src: url("/assets/fonts/RTL-Saudi-Bold.ttf");
+}
 /* Hide spin buttons in Chrome, Safari, Edge, Opera */
 input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button {
@@ -8,6 +12,10 @@ input[type=number]::-webkit-inner-spin-button {
 
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
+}
+
+.saudi {
+  font-family: "Saudi";
 }
 
 /* Hide in Firefox */
@@ -125,6 +133,15 @@ input::placeholder {
   text-align: justify;
 }
 
+.no-caret::after {
+  display: none !important;
+}
+
+.custom-center-dropdown {
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+
 body {
   font-family: "Tajawal", sans-serif;
   min-height: 100vh;
@@ -150,6 +167,15 @@ body {
 }
 .navbar .navbar-collapse {
   justify-content: center;
+}
+.navbar .dropdown-menu.show {
+  background-color: #FAFAFA;
+  border-radius: 6px;
+  border: none;
+}
+
+.dropdown-menu {
+  top: 115% !important;
 }
 
 .navbar .navbar-nav .nav-link.active,
@@ -376,6 +402,27 @@ body {
   align-items: center;
 }
 
+.lang-drop-container .dropdown-menu.show {
+  border: 1px solid #EDEDED;
+  border-radius: 9px;
+  padding: 5px;
+  background-color: white;
+}
+.lang-drop-container .dropdown-menu.show .dropdown-item {
+  background-color: #F9F9F9;
+  font-weight: 700;
+  border-radius: 5px;
+}
+.lang-drop-container .dropdown-menu.show .dropdown-item:hover {
+  background-color: #E4F0FF !important;
+  color: #0F898C;
+}
+
+.lang-drop-container .dropdown-item.active {
+  background-color: #E4F0FF !important;
+  color: #0F898C;
+}
+
 .iti__flag {
   display: none !important;
 }
@@ -505,8 +552,8 @@ input[id=phone] {
 .detail-upper-pattern {
   max-width: 100px;
   position: absolute;
-  bottom: -20%;
-  right: 26%;
+  bottom: -39%;
+  right: 25%;
   z-index: -1;
 }
 
@@ -721,7 +768,7 @@ input[id=phone] {
 }
 
 .bottom-footer {
-  border-top: 1px solid #e9ecef;
+  border-top: 1px solid #C3C3C3;
 }
 
 .registering-section {
@@ -1129,7 +1176,12 @@ input[id=phone] {
 }
 .accounting-header .header-desc {
   line-height: 33px;
-  color: #565656;
+}
+.accounting-header .header-top h2 {
+  font-size: 70px;
+}
+.accounting-header .header-top h5 {
+  font-size: 25px;
 }
 
 .acounting-section {
@@ -1137,6 +1189,9 @@ input[id=phone] {
   padding-bottom: 110px;
   margin-bottom: 100px;
   background-size: contain;
+}
+.acounting-section h1 {
+  font-size: 35px;
 }
 
 .accounting-pkg-card {
@@ -1152,6 +1207,12 @@ input[id=phone] {
 .translation-header .header-desc {
   line-height: 33px;
   color: #565656;
+}
+.translation-header .header-top h2 {
+  font-size: 70px;
+}
+.translation-header .header-top h5 {
+  font-size: 25px;
 }
 
 .translation-service {
@@ -1218,7 +1279,6 @@ input[id=phone] {
   }
 }
 .file-upload-container {
-  max-width: 600px;
   margin: 0 auto;
 }
 
@@ -1334,7 +1394,10 @@ input[id=phone] {
   padding: 100px 0;
 }
 .lawyer-header .header-top h2 {
-  font-size: 70px;
+  font-size: 50px;
+}
+.lawyer-header .header-top h5 {
+  font-size: 25px;
 }
 .lawyer-header .lawyer-points {
   width: 28px;
@@ -1532,6 +1595,23 @@ input[id=phone] {
   left: 5px !important;
 }
 
+.contact-container .header h2 {
+  font-size: 35px;
+}
+.contact-container .header h4 {
+  font-size: 20px;
+}
+
+.business-header-content-span::before {
+  content: url("/assets/images/red-underline.svg"); /* or an asset() URL if using Laravel + Blade */
+  display: inline-block; /* or block depending on layout */
+  width: 20px; /* optional: control image size */
+  height: 20px;
+  margin-right: 8px; /* spacing between image and text */
+  vertical-align: middle; /* align with text */
+  position: absolute;
+}
+
 @media (max-width: 1200px) {
   .about-content {
     padding: 40px 45px 80px 45px;
@@ -1669,6 +1749,36 @@ input[id=phone] {
     background-size: contain;
     padding: 50px 0;
   }
+  .lawyer-plan-section .plan-card {
+    min-height: 100%;
+  }
+  .accounting-header .header-top h2 {
+    font-size: 40px;
+  }
+  .accounting-header .header-top h5 {
+    font-size: 20px;
+  }
+  .acounting-section h1 {
+    font-size: 30px;
+  }
+  .translation-header .header-top h2 {
+    font-size: 40px;
+  }
+  .translation-header .header-top h5 {
+    font-size: 20px;
+  }
+  .translation-service .trans-stepper {
+    transform: rotate(90deg);
+  }
+  .translation-specialization h1 {
+    font-size: 35px;
+  }
+  .about-content {
+    background-image: url(/assets/images/small-about-pattern-mob.png);
+    background-size: 100%;
+    padding: 40px 45px 120px 45px;
+    background-repeat: no-repeat;
+  }
 }
 @media (max-width: 768px) {
   .login-card {
@@ -1743,6 +1853,31 @@ input[id=phone] {
   }
   .business-plan-section.document-section .header h5 {
     font-size: 18px !important;
+  }
+  .contact-card-section {
+    padding: 50px 10px;
+  }
+  .contact-card-section h1 {
+    font-size: 20px;
+  }
+  .lawyer-header .header-top h5 {
+    max-width: 75%;
+    font-weight: bold;
+  }
+  .lawyer-form-section {
+    margin-bottom: 0;
+    padding: 40px 10px;
+  }
+  .lawyer-header .header-top h2 {
+    font-size: 40px;
+  }
+  .lawyer-header {
+    padding: 70px 0;
+  }
+}
+@media (max-width: 576px) {
+  .trans-spec-content img {
+    max-width: 100%;
   }
 }
 

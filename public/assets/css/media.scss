@@ -142,15 +142,59 @@
     .document-header h5 {
         font-size: 18px !important;
     }
-    .contract-tags{
+    .contract-tags {
         max-width: 100%;
     }
-    .document-header, .contract-section{
+    .document-header, .contract-section {
         padding: 70px 0;
     }
-    .business-plan-section.document-section{
+    .business-plan-section.document-section {
         background-size: contain;
         padding: 50px 0;
+    }
+    .lawyer-plan-section {
+        .plan-card {
+            min-height: 100%;
+        }
+    }
+    .accounting-header .header-top {
+        h2 {
+            font-size: 40px;
+        }
+
+        h5 {
+            font-size: 20px;
+        }
+    }
+    .acounting-section {
+        h1 {
+            font-size: 30px;
+        }
+    }
+    .translation-header .header-top {
+        h2 {
+            font-size: 40px;
+        }
+
+        h5 {
+            font-size: 20px;
+        }
+    }
+    .translation-service {
+        .trans-stepper {
+            transform: rotate(90deg);
+        }
+    }
+    .translation-specialization {
+        h1 {
+            font-size: 35px;
+        }
+    }
+    .about-content {
+        background-image: url(/assets/images/small-about-pattern-mob.png);
+        background-size: 100%;
+        padding: 40px 45px 120px 45px;
+        background-repeat: no-repeat;
     }
 }
 
@@ -233,11 +277,38 @@
     .benefit-section {
         padding: 80px 10px;
     }
-    .business-plan-section.document-section .header h2{
+    .business-plan-section.document-section .header h2 {
         font-size: 30px;
     }
-    .business-plan-section.document-section .header h5{
+    .business-plan-section.document-section .header h5 {
         font-size: 18px !important;
+    }
+    .contact-card-section {
+        padding: 50px 10px;
+    }
+    .contact-card-section {
+        h1 {
+            font-size: 20px;
+        }
+    }
+    .lawyer-header .header-top h5 {
+        max-width: 75%;
+        font-weight: bold;
+    }
+    .lawyer-form-section {
+        margin-bottom: 0;
+        padding: 40px 10px;
+    }
+    .lawyer-header .header-top h2 {
+        font-size: 40px;
+    }
+    .lawyer-header {
+        padding: 70px 0;
     }
 }
 
+@media (max-width: 576px) {
+    .trans-spec-content img {
+        max-width: 100%;
+    }
+}

@@ -11,7 +11,7 @@ return [
             'receive_answers' => 'Receive answers from a professional lawyer',
             'solve_problem' => 'Solve your problem and move forward'
         ],
-        'button' => 'Get Started'
+        'button' => 'Get Your Plan Now'
     ],
     'packages' => [
         'title' => 'Ask a Lawyer Packages',

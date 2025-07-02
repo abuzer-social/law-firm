@@ -33,6 +33,15 @@ body {
     .navbar-collapse {
         justify-content: center;
     }
+
+    .dropdown-menu.show {
+        background-color: #FAFAFA;
+        border-radius: 6px;
+        border: none;
+    }
+}
+.dropdown-menu{
+    top: 115% !important;
 }
 
 .navbar .navbar-nav .nav-link.active,
@@ -271,8 +280,32 @@ body {
     display: flex;
     gap: 10px;
     align-items: center;
+
 }
 
+.lang-drop-container {
+    .dropdown-menu.show {
+        border: 1px solid #EDEDED;
+        border-radius: 9px;
+        padding: 5px;
+        background-color: white;
+
+        .dropdown-item {
+            background-color: #F9F9F9;
+            &:hover {
+                background-color: #E4F0FF !important;
+                color: $primary-color;
+            }
+
+            font-weight: 700;
+            border-radius: 5px;
+        }
+    }
+}
+.lang-drop-container .dropdown-item.active{
+    background-color: #E4F0FF !important;
+    color: $primary-color;
+}
 .iti__flag {
     display: none !important;
 }
@@ -408,10 +441,11 @@ input[id = 'phone'] {
 }
 
 .detail-upper-pattern {
+
     max-width: 100px;
     position: absolute;
-    bottom: -20%;
-    right: 26%;
+    bottom: -39%;
+    right: 25%;
     z-index: -1;
 }
 
@@ -637,7 +671,7 @@ input[id = 'phone'] {
 }
 
 .bottom-footer {
-    border-top: 1px solid #e9ecef;
+    border-top: 1px solid #C3C3C3;
 }
 
 .registering-section {
@@ -899,13 +933,15 @@ input[id = 'phone'] {
 .lawyer-section {
     padding: 50px 0;
 }
-.lawyer-underline{
+
+.lawyer-underline {
     white-space: nowrap;
     background-image: url("/assets/images/black-underline.svg");
     background-size: 45%;
     background-repeat: no-repeat;
     background-position: right;
 }
+
 .counter-component {
     display: inline-flex;
     border-radius: 12px;
@@ -1060,7 +1096,16 @@ input[id = 'phone'] {
 
     .header-desc {
         line-height: 33px;
-        color: #565656;
+    }
+
+    .header-top {
+        h2 {
+            font-size: 70px;
+        }
+
+        h5 {
+            font-size: 25px;
+        }
     }
 }
 
@@ -1070,6 +1115,10 @@ input[id = 'phone'] {
     padding-bottom: 110px;
     margin-bottom: 100px;
     background-size: contain;
+
+    h1 {
+        font-size: 35px;
+    }
 }
 
 .accounting-pkg-card {
@@ -1085,6 +1134,16 @@ input[id = 'phone'] {
     .header-desc {
         line-height: 33px;
         color: #565656;
+    }
+
+    .header-top {
+        h2 {
+            font-size: 70px;
+        }
+
+        h5 {
+            font-size: 25px;
+        }
     }
 }
 
@@ -1153,7 +1212,6 @@ input[id = 'phone'] {
 }
 
 .file-upload-container {
-    max-width: 600px;
     margin: 0 auto;
 }
 
@@ -1274,7 +1332,11 @@ input[id = 'phone'] {
 
     .header-top {
         h2 {
-            font-size: 70px;
+            font-size: 50px;
+        }
+
+        h5 {
+            font-size: 25px;
         }
     }
 
@@ -1481,4 +1543,26 @@ input[id = 'phone'] {
     left: 5px !important;
 }
 
+.contact-container {
+    .header {
+        h2 {
+            font-size: 35px
+        }
+
+        h4 {
+            font-size: 20px;
+        }
+    }
+}
+.business-header-content-span{
+    &::before{
+        content: url("/assets/images/red-underline.svg"); /* or an asset() URL if using Laravel + Blade */
+        display: inline-block; /* or block depending on layout */
+        width: 20px;            /* optional: control image size */
+        height: 20px;
+        margin-right: 8px;      /* spacing between image and text */
+        vertical-align: middle; /* align with text */
+        position: absolute;
+    }
+}
 @import "media";

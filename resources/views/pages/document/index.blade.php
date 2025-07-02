@@ -4,7 +4,7 @@
     <header class="document-header" @if(app()->isLocale('ar')) dir="rtl" @endif>
         <div>
             <div class="text-center header-top">
-                <h2 class="pb-3 fw-bold">{{ __('document.title') }}</h2>
+                <h2 class="pb-3 saudi">{{ __('document.title') }}</h2>
                 <h5 class="max-50 m-auto dark-gray">{{ __('document.subtitle') }}</h5>
             </div>
             <section class="legal-section">
