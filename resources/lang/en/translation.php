@@ -38,5 +38,8 @@ return [
             'certified' => 'Certified Translation',
             'standard' => 'Translation Only'
         ]
+    ],
+    'services' => [
+        'how_service_works' => 'How the Service Works',
     ]
 ];

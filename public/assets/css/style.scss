@@ -40,7 +40,8 @@ body {
         border: none;
     }
 }
-.dropdown-menu{
+
+.dropdown-menu {
     top: 115% !important;
 }
 
@@ -55,7 +56,7 @@ body {
 }
 
 .navbar .navbar-nav .dropdown > .nav-link.active {
-    background-color: transparent;
+    background-color: #FAFAFA;
 }
 
 .navbar .navbar-nav .dropdown-item.active {
@@ -126,8 +127,18 @@ body {
 
 .login-page {
     background-image: url("/assets/images/bg-pattern.png");
+    background-size: contain;
+    background-position: center;
+}
+.signup-bg{
+    background-image: url("/assets/images/bg-pattern.png");
     background-size: cover;
     background-position: center;
+}
+.signup-card{
+    label{
+        color: #6C6868;
+    }
 }
 
 // Login Form Styles
@@ -231,7 +242,6 @@ body {
     border-radius: 13px;
     font-weight: 500;
     width: 100%;
-    margin: 15px 0;
     transition: background-color 0.3s ease;
 
     &:hover {
@@ -287,6 +297,7 @@ body {
 
         .dropdown-item {
             background-color: #F9F9F9;
+
             &:hover {
                 background-color: #E4F0FF !important;
                 color: $primary-color;
@@ -297,10 +308,12 @@ body {
         }
     }
 }
-.lang-drop-container .dropdown-item.active{
+
+.lang-drop-container .dropdown-item.active {
     background-color: #E4F0FF !important;
     color: $primary-color;
 }
+
 .iti__flag {
     display: none !important;
 }
@@ -697,7 +710,8 @@ input[id = 'phone'] {
 
 .process-section {
     padding: 100px 0;
-    .btn{
+
+    .btn {
         font-size: 20px;
         border-radius: 18px;
         padding: 15px 25px;
@@ -720,7 +734,7 @@ input[id = 'phone'] {
         padding: 0 20px;
 
         h1 {
-            font-size: 40px;
+            font-size: 70px;
         }
 
         p {
@@ -863,6 +877,7 @@ input[id = 'phone'] {
     border-radius: 9px;
     padding: 20px;
     margin-top: 20px;
+    min-height: 270px;
 }
 
 .essential-additional {
@@ -870,6 +885,7 @@ input[id = 'phone'] {
     border-radius: 9px;
     padding: 20px;
     margin-top: 20px;
+    min-height: 270px;
 }
 
 .growth-additional {
@@ -877,6 +893,7 @@ input[id = 'phone'] {
     border-radius: 9px;
     padding: 20px;
     margin-top: 20px;
+    min-height: 270px;
 }
 
 .ticket-container {
@@ -1061,10 +1078,51 @@ input[id = 'phone'] {
 }
 
 .about-content {
-    background-image: url(/assets/images/small-about-pattern.png);
-    background-size: 100%;
-    padding: 40px 45px 120px 45px;
-    background-repeat: no-repeat;
+    padding: 50px 30px;
+    border: 2px solid #EEEEEE;
+    border-radius: 10px;
+    margin-bottom: 80px !important;
+    position: relative;
+
+    .top-left {
+        position: absolute;
+        left: -4px;
+        top: -4px;
+    }
+
+    .top-right {
+        position: absolute;
+        right: -4px;
+        top: -4px;
+    }
+
+    .top-quote {
+        position: absolute;
+        top: -45px;
+        left: 20%;
+        background: white;
+        padding: 20px;
+    }
+
+    .bottom-left {
+        position: absolute;
+        left: -4px;
+        bottom: -4px;
+    }
+
+    .bottom-right {
+        position: absolute;
+        bottom: -4px;
+        right: 100px;
+    }
+
+    .bottom-quote {
+        position: absolute;
+        bottom: -40px;
+        left: 10%;
+        background: white;
+        padding: 20px;
+    }
 
     p {
         font-size: 16px;
@@ -1074,19 +1132,6 @@ input[id = 'phone'] {
     }
 }
 
-.about-large-content {
-    background-image: url(/assets/images/large-about-pattern.png);
-    background-size: 100%;
-    padding: 40px 45px 120px 45px;
-    background-repeat: no-repeat;
-
-    p {
-        font-size: 16px;
-        color: #606060;
-        line-height: 31px;
-        font-weight: 700;
-    }
-}
 
 .accounting-header {
     padding: 50px 0;
@@ -1332,7 +1377,7 @@ input[id = 'phone'] {
 
     .header-top {
         h2 {
-            font-size: 50px;
+            font-size: 70px;
         }
 
         h5 {
@@ -1546,7 +1591,7 @@ input[id = 'phone'] {
 .contact-container {
     .header {
         h2 {
-            font-size: 35px
+            font-size: 50px
         }
 
         h4 {
@@ -1554,6 +1599,7 @@ input[id = 'phone'] {
         }
     }
 }
+
 //.business-header-content-span{
 //    &::before{
 //        content: url("/assets/images/red-underline.svg"); /* or an asset() URL if using Laravel + Blade */
@@ -1588,8 +1634,12 @@ input[id = 'phone'] {
 
 /* Your animation as-is */
 @keyframes l21 {
-    50%  { box-shadow: 19px 0 0 3px, 38px 0 0 7px, 57px 0 0 3px; }
-    100% { box-shadow: 19px 0 0 0,   38px 0 0 3px, 57px 0 0 7px; }
+    50% {
+        box-shadow: 19px 0 0 3px, 38px 0 0 7px, 57px 0 0 3px;
+    }
+    100% {
+        box-shadow: 19px 0 0 0, 38px 0 0 3px, 57px 0 0 7px;
+    }
 }
 
 @import "media";

@@ -1,8 +1,8 @@
 @extends('layouts.main')
 
 @section('content')
-    <header class="business-header" @if(app()->isLocale('ar')) dir="rtl" @endif>
-        <div>
+    <header class="business-header margin-top" @if(app()->isLocale('ar')) dir="rtl" @endif>
+        <div class="padding-top">
             <div class="text-center header">
                 <h1 class="primary pb-3 saudi">{{ __('business.header.title') }}</h1>
                 <h5 class="fw-semibold">{{ __('business.header.subtitle') }}</h5>
@@ -46,7 +46,7 @@
         <div class="container">
             <div class="row mt-5">
                 <div class="col-lg-8 text-center">
-                    <ul class="nav nav-pills mb-3 subscription-toggle" id="pills-tab" role="tablist">
+                    <ul class="nav nav-pills mb-3 subscription-toggle flex-nowrap" id="pills-tab" role="tablist">
                         <li class="nav-item" role="presentation">
                             <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
                                     data-bs-target="#pills-home"
@@ -382,40 +382,73 @@
                                     {{ __('business.benefits_section.form_title') }}
                                 </h2>
                             </div>
-                            <form action="">
+                            <form method="POST" action="{{ route('business.submit') }}">
+                                @csrf
                                 <div class="mb-3">
-                                    <label for=""
-                                           class="form-label fw-semibold">{{ __('business.benefits_section.form_labels.name') }}</label>
-                                    <input type="text" class="form-control">
+                                    <label class="form-label fw-semibold">
+                                        {{ __('business.benefits_section.form_labels.name') }}
+                                    </label>
+                                    <input type="text" name="name"
+                                           class="form-control @error('name') is-invalid @enderror"
+                                           value="{{ old('name') }}">
+                                    @error('name')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                    @enderror
                                 </div>
                                 <div class="mb-3">
-                                    <label for=""
-                                           class="form-label fw-semibold">{{ __('business.benefits_section.form_labels.phone') }}</label>
-                                    <input type="number" id="phone" class="form-control" name="name"
+                                    <label class="form-label fw-semibold">
+                                        {{ __('business.benefits_section.form_labels.phone') }}
+                                    </label>
+                                    <input type="number" name="phone" id="phone"
+                                           class="form-control @error('phone') is-invalid @enderror"
+                                           value="{{ old('phone') }}"
                                            placeholder="{{ __('auth.login.phone') }}">
+                                    @error('phone')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                    @enderror
                                 </div>
                                 <div class="mb-3">
-                                    <label for=""
-                                           class="form-label fw-semibold">{{ __('business.benefits_section.form_labels.city') }}</label>
+                                    <label class="form-label fw-semibold">
+                                        {{ __('business.benefits_section.form_labels.city') }}
+                                    </label>
                                     <div class="custom-dropdown-wrapper position-relative">
-                                        <button class="form-select custom-dropdown-toggle" type="button">
-                                            {{ __('business.benefits_section.form_labels.city') }}
+                                        <button type="button"
+                                                style="height: 40px"
+                                                class="form-select custom-dropdown-toggle @error('city') is-invalid @enderror"
+                                                data-input-id="city">
+                                            {{ old('city', __('business.benefits_section.form_labels.city')) }}
                                         </button>
                                         <ul class="custom-dropdown-options list-unstyled shadow-sm">
-                                            <li class="dropdown-item">{{ __('business.benefits_section.form_labels.city') }}</li>
+                                            <li class="dropdown-item" data-value="Riyadh">Riyadh</li>
+                                            <li class="dropdown-item" data-value="Jeddah">Jeddah</li>
+                                            <li class="dropdown-item" data-value="Dammam">Dammam</li>
                                         </ul>
+                                        <input type="hidden" name="city" id="city" value="{{ old('city') }}">
+                                        @error('city')
+                                        <div class="invalid-feedback d-block">{{ $message }}</div>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="mb-4">
-                                    <label for=""
-                                           class="form-label fw-semibold">{{ __('business.benefits_section.form_labels.entity_type') }}</label>
+                                    <label class="form-label fw-semibold">
+                                        {{ __('business.benefits_section.form_labels.entity_type') }}
+                                    </label>
                                     <div class="custom-dropdown-wrapper position-relative">
-                                        <button class="form-select custom-dropdown-toggle" type="button">
-                                            {{ __('business.benefits_section.form_labels.entity_type') }}
+                                        <button type="button"
+                                                style="height: 40px"
+                                                class="form-select custom-dropdown-toggle @error('entity_type') is-invalid @enderror"
+                                                data-input-id="entity_type">
+                                            {{ old('entity_type', __('business.benefits_section.form_labels.entity_type')) }}
                                         </button>
                                         <ul class="custom-dropdown-options list-unstyled shadow-sm">
-                                            <li class="dropdown-item">{{ __('business.benefits_section.form_labels.entity_type') }}</li>
+                                            <li class="dropdown-item" data-value="individual">Individual</li>
+                                            <li class="dropdown-item" data-value="company">Company</li>
+                                            <li class="dropdown-item" data-value="government">Government</li>
                                         </ul>
+                                        <input type="hidden" name="entity_type" id="entity_type" value="{{ old('entity_type') }}">
+                                        @error('entity_type')
+                                        <div class="invalid-feedback d-block">{{ $message }}</div>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="text-end">

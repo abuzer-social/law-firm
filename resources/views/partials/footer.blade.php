@@ -43,7 +43,6 @@
                             <a href="#privacy">{{ __('footer.links.privacy') }}</a>
                             <a href="#terms">{{ __('footer.links.terms') }}</a>
                             <a href="#faq">{{ __('footer.links.faq') }}</a>
-                            <a href="#firm">{{ __('footer.links.firm') }}</a>
                         </div>
                     </div>
                 </div>

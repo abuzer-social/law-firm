@@ -27,7 +27,7 @@ return [
             'mobile' => 'Mobile Number',
             'country_code' => 'Country Code',
             'terms_acceptance' => 'Acceptance of the terms and conditions',
-            'submit' => 'Submit',
+            'submit' => 'Send',
         ],
         'welcome' => [
             'title' => 'Welcome!',
@@ -36,7 +36,7 @@ return [
                 'account_type' => 'Choose the account type that best fits your profile (Individual / Government / Entity).',
                 'help' => 'Need help? We\'re just a message away!',
                 'review' => 'Double-check your information before submitting.',
-                'terms' => 'Take a moment to read through our terms and conditions.',
+                'terms' => 'Take a moment to read through our <span class="primary">terms and conditions.</span>',
             ],
         ],
         'already_account' => 'Already have an account?',

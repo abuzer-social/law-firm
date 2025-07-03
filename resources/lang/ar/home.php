@@ -44,7 +44,7 @@ return [
         'title' => "<span class='primary'>دفاع</span> قوتها في التفاصيل",
         'card1' => [
             'title' => 'تتبع الرصيد',
-            'description' => 'استعرض رصيدك عبر حسابك'
+            'description' => 'ابدأ الخدمة فور اشتراكك'
         ],
         'card2' => [
             'title' => 'تتبع حالة طلبات الكترونياً',
@@ -52,7 +52,7 @@ return [
         ],
         'card3' => [
             'title' => 'سهولة الاشتراك',
-            'description' => 'إبدأ الخدمة فور اشتراكك'
+            'description' => 'استعرض رصيدك عبر حسابك'
         ]
     ],
     'solutions' => [

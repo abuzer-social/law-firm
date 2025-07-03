@@ -47,14 +47,6 @@ input[id=phone] {
   direction: rtl;
 }
 
-.about-large-content {
-  padding: 80px 45px 150px 45px;
-}
-
-.about-content {
-  padding: 70px 45px 150px 45px;
-}
-
 .trans-stepper {
   transform: rotate(180deg);
 }

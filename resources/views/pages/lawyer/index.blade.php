@@ -1,8 +1,8 @@
 @extends('layouts.main')
 
 @section('content')
-    <header class="lawyer-header" @if(app()->isLocale('ar')) dir="rtl" @endif>
-        <div>
+    <header class="lawyer-header margin-top" @if(app()->isLocale('ar')) dir="rtl" @endif>
+        <div class="padding-top">
             <div class="text-center header-top">
                 <h2 class="primary pb-3 saudi">{{ __('lawyer.header.title') }}</h2>
                 <h5 class="max-50 m-auto">{{ __('lawyer.header.subtitle') }}</h5>
@@ -91,7 +91,7 @@
                                         {{ __('lawyer.packages.plans.essential.consultations') }}
                                     </h6>
                                 </div>
-                                <p class="fw-bold py-3 dark-gray">يشمل</p>
+                                <p class="fw-bold py-3 dark-gray">{{ __('lawyer.packages.plans.includes') }}</p>
                                 <div>
                                     <div class="d-flex align-items-center gap-3 mb-3">
                                         <div class="plan-enable essential-counter">
@@ -161,7 +161,7 @@
                                     {{ __('lawyer.packages.plans.growth.consultations') }}
                                 </h6>
                             </div>
-                            <p class="fw-bold py-3 dark-gray">يشمل</p>
+                            <p class="fw-bold py-3 dark-gray">{{ __('lawyer.packages.plans.includes') }}</p>
                             <div>
                                 <div class="d-flex align-items-center gap-3 mb-3">
                                     <div class="plan-enable pro-counter">
@@ -226,7 +226,7 @@
                                     {{ __('lawyer.packages.plans.premier.consultations') }}
                                 </h6>
                             </div>
-                            <p class="fw-bold py-3 dark-gray">يشمل</p>
+                            <p class="fw-bold py-3 dark-gray">{{ __('lawyer.packages.plans.includes') }}</p>
                             <div>
                                 <div class="d-flex align-items-center gap-3 mb-3">
                                     <div class="plan-enable premier-counter">
@@ -300,59 +300,84 @@
                             <h5 class="fw-bold pb-4">
                                 {{ __('lawyer.form.title') }}
                             </h5>
-                            <form action="">
+                            <form method="POST" action="{{ route('lawyer.submit') }}" enctype="multipart/form-data">
+                                @csrf
+
+                                {{-- Lawsuit Question --}}
                                 <div class="mb-3">
-                                    <label for=""
-                                           class="form-label fw-semibold">{{ __('lawyer.form.lawsuit_question') }}</label>
+                                    <label class="form-label fw-semibold">{{ __('lawyer.form.lawsuit_question') }}</label>
                                     <div class="custom-dropdown-wrapper position-relative">
-                                        <button class="form-select custom-dropdown-toggle" type="button">
-                                            {{ __('lawyer.form.yes_no_placeholder') }}
+                                        <button type="button"
+                                                style="height: 40px"
+                                                class="form-select custom-dropdown-toggle @error('lawsuit') is-invalid @enderror"
+                                                data-input-id="lawsuit">
+                                            {{ old('lawsuit') ? (old('lawsuit') == 'yes' ? __('lawyer.form.yes') : __('lawyer.form.no')) : __('lawyer.form.yes_no_placeholder') }}
                                         </button>
                                         <ul class="custom-dropdown-options list-unstyled shadow-sm">
-                                            <li class="dropdown-item">{{ __('lawyer.form.yes') }}</li>
-                                            <li class="dropdown-item">{{ __('lawyer.form.no') }}</li>
+                                            <li class="dropdown-item" data-value="yes">{{ __('lawyer.form.yes') }}</li>
+                                            <li class="dropdown-item" data-value="no">{{ __('lawyer.form.no') }}</li>
                                         </ul>
+                                        <input type="hidden" name="lawsuit" id="lawsuit" value="{{ old('lawsuit') }}">
+                                        @error('lawsuit')
+                                        <div class="invalid-feedback d-block">{{ $message }}</div>
+                                        @enderror
                                     </div>
                                 </div>
+
+                                {{-- Consultation Type --}}
                                 <div class="mb-3">
-                                    <label for=""
-                                           class="form-label fw-semibold">{{ __('lawyer.form.consultation_type') }}</label>
+                                    <label
+                                        class="form-label fw-semibold">{{ __('lawyer.form.consultation_type') }}</label>
                                     <div class="custom-dropdown-wrapper position-relative">
-                                        <button class="form-select custom-dropdown-toggle" type="button">
-                                            {{ __('lawyer.form.select_case_placeholder') }}
+                                        <button type="button"
+                                                style="height: 40px"
+                                                class="form-select custom-dropdown-toggle @error('consultation_type') is-invalid @enderror"
+                                                data-input-id="consultation_type">
+                                            {{ old('consultation_type', __('lawyer.form.select_case_placeholder')) }}
                                         </button>
                                         <ul class="custom-dropdown-options list-unstyled shadow-sm">
-                                            <li class="dropdown-item">{{ __('lawyer.form.commercial_case') }}</li>
-                                            <li class="dropdown-item">{{ __('lawyer.form.commercial_case') }}</li>
+                                            <li class="dropdown-item"
+                                                data-value="commercial">{{ __('lawyer.form.commercial_case') }}</li>
+                                            <li class="dropdown-item"
+                                                data-value="civil">{{ __('lawyer.form.civil_case') }}</li>
                                         </ul>
+                                        <input type="hidden" name="consultation_type" id="consultation_type"
+                                               value="{{ old('consultation_type') }}">
+                                        @error('consultation_type')
+                                        <div class="invalid-feedback d-block">{{ $message }}</div>
+                                        @enderror
                                     </div>
                                 </div>
+
+                                {{-- Consultation Details --}}
                                 <div class="mb-3">
-                                    <label for=""
-                                           class="form-label fw-semibold">{{ __('lawyer.form.consultation_details') }}</label>
-                                    <textarea class="form-control" name="" id="" rows="3"></textarea>
+                                    <label
+                                        class="form-label fw-semibold">{{ __('lawyer.form.consultation_details') }}</label>
+                                    <textarea name="details" rows="3"
+                                              class="form-control @error('details') is-invalid @enderror">{{ old('details') }}</textarea>
+                                    @error('details')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                    @enderror
                                 </div>
+
+                                {{-- File Upload --}}
                                 <div class="mb-4">
-                                    <div class="file-upload-container">
-                                        <div class="file-upload-wrapper" id="fileUploadWrapper">
-                                            <input type="file" class="file-input" id="fileInput" multiple>
-                                            <div class="file-upload-content">
-                                                <p class="file-upload-text"
-                                                   id="fileUploadText">{{ __('lawyer.form.file_upload') }}</p>
-                                                <button type="button" class="select-file-btn" id="selectFileBtn">
-                                                    <img src="{{asset('assets/images/uploader-icon.svg')}}" alt="">
-                                                    {{ __('lawyer.form.select_file') }}
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <x-file-upload
+                                        name="file_upload"
+                                        :multiple="true"
+                                        label="{{ __('translation.form.fields.file_upload') }}"
+                                        button-label="{{ __('translation.form.fields.select_file') }}"
+                                    />
                                 </div>
+
+                                {{-- Submit --}}
                                 <div class="{{ app()->getLocale() == 'ar' ? 'text-start' : 'text-end' }}">
                                     <button class="btn btn-primary rounded-4 btn-lg px-5 py-3 fw-semibold">
                                         {{ __('lawyer.form.send_button') }}
                                     </button>
                                 </div>
                             </form>
+
                         </div>
                     </div>
                 </div>

@@ -2,8 +2,8 @@
 
 @section('content')
     <div class="translation-container">
-        <header class="translation-header" @if(app()->isLocale('ar')) dir="rtl" @endif>
-            <div>
+        <header class="translation-header margin-top" @if(app()->isLocale('ar')) dir="rtl" @endif>
+            <div class="padding-top">
                 <div class="text-center header-top">
                     <h2 class="primary pb-3 saudi">
                         {{ __('translation.header.title') }}
@@ -129,7 +129,7 @@
         <section class="translation-service">
             <div class="container">
                 <div class="pb-5 text-center">
-                    <h2 class="fw-bold primary">How the Service Works</h2>
+                    <h2 class="fw-bold primary">{{ __('translation.services.how_service_works') }}</h2>
                 </div>
                 <div class="d-flex align-items-center flex-column flex-lg-row gap-5 gap-lg-0">
                     <div>
@@ -172,7 +172,7 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <div
-                                class="benefit-card-left translation-card-left position-relative d-flex align-items-center"
+                                class="benefit-card-left translation-card-left justify-content-center position-relative d-flex align-items-center"
                                 @if(app()->getLocale() == 'ar') dir="rtl" style="text-align: right;" @endif>
                                 <div class="text-white text-center">
                                     <div class="pb-5">
@@ -192,92 +192,139 @@
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <div class="p-4" @if(app()->getLocale() == 'ar') dir="rtl"
+                            <div class="p-2 p-sm-4" @if(app()->getLocale() == 'ar') dir="rtl"
                                  style="text-align: right;" @endif>
                                 <div>
                                     <h2 class="pb-4 fw-bold">
                                         {{ __('translation.form.title') }}
                                     </h2>
                                 </div>
-                                <form action="">
+                                <form method="POST" action="{{ route('translation.submit') }}"
+                                      enctype="multipart/form-data">
+                                    @csrf
                                     <div class="mb-4">
-                                        <input type="text" class="form-control"
+                                        <input type="text" name="file_name"
+                                               class="form-control @error('file_name') is-invalid @enderror"
+                                               value="{{ old('file_name') }}"
                                                placeholder="{{ __('translation.form.fields.file_name') }}">
+                                        @error('file_name')
+                                        <div class="invalid-feedback">{{ $message }}</div>
+                                        @enderror
                                     </div>
                                     <div class="row g-2">
-                                        <div class="col-6 col-lg-6 col-md-6">
+                                        <div class="col-md-6 col-sm-6 col-12">
                                             <div class="mb-4">
                                                 <div class="custom-dropdown-wrapper position-relative">
-                                                    <button class="form-select custom-dropdown-toggle" type="button">
-                                                        {{ __('translation.form.fields.translate_from') }}
+                                                    <button type="button"
+                                                            style="height: 40px"
+                                                            class="form-select custom-dropdown-toggle @error('translate_from') is-invalid @enderror"
+                                                            data-input-id="translate_from">
+                                                        {{ old('translate_from', __('translation.form.fields.translate_from')) }}
                                                     </button>
                                                     <ul class="custom-dropdown-options list-unstyled shadow-sm">
-                                                        <li class="dropdown-item">{{ __('translation.form.dropdown_options.certified') }}</li>
-                                                        <li class="dropdown-item">{{ __('translation.form.dropdown_options.standard') }}</li>
+                                                        <li class="dropdown-item"
+                                                            data-value="certified">{{ __('translation.form.dropdown_options.certified') }}</li>
+                                                        <li class="dropdown-item"
+                                                            data-value="standard">{{ __('translation.form.dropdown_options.standard') }}</li>
                                                     </ul>
+                                                    <input type="hidden" name="translate_from" id="translate_from"
+                                                           value="{{ old('translate_from') }}">
+                                                    @error('translate_from')
+                                                    <div class="invalid-feedback d-block">{{ $message }}</div>
+                                                    @enderror
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-6 col-lg-6 col-md-6">
+                                        <div class="col-md-6 col-sm-6 col-12">
                                             <div class="mb-4">
                                                 <div class="custom-dropdown-wrapper position-relative">
-                                                    <button class="form-select custom-dropdown-toggle" type="button">
-                                                        {{ __('translation.form.fields.translate_to') }}
+                                                    <button type="button"
+                                                            style="height: 40px"
+                                                            class="form-select custom-dropdown-toggle @error('translate_to') is-invalid @enderror"
+                                                            data-input-id="translate_to">
+                                                        {{ old('translate_to', __('translation.form.fields.translate_to')) }}
                                                     </button>
                                                     <ul class="custom-dropdown-options list-unstyled shadow-sm">
-                                                        <li class="dropdown-item">{{ __('translation.form.dropdown_options.certified') }}</li>
-                                                        <li class="dropdown-item">{{ __('translation.form.dropdown_options.standard') }}</li>
+                                                        <li class="dropdown-item"
+                                                            data-value="certified">{{ __('translation.form.dropdown_options.certified') }}</li>
+                                                        <li class="dropdown-item"
+                                                            data-value="standard">{{ __('translation.form.dropdown_options.standard') }}</li>
                                                     </ul>
+                                                    <input type="hidden" name="translate_to" id="translate_to"
+                                                           value="{{ old('translate_to') }}">
+                                                    @error('translate_to')
+                                                    <div class="invalid-feedback d-block">{{ $message }}</div>
+                                                    @enderror
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row g-2">
-                                        <div class="col-6 col-lg-6 col-md-6">
+                                        {{-- Translation Quality --}}
+                                        <div class="col-md-6 col-sm-6 col-12">
                                             <div class="mb-4">
                                                 <div class="custom-dropdown-wrapper position-relative">
-                                                    <button class="form-select custom-dropdown-toggle" type="button">
-                                                        {{ __('translation.form.fields.translation_quality') }}
+                                                    <button type="button"
+                                                            style="height: 40px"
+                                                            class="form-select custom-dropdown-toggle @error('translation_quality') is-invalid @enderror"
+                                                            data-input-id="translation_quality">
+                                                        {{ old('translation_quality', __('translation.form.fields.translation_quality')) }}
                                                     </button>
                                                     <ul class="custom-dropdown-options list-unstyled shadow-sm">
-                                                        <li class="dropdown-item">{{ __('translation.form.dropdown_options.certified') }}</li>
-                                                        <li class="dropdown-item">{{ __('translation.form.dropdown_options.standard') }}</li>
+                                                        <li class="dropdown-item"
+                                                            data-value="certified">{{ __('translation.form.dropdown_options.certified') }}</li>
+                                                        <li class="dropdown-item"
+                                                            data-value="standard">{{ __('translation.form.dropdown_options.standard') }}</li>
                                                     </ul>
+                                                    <input type="hidden" name="translation_quality"
+                                                           id="translation_quality"
+                                                           value="{{ old('translation_quality') }}">
+                                                    @error('translation_quality')
+                                                    <div class="invalid-feedback d-block">{{ $message }}</div>
+                                                    @enderror
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-6 col-lg-6 col-md-6">
+
+                                        {{-- Specialization --}}
+                                        <div class="col-md-6 col-sm-6 col-12">
                                             <div class="mb-4">
                                                 <div class="custom-dropdown-wrapper position-relative">
-                                                    <button class="form-select custom-dropdown-toggle" type="button">
-                                                        {{ __('translation.form.fields.specialization') }}
+                                                    <button type="button"
+                                                            style="height: 40px"
+                                                            class="form-select custom-dropdown-toggle @error('specialization') is-invalid @enderror"
+                                                            data-input-id="specialization">
+                                                        {{ old('specialization', __('translation.form.fields.specialization')) }}
                                                     </button>
                                                     <ul class="custom-dropdown-options list-unstyled shadow-sm">
-                                                        <li class="dropdown-item">{{ __('translation.form.dropdown_options.certified') }}</li>
-                                                        <li class="dropdown-item">{{ __('translation.form.dropdown_options.standard') }}</li>
+                                                        <li class="dropdown-item"
+                                                            data-value="certified">{{ __('translation.form.dropdown_options.certified') }}</li>
+                                                        <li class="dropdown-item"
+                                                            data-value="standard">{{ __('translation.form.dropdown_options.standard') }}</li>
                                                     </ul>
+                                                    <input type="hidden" name="specialization" id="specialization"
+                                                           value="{{ old('specialization') }}">
+                                                    @error('specialization')
+                                                    <div class="invalid-feedback d-block">{{ $message }}</div>
+                                                    @enderror
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="mb-3">
-                                        <div class="file-upload-container">
-                                            <div class="file-upload-wrapper" id="fileUploadWrapper">
-                                                <input type="file" class="file-input" id="fileInput" multiple>
-                                                <div class="file-upload-content">
-                                                    <p class="file-upload-text"
-                                                       id="fileUploadText">{{ __('translation.form.fields.file_upload') }}</p>
-                                                    <button type="button" class="select-file-btn" id="selectFileBtn">
-                                                        <img src="{{asset('assets/images/uploader-icon.svg')}}" alt="">
-                                                        {{ __('translation.form.fields.select_file') }}
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <x-file-upload
+                                        name="file_upload"
+                                        :multiple="true"
+                                        label="{{ __('translation.form.fields.file_upload') }}"
+                                        button-label="{{ __('translation.form.fields.select_file') }}"
+                                    />
                                     <div class="mb-4">
-                                <textarea class="form-control" name="" id="" rows="3"
-                                          placeholder="{{ __('translation.form.fields.notes') }}"></textarea>
+        <textarea name="notes"
+                  class="form-control @error('notes') is-invalid @enderror"
+                  rows="3"
+                  placeholder="{{ __('translation.form.fields.notes') }}">{{ old('notes') }}</textarea>
+                                        @error('notes')
+                                        <div class="invalid-feedback">{{ $message }}</div>
+                                        @enderror
                                     </div>
                                     <div class="{{ app()->getLocale() == 'ar' ? 'text-start' : 'text-end' }}">
                                         <button class="btn btn-primary rounded-4 btn-lg px-5 py-3 fw-semibold">

@@ -1,8 +1,8 @@
 @extends('layouts.main')
 
 @section('content')
-    <div class="container-fluid home-header-container">
-        <div class="row align-items-center">
+    <div class="container-fluid home-header-container margin-top">
+        <div class="row align-items-center padding-top">
             <div class="col-lg-5 col-md-12 order-2 order-lg-1 home-img-section p-0">
                 <div class="d-flex justify-content-center mb-3">
                     <img class=" max-100 d-block d-lg-none" src="{{asset('assets/images/horizontal-divider.svg')}}" alt="">
@@ -21,7 +21,7 @@
                     <h1 class="pb-4 saudi">
                         {{ __('home.header.title') }}
                     </h1>
-                    <h4 class="primary fw-semibold pb-3 ">
+                    <h4 class="primary fw-semibold pb-3 saudi">
                         {{ __('home.header.subtitle') }}
                     </h4>
                     <p class="fw-semibold home-header-desc text-justify">
@@ -124,7 +124,7 @@
             </h1>
         </div>
         <div class="container">
-            <div class="row g-4 position-relative">
+            <div class="row g-4 position-relative" @if(app()->getLocale() === 'ar') dir="ltr" @endif>
                 <!-- Card 1 -->
                 <div class="col-lg-4">
                     <div class="card detail-card">

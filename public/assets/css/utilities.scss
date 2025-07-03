@@ -65,9 +65,10 @@ textarea.form-control {
         background-color: #2C3E50 !important;
         color: white;
     }
-    &:focus{
+
+    &:focus {
         background-color: #24B4B7 !important;
-        color: white ;
+        color: white;
     }
 }
 
@@ -145,15 +146,17 @@ input::placeholder {
 .btn-close:focus {
     box-shadow: none;
 }
-.btn{
+
+.btn {
     position: relative;
 }
+
 .dropdown-item.active, .dropdown-item:active {
     background-color: $primary-color;
 }
 
 .text-justify {
-    text-align: justify;
+    text-align: justify !important;
 }
 
 .no-caret::after {
@@ -163,4 +166,27 @@ input::placeholder {
 .custom-center-dropdown {
     left: 50% !important;
     transform: translateX(-50%) !important;
+}
+
+input.is-invalid {
+    background-image: url("data:image/svg+xml,%3Csvg ...error-icon...%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1rem;
+
+    // RTL support
+    [dir="rtl"] & {
+        background-position: left 0.75rem center !important;
+    }
+}
+.form-select.is-invalid:not([multiple]):not([size]){
+    [dir="rtl"] & {
+        background-position: left .75rem center,center left 2.25rem !important
+    }
+}
+.margin-top{
+    margin-top: -100px;
+}
+.padding-top{
+    padding-top: 100px;
 }

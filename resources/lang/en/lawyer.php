@@ -51,7 +51,8 @@ return [
                 'feature5' => 'Reviewing a document or contract before signing',
                 'additional_time' => 'Additional time: available at extra cost upon coordination with the client',
                 'button' => 'Get Started'
-            ]
+            ],
+            'includes' => 'Includes',
         ]
     ],
     'form' => [

@@ -143,7 +143,7 @@ input::placeholder {
 }
 
 .text-justify {
-  text-align: justify;
+  text-align: justify !important;
 }
 
 .no-caret::after {
@@ -153,6 +153,28 @@ input::placeholder {
 .custom-center-dropdown {
   left: 50% !important;
   transform: translateX(-50%) !important;
+}
+
+input.is-invalid {
+  background-image: url("data:image/svg+xml,%3Csvg ...error-icon...%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1rem;
+}
+[dir=rtl] input.is-invalid {
+  background-position: left 0.75rem center !important;
+}
+
+[dir=rtl] .form-select.is-invalid:not([multiple]):not([size]) {
+  background-position: left 0.75rem center, center left 2.25rem !important;
+}
+
+.margin-top {
+  margin-top: -100px;
+}
+
+.padding-top {
+  padding-top: 100px;
 }
 
 body {
@@ -202,7 +224,7 @@ body {
 }
 
 .navbar .navbar-nav .dropdown > .nav-link.active {
-  background-color: transparent;
+  background-color: #FAFAFA;
 }
 
 .navbar .navbar-nav .dropdown-item.active {
@@ -271,8 +293,18 @@ body {
 
 .login-page {
   background-image: url("/assets/images/bg-pattern.png");
+  background-size: contain;
+  background-position: center;
+}
+
+.signup-bg {
+  background-image: url("/assets/images/bg-pattern.png");
   background-size: cover;
   background-position: center;
+}
+
+.signup-card label {
+  color: #6C6868;
 }
 
 .login-container {
@@ -368,7 +400,6 @@ body {
   border-radius: 13px;
   font-weight: 500;
   width: 100%;
-  margin: 15px 0;
   transition: background-color 0.3s ease;
 }
 .btn-send-otp:hover {
@@ -829,7 +860,7 @@ input[id=phone] {
   padding: 0 20px;
 }
 .business-header .header h1 {
-  font-size: 40px;
+  font-size: 70px;
 }
 .business-header .header p {
   font-size: 20px;
@@ -968,6 +999,7 @@ input[id=phone] {
   border-radius: 9px;
   padding: 20px;
   margin-top: 20px;
+  min-height: 270px;
 }
 
 .essential-additional {
@@ -975,6 +1007,7 @@ input[id=phone] {
   border-radius: 9px;
   padding: 20px;
   margin-top: 20px;
+  min-height: 270px;
 }
 
 .growth-additional {
@@ -982,6 +1015,7 @@ input[id=phone] {
   border-radius: 9px;
   padding: 20px;
   margin-top: 20px;
+  min-height: 270px;
 }
 
 .ticket-container {
@@ -1157,25 +1191,47 @@ input[id=phone] {
 }
 
 .about-content {
-  background-image: url(/assets/images/small-about-pattern.png);
-  background-size: 100%;
-  padding: 40px 45px 120px 45px;
-  background-repeat: no-repeat;
+  padding: 50px 30px;
+  border: 2px solid #EEEEEE;
+  border-radius: 10px;
+  margin-bottom: 80px !important;
+  position: relative;
+}
+.about-content .top-left {
+  position: absolute;
+  left: -4px;
+  top: -4px;
+}
+.about-content .top-right {
+  position: absolute;
+  right: -4px;
+  top: -4px;
+}
+.about-content .top-quote {
+  position: absolute;
+  top: -45px;
+  left: 20%;
+  background: white;
+  padding: 20px;
+}
+.about-content .bottom-left {
+  position: absolute;
+  left: -4px;
+  bottom: -4px;
+}
+.about-content .bottom-right {
+  position: absolute;
+  bottom: -4px;
+  right: 100px;
+}
+.about-content .bottom-quote {
+  position: absolute;
+  bottom: -40px;
+  left: 10%;
+  background: white;
+  padding: 20px;
 }
 .about-content p {
-  font-size: 16px;
-  color: #606060;
-  line-height: 31px;
-  font-weight: 700;
-}
-
-.about-large-content {
-  background-image: url(/assets/images/large-about-pattern.png);
-  background-size: 100%;
-  padding: 40px 45px 120px 45px;
-  background-repeat: no-repeat;
-}
-.about-large-content p {
   font-size: 16px;
   color: #606060;
   line-height: 31px;
@@ -1408,7 +1464,7 @@ input[id=phone] {
   padding: 100px 0;
 }
 .lawyer-header .header-top h2 {
-  font-size: 50px;
+  font-size: 70px;
 }
 .lawyer-header .header-top h5 {
   font-size: 25px;
@@ -1610,7 +1666,7 @@ input[id=phone] {
 }
 
 .contact-container .header h2 {
-  font-size: 35px;
+  font-size: 50px;
 }
 .contact-container .header h4 {
   font-size: 20px;
@@ -1647,12 +1703,6 @@ input[id=phone] {
   }
 }
 @media (max-width: 1200px) {
-  .about-content {
-    padding: 40px 45px 80px 45px;
-  }
-  .about-content p {
-    line-height: unset;
-  }
   .about-large-content {
     padding: 40px 45px 80px 45px;
   }
@@ -1808,10 +1858,27 @@ input[id=phone] {
     font-size: 35px;
   }
   .about-content {
-    background-image: url(/assets/images/small-about-pattern-mob.png);
-    background-size: 100%;
-    padding: 40px 45px 120px 45px;
-    background-repeat: no-repeat;
+    border: 1px solid #E5E5E5;
+  }
+  .about-content .top-right {
+    right: -2px;
+    top: -2px;
+    max-width: 85%;
+  }
+  .about-content .top-left {
+    left: -2px;
+    top: -2px;
+    max-width: 11%;
+  }
+  .about-content .bottom-right {
+    bottom: -2px;
+    right: 65px;
+    max-width: 50%;
+  }
+  .about-content .bottom-left {
+    left: -2px;
+    bottom: -1px;
+    max-width: 20%;
   }
 }
 @media (max-width: 768px) {
@@ -1908,10 +1975,29 @@ input[id=phone] {
   .lawyer-header {
     padding: 70px 0;
   }
+  .contact-container .header h2 {
+    font-size: 35px;
+  }
+  .lawyer-header .header-top h2 {
+    font-size: 40px;
+  }
 }
 @media (max-width: 576px) {
   .trans-spec-content img {
-    max-width: 100%;
+    max-width: 200px;
+  }
+}
+@media (max-width: 450px) {
+  .trans-spec-content p {
+    top: 51%;
+    left: 49%;
+    font-size: 14px;
+  }
+  .trans-spec-content img {
+    max-width: 150px;
+  }
+  .nav-pills.subscription-toggle .nav-link {
+    font-size: 12px;
   }
 }
 

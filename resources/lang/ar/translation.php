@@ -38,5 +38,8 @@ return [
             'certified' => 'ترجمة معتمدة',
             'standard' => 'ترجمة فقط'
         ]
+    ],
+    'services' => [
+        'how_service_works' => 'كيف تعمل الخدمة؟',
     ]
 ];

@@ -4,7 +4,7 @@
     <header class="signup-header">
         <h1 class="fw-bold text-white saudi">{{ __('auth.signup.title') }}</h1>
     </header>
-    <div class="container">
+    <div class="container signup-bg">
         <div class="row g-3 signup-wrapper">
             <div class="col-lg-4">
                 <div class="card signup-card">
@@ -68,34 +68,55 @@
 
                         <div class="tab-content mt-4" id="myTabContent">
                             <div class="tab-pane fade show active" id="individual" role="tabpanel">
-                                <form action="">
+                                <form method="POST" action="{{ route('signup.submit') }}">
+                                    @csrf
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <div class="mb-3">
                                                 <label for=""
                                                        class="form-label fw-semibold">{{ __('auth.signup.form.name_arabic') }}</label>
-                                                <input type="text" class="form-control">
+                                                <input type="text" name="name_ar"
+                                                       class="form-control @error('name_ar') is-invalid @enderror"
+                                                       value="{{ old('name_ar') }}">
+                                                @error('name_ar')
+                                                <div class="invalid-feedback">{{ $message }}</div>
+                                                @enderror
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="mb-3">
                                                 <label for=""
                                                        class="form-label fw-semibold">{{ __('auth.signup.form.name_english') }}</label>
-                                                <input type="text" class="form-control">
+                                                <input type="text" name="name_en"
+                                                       class="form-control @error('name_en') is-invalid @enderror"
+                                                       value="{{ old('name_en') }}">
+                                                @error('name_en')
+                                                <div class="invalid-feedback">{{ $message }}</div>
+                                                @enderror
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="mb-3">
                                                 <label for=""
                                                        class="form-label fw-semibold">{{ __('auth.signup.form.city') }}</label>
-                                                <input type="text" class="form-control">
+                                                <input type="text" name="city"
+                                                       class="form-control @error('city') is-invalid @enderror"
+                                                       value="{{ old('city') }}">
+                                                @error('city')
+                                                <div class="invalid-feedback">{{ $message }}</div>
+                                                @enderror
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="mb-3">
                                                 <label for=""
                                                        class="form-label fw-semibold">{{ __('auth.signup.form.email') }}</label>
-                                                <input type="text" class="form-control">
+                                                <input type="email" name="email"
+                                                       class="form-control @error('email') is-invalid @enderror"
+                                                       value="{{ old('email') }}">
+                                                @error('email')
+                                                <div class="invalid-feedback">{{ $message }}</div>
+                                                @enderror
                                             </div>
                                         </div>
 
@@ -104,22 +125,31 @@
                                                 <label for=""
                                                        class="form-label fw-semibold">{{ __('auth.signup.form.mobile') }}</label>
                                                 <div class="">
-                                                    <input type="number" id="phone" class="form-control"
-                                                           name="name"
-                                                           placeholder="{{ __('auth.signup.form.mobile') }}">
+                                                    <input type="number" name="mobile" id="phone" placeholder="{{ __('auth.signup.form.mobile') }}"
+                                                           class="form-control @error('mobile') is-invalid @enderror"
+                                                           value="{{ old('mobile') }}">
+                                                    @error('mobile')
+                                                    <div class="invalid-feedback">{{ $message }}</div>
+                                                    @enderror
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-check mb-3">
-                                        <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+                                        <input class="form-check-input @error('terms') is-invalid @enderror"
+                                               type="checkbox" name="terms" id="checkDefault"
+                                            {{ old('terms') ? 'checked' : '' }}>
                                         <label class="form-check-label" for="checkDefault">
                                             {{ __('auth.signup.form.terms_acceptance') }}
                                         </label>
+                                        @error('terms')
+                                        <div class="invalid-feedback d-block">{{ $message }}</div>
+                                        @enderror
                                     </div>
                                     <div class="text-center">
-                                        <a href="{{route('home.index')}}" type="submit"
-                                           class="btn btn-primary px-5 rounded-3">{{ __('auth.signup.form.submit') }}</a>
+                                        <button type="submit" class="btn btn-primary fw-bold px-5 rounded-3 btn-load">
+                                            {{ __('auth.signup.form.submit') }}
+                                        </button>
                                     </div>
                                 </form>
                             </div>
@@ -128,7 +158,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="mt-4 text-center">
+                <div class="my-4 text-center">
                     <p>{{ __('auth.signup.already_account') }} <a class="primary text-decoration-none"
                                                                   href="{{ route('login.page') }}">{{ __('auth.signup.login_link') }}</a>
                     </p>

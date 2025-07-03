@@ -44,7 +44,7 @@ return [
         'title' => "<span class='primary'>Defaa's</span> Strength Lies in the Details",
         'card1' => [
             'title' => 'Track your Balance',
-            'description' => 'View your balance through your account'
+            'description' => 'and requests through your account.'
         ],
         'card2' => [
             'title' => 'Monitor request status electronically',
@@ -52,7 +52,7 @@ return [
         ],
         'card3' => [
             'title' => 'Ease of Subscription',
-            'description' => 'Start service immediately upon subscription'
+            'description' => 'Enjoy instant access to our services upon subscription.'
         ]
     ],
     'solutions' => [

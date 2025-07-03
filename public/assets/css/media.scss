@@ -1,11 +1,4 @@
 @media (max-width: 1200px) {
-    .about-content {
-        padding: 40px 45px 80px 45px;
-
-        p {
-            line-height: unset;
-        }
-    }
     .about-large-content {
         padding: 40px 45px 80px 45px;
 
@@ -191,10 +184,32 @@
         }
     }
     .about-content {
-        background-image: url(/assets/images/small-about-pattern-mob.png);
-        background-size: 100%;
-        padding: 40px 45px 120px 45px;
-        background-repeat: no-repeat;
+        border: 1px solid #E5E5E5;
+
+        .top-right {
+            right: -2px;
+            top: -2px;
+            max-width: 85%;
+        }
+
+        .top-left {
+            left: -2px;
+            top: -2px;
+            max-width: 11%;
+        }
+
+        .bottom-right {
+            bottom: -2px;
+            right: 65px;
+            max-width: 50%;
+        }
+
+        .bottom-left {
+
+            left: -2px;
+            bottom: -1px;
+            max-width: 20%;
+        }
     }
 }
 
@@ -305,10 +320,31 @@
     .lawyer-header {
         padding: 70px 0;
     }
+    .contact-container .header h2 {
+        font-size: 35px;
+    }
+    .lawyer-header .header-top h2 {
+        font-size: 40px;
+    }
 }
 
 @media (max-width: 576px) {
     .trans-spec-content img {
-        max-width: 100%;
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 450px) {
+    .trans-spec-content p {
+        top: 51%;
+        left: 49%;
+        font-size: 14px;
+
+    }
+    .trans-spec-content img {
+        max-width: 150px;
+    }
+    .nav-pills.subscription-toggle .nav-link {
+        font-size: 12px;
     }
 }

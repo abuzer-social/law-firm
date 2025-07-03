@@ -2,8 +2,8 @@
 
 @section('content')
     <div class="accounting-container">
-        <header class="accounting-header" @if(app()->isLocale('ar')) dir="rtl" @endif>
-            <div>
+        <header class="accounting-header margin-top" @if(app()->isLocale('ar')) dir="rtl" @endif>
+            <div class="padding-top">
                 <div class="text-center header-top">
                     <h2 class="primary pb-3 saudi">{{ __('accounting.header.title') }}</h2>
                     <h5 class="fw-semibold">{{ __('accounting.header.subtitle') }}</h5>

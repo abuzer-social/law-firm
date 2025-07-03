@@ -1,8 +1,8 @@
 @extends('layouts.main')
 
 @section('content')
-    <header class="document-header" @if(app()->isLocale('ar')) dir="rtl" @endif>
-        <div>
+    <header class="document-header margin-top" @if(app()->isLocale('ar')) dir="rtl" @endif>
+        <div class="padding-top">
             <div class="text-center header-top">
                 <h2 class="pb-3 saudi">{{ __('document.title') }}</h2>
                 <h5 class="max-50 m-auto dark-gray">{{ __('document.subtitle') }}</h5>
@@ -146,147 +146,92 @@
                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
                      aria-labelledby="pills-home-tab"
                      tabindex="0">
+                    @php
+                        $plans = [
+                            [
+                                'key' => 'launch',
+                                'price' => 200,
+                                'class' => 'essential-plan',
+                                'tag_class' => 'essential',
+                                'counter_class' => 'essential-counter',
+                                'bottom_class' => 'essential-bottom',
+                                'features' => [
+                                    'creation',
+                                    'one_document',
+                                    'single_user',
+                                    'share_download',
+                                    'management',
+                                ],
+                            ],
+                            [
+                                'key' => 'growth',
+                                'price' => 1000,
+                                'class' => 'pro-plan',
+                                'tag_class' => 'pro',
+                                'counter_class' => 'pro-counter',
+                                'bottom_class' => 'pro-bottom',
+                                'features' => [
+                                    'creation',
+                                    'one_document',
+                                    'single_user',
+                                    'share_download',
+                                    'management',
+                                ],
+                            ],
+                            [
+                                'key' => 'premier',
+                                'price' => 2000,
+                                'class' => 'flexible-plan',
+                                'tag_class' => 'flexible',
+                                'counter_class' => 'premier-counter',
+                                'bottom_class' => 'flexible-bottom',
+                                'features' => [
+                                    'creation',
+                                    'multiple_documents',
+                                    'multiple_users',
+                                    'share_download',
+                                    'management',
+                                ],
+                            ],
+                        ];
+                    @endphp
+
                     <div class="row g-3">
-                        <!-- Launch Plan -->
-                        <div class="col-lg-4">
-                            <div class="plan-card essential-plan document-plan-card">
-                                <div class="flex-grow-1">
-                                    <div class="plan-tag essential">{{ __('document.packages.plans.launch.name') }}</div>
-                                    <div class="py-4 d-flex align-items-center gap-2 justify-content-center">
-                                        <img src="{{asset('assets/images/dinar.svg')}}" alt="">
-                                        <h2 class="navy fw-bold">
-                                            200
-                                        </h2>
-                                    </div>
-                                    <div>
-                                        <div class="d-flex align-items-center gap-3 mb-3">
-                                            <div class="plan-enable essential-counter"><img
-                                                    src="{{asset('assets/images/white-tick.svg')}}" alt=""></div>
-                                            <h5>{{ __('document.packages.features.creation') }}</h5>
+                        @foreach($plans as $plan)
+                            <div class="col-lg-4">
+                                <div class="plan-card {{ $plan['class'] }} document-plan-card">
+                                    <div class="flex-grow-1">
+                                        <div class="plan-tag {{ $plan['tag_class'] }}">
+                                            {{ __('document.packages.plans.' . $plan['key'] . '.name') }}
                                         </div>
-                                        <div class="d-flex align-items-center gap-3 mb-3">
-                                            <div class="plan-enable essential-counter"><img
-                                                    src="{{asset('assets/images/white-tick.svg')}}" alt=""></div>
-                                            <h5>{{ __('document.packages.features.one_document') }}</h5>
-                                        </div>
-                                        <div class="d-flex align-items-center gap-3 mb-3">
-                                            <div class="plan-enable essential-counter"><img
-                                                    src="{{asset('assets/images/white-tick.svg')}}" alt=""></div>
-                                            <h5>{{ __('document.packages.features.single_user') }}</h5>
-                                        </div>
-                                        <div class="d-flex align-items-center gap-3 mb-3">
-                                            <div class="plan-enable essential-counter"><img
-                                                    src="{{asset('assets/images/white-tick.svg')}}" alt=""></div>
-                                            <h5>{{ __('document.packages.features.share_download') }}</h5>
-                                        </div>
-                                        <div class="d-flex align-items-center gap-3 mb-3">
-                                            <div class="plan-enable essential-counter"><img
-                                                    src="{{asset('assets/images/white-tick.svg')}}" alt=""></div>
-                                            <h5>{{ __('document.packages.features.management') }}</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="essential-bottom">
-                                    <div>
-                                        <button class="btn w-100 rounded-3">{{ __('document.packages.subscribe') }}</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
-                        <!-- Growth Plan -->
-                        <div class="col-lg-4">
-                            <div class="plan-card pro-plan document-plan-card">
-                                <div class="flex-grow-1">
-                                    <div class="plan-tag pro">{{ __('document.packages.plans.growth.name') }}</div>
-                                    <div class="py-4 d-flex align-items-center gap-2 justify-content-center">
-                                        <img src="{{asset('assets/images/dinar.svg')}}" alt="">
-                                        <h2 class="navy fw-bold">
-                                            1000
-                                        </h2>
-                                    </div>
-                                    <div>
-                                        <div class="d-flex align-items-center gap-3 mb-3">
-                                            <div class="plan-enable pro-counter"><img
-                                                    src="{{asset('assets/images/white-tick.svg')}}" alt=""></div>
-                                            <h5>{{ __('document.packages.features.creation') }}</h5>
+                                        <div class="py-4 d-flex align-items-center gap-2 justify-content-center">
+                                            <img src="{{ asset('assets/images/dinar.svg') }}" alt="">
+                                            <h2 class="navy fw-bold">{{ $plan['price'] }}</h2>
                                         </div>
-                                        <div class="d-flex align-items-center gap-3 mb-3">
-                                            <div class="plan-enable pro-counter"><img
-                                                    src="{{asset('assets/images/white-tick.svg')}}" alt=""></div>
-                                            <h5>{{ __('document.packages.features.one_document') }}</h5>
-                                        </div>
-                                        <div class="d-flex align-items-center gap-3 mb-3">
-                                            <div class="plan-enable pro-counter"><img
-                                                    src="{{asset('assets/images/white-tick.svg')}}" alt=""></div>
-                                            <h5>{{ __('document.packages.features.single_user') }}</h5>
-                                        </div>
-                                        <div class="d-flex align-items-center gap-3 mb-3">
-                                            <div class="plan-enable pro-counter"><img
-                                                    src="{{asset('assets/images/white-tick.svg')}}" alt=""></div>
-                                            <h5>{{ __('document.packages.features.share_download') }}</h5>
-                                        </div>
-                                        <div class="d-flex align-items-center gap-3 mb-3">
-                                            <div class="plan-enable pro-counter"><img
-                                                    src="{{asset('assets/images/white-tick.svg')}}" alt=""></div>
-                                            <h5>{{ __('document.packages.features.management') }}</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="pro-bottom">
-                                    <div>
-                                        <button class="btn w-100 rounded-3">{{ __('document.packages.subscribe') }}</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
-                        <!-- Premier Plan -->
-                        <div class="col-lg-4">
-                            <div class="plan-card flexible-plan document-plan-card">
-                                <div class="flex-grow-1">
-                                    <div class="plan-tag flexible">{{ __('document.packages.plans.premier.name') }}</div>
-                                    <div class="py-4 d-flex align-items-center gap-2 justify-content-center">
-                                        <img src="{{asset('assets/images/dinar.svg')}}" alt="">
-                                        <h2 class="navy fw-bold">
-                                            2000
-                                        </h2>
-                                    </div>
-                                    <div>
-                                        <div class="d-flex align-items-center gap-3 mb-3">
-                                            <div class="plan-enable premier-counter"><img
-                                                    src="{{asset('assets/images/white-tick.svg')}}" alt=""></div>
-                                            <h5>{{ __('document.packages.features.creation') }}</h5>
-                                        </div>
-                                        <div class="d-flex align-items-center gap-3 mb-3">
-                                            <div class="plan-enable premier-counter"><img
-                                                    src="{{asset('assets/images/white-tick.svg')}}" alt=""></div>
-                                            <h5>{{ __('document.packages.features.multiple_documents') }}</h5>
-                                        </div>
-                                        <div class="d-flex align-items-center gap-3 mb-3">
-                                            <div class="plan-enable premier-counter"><img
-                                                    src="{{asset('assets/images/white-tick.svg')}}" alt=""></div>
-                                            <h5>{{ __('document.packages.features.multiple_users') }}</h5>
-                                        </div>
-                                        <div class="d-flex align-items-center gap-3 mb-3">
-                                            <div class="plan-enable premier-counter"><img
-                                                    src="{{asset('assets/images/white-tick.svg')}}" alt=""></div>
-                                            <h5>{{ __('document.packages.features.share_download') }}</h5>
-                                        </div>
-                                        <div class="d-flex align-items-center gap-3 mb-3">
-                                            <div class="plan-enable premier-counter"><img
-                                                    src="{{asset('assets/images/white-tick.svg')}}" alt=""></div>
-                                            <h5>{{ __('document.packages.features.management') }}</h5>
+                                        <div>
+                                            @foreach($plan['features'] as $feature)
+                                                <div class="d-flex align-items-center gap-3 mb-3">
+                                                    <div class="plan-enable {{ $plan['counter_class'] }}">
+                                                        <img src="{{ asset('assets/images/white-tick.svg') }}" alt="">
+                                                    </div>
+                                                    <h5>{{ __('document.packages.features.' . $feature) }}</h5>
+                                                </div>
+                                            @endforeach
                                         </div>
                                     </div>
-                                </div>
-                                <div class="flexible-bottom">
-                                    <div>
-                                        <button class="btn w-100 rounded-3">{{ __('document.packages.subscribe') }}</button>
+
+                                    <div class="{{ $plan['bottom_class'] }}">
+                                        <div>
+                                            <button class="btn w-100 rounded-3">
+                                                {{ __('document.packages.subscribe') }}
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
                 <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
@@ -323,30 +268,62 @@
                             <h5 class="fw-bold pb-4">
                                 {{ __('document.form.title') }}
                             </h5>
-                            <form action="">
+                            <form method="POST" action="{{ route('document.submit') }}">
+                                @csrf
+
+                                {{-- Name --}}
                                 <div class="mb-3">
-                                    <label for="" class="form-label fw-semibold">{{ __('document.form.name_label') }}</label>
-                                    <input class="form-control" type="text">
+                                    <label class="form-label fw-semibold">{{ __('document.form.name_label') }}</label>
+                                    <input type="text" name="name"
+                                           class="form-control @error('name') is-invalid @enderror"
+                                           value="{{ old('name') }}">
+                                    @error('name')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                    @enderror
                                 </div>
+
+                                {{-- Phone --}}
                                 <div class="mb-3">
-                                    <label for="" class="form-label fw-semibold">{{ __('document.form.phone_label') }}</label>
-                                    <input type="number" id="phone" class="form-control" name="name"
+                                    <label class="form-label fw-semibold">{{ __('document.form.phone_label') }}</label>
+                                    <input type="number" name="phone" id="phone"
+                                           class="form-control @error('phone') is-invalid @enderror"
+                                           value="{{ old('phone') }}"
                                            placeholder="{{ __('document.form.phone_placeholder') }}">
+                                    @error('phone')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                    @enderror
                                 </div>
+
+                                {{-- Email --}}
                                 <div class="mb-4">
-                                    <label for="" class="form-label">{{ __('document.form.email_label') }}</label>
-                                    <input type="email" class="form-control">
+                                    <label class="form-label">{{ __('document.form.email_label') }}</label>
+                                    <input type="email" name="email"
+                                           class="form-control @error('email') is-invalid @enderror"
+                                           value="{{ old('email') }}">
+                                    @error('email')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                    @enderror
                                 </div>
+
+                                {{-- Description --}}
                                 <div class="mb-4">
-                                    <label for="" class="form-label">{{ __('document.form.description_label') }}</label>
-                                    <textarea name="" class="form-control" id="" rows="3"></textarea>
+                                    <label class="form-label">{{ __('document.form.description_label') }}</label>
+                                    <textarea name="description"
+                                              class="form-control @error('description') is-invalid @enderror"
+                                              rows="3">{{ old('description') }}</textarea>
+                                    @error('description')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                    @enderror
                                 </div>
+
+                                {{-- Submit --}}
                                 <div class="{{ app()->getLocale() == 'ar' ? 'text-start' : 'text-end' }}">
                                     <button class="btn btn-primary rounded-4 btn-lg px-5 py-3 fw-semibold">
                                         {{ __('document.form.submit_button') }}
                                     </button>
                                 </div>
                             </form>
+
                         </div>
                     </div>
                 </div>
