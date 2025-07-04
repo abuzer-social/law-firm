@@ -91,6 +91,20 @@ input[id='phone'] {
         text-shadow: 0px 0px 0 black, 1px 3px 5px rgba(0, 0, 0, 0.5);
     }
 }
+/* First tab active */
+.business-second-tabs .nav-item:first-child .nav-link.active {
+
+    border-radius: 0 46px 46px 0;
+}
+
+/* Second tab active */
+.business-second-tabs .nav-item:last-child .nav-link.active {
+    border-radius: 46px 0 0 46px;
+}
+.discount-badge{
+    right: unset;
+    left: -20px;
+}
 
 @media (max-width: 992px) {
     .offcanvas-header .btn-close {

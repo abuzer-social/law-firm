@@ -7,6 +7,15 @@ return [
         'description' => 'Your legal rights deserve a true partnership with a team that understands your concerns, values your time, and respects your intelligence. We offer you smart legal solutions through an advanced platform that saves you time and gives you peace of mind every step of the way. Because every case matters to us, and every client deserves exceptional service.',
         'button' => 'Start with us',
     ],
+    'legal_service' => [
+        'licensed_trusted' => 'Licensed and trusted',
+        'fully_automated' => 'Fully automated',
+        'digital_platform' => 'Digital platform',
+        'all_in_one' => 'All-in-one',
+        'secure_payment' => 'Secure payment',
+        'electronic_contracts' => 'Electronic contracts',
+        'fixed_prices' => 'Fixed prices',
+    ],
     'services' => [
         'title' => 'A New Vision for Legal Services',
         'features' => [

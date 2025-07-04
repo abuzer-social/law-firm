@@ -55,10 +55,6 @@ body {
     display: none;
 }
 
-.navbar .navbar-nav .dropdown > .nav-link.active {
-    background-color: #FAFAFA;
-}
-
 .navbar .navbar-nav .dropdown-item.active {
     background-color: #f8f9fa;
 }
@@ -130,13 +126,15 @@ body {
     background-size: contain;
     background-position: center;
 }
-.signup-bg{
+
+.signup-bg {
     background-image: url("/assets/images/bg-pattern.png");
     background-size: cover;
     background-position: center;
 }
-.signup-card{
-    label{
+
+.signup-card {
+    label {
         color: #6C6868;
     }
 }
@@ -407,6 +405,59 @@ input[id = 'phone'] {
     }
 }
 
+.business-second-tabs {
+    background-color: white;
+    border-radius: 50px;
+    padding: 10px;
+    display: inline-flex;
+    position: relative;
+    max-width: fit-content;
+    border: 1px solid #E8ECF5;
+}
+
+.business-second-tabs .nav-tabs {
+    background: #F4F4F4;
+    border-radius: 38px;
+    padding: 0;
+    margin: 0;
+}
+
+.business-second-tabs .nav-link {
+    color: #6c757d;
+    background: transparent;
+    border: none;
+    padding: 12px 24px;
+    font-weight: 500;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+    min-width: 120px;
+    text-align: center;
+}
+
+.business-second-tabs .nav-link:hover {
+    color: #495057;
+}
+
+/* First tab active */
+.business-second-tabs .nav-item:first-child .nav-link.active {
+    color: #ffffff;
+    background-color: #213242;
+    border-radius: 46px 0 0 46px;
+}
+
+/* Second tab active */
+.business-second-tabs .nav-item:last-child .nav-link.active {
+    color: #ffffff;
+    background-color: #213242;
+    border-radius: 0 46px 46px 0;
+}
+
+.business-second-tabs .nav-link:focus {
+    box-shadow: none;
+}
+
 .home-header-desc {
     line-height: 38px;
     max-width: 70%;
@@ -430,6 +481,22 @@ input[id = 'phone'] {
     background-color: #F9FAFB;
     background-blend-mode: multiply;
     padding: 50px 0;
+}
+
+.service-container {
+    position: relative;
+    text-align: center;
+
+    p {
+        position: absolute;
+        top: 51%;
+        left: 48%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        font-size: 18px;
+        font-weight: 700;
+        color: #565656;
+    }
 }
 
 .detail-section-container {
@@ -1600,18 +1667,6 @@ input[id = 'phone'] {
     }
 }
 
-//.business-header-content-span{
-//    &::before{
-//        content: url("/assets/images/red-underline.svg"); /* or an asset() URL if using Laravel + Blade */
-//        display: inline-block; /* or block depending on layout */
-//        width: 20px;            /* optional: control image size */
-//        height: 20px;
-//        margin-right: 8px;      /* spacing between image and text */
-//        vertical-align: middle; /* align with text */
-//        position: absolute;
-//    }
-//}
-/* Centered dot loader using box-shadow animation */
 .btn-loading::after {
     content: "";
     position: absolute;
@@ -1621,18 +1676,16 @@ input[id = 'phone'] {
     aspect-ratio: 1;
     border-radius: 50%;
     background: currentColor;
-    color: #fff; /* Match your button text color */
-    transform: translate(-50%, -50%) translateX(-38px); /* Center all 3 dots */
+    color: #fff;
+    transform: translate(-50%, -50%) translateX(-38px);
     box-shadow: 19px 0 0 7px, 38px 0 0 3px, 57px 0 0 0;
     animation: l21 0.5s infinite alternate linear;
 }
 
-/* Hide original button text */
 .btn-loading span {
     visibility: hidden;
 }
 
-/* Your animation as-is */
 @keyframes l21 {
     50% {
         box-shadow: 19px 0 0 3px, 38px 0 0 7px, 57px 0 0 3px;
@@ -1640,6 +1693,19 @@ input[id = 'phone'] {
     100% {
         box-shadow: 19px 0 0 0, 38px 0 0 3px, 57px 0 0 7px;
     }
+}
+
+.discount-badge {
+    max-width: fit-content;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #FFB74D;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    right: -20px;
+    top: -25px;
+    z-index: 100;
 }
 
 @import "media";

@@ -46,71 +46,48 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-12">
-                    @if(app()->getLocale() === 'ar')
-                        <div class="text-center"><img src="{{asset('assets/images/service-card-ar-1.svg')}}" alt="">
-                        </div>
-                    @else
+                    <div class="service-container">
                         <div class="text-center"><img src="{{asset('assets/images/service-card-1.svg')}}" alt=""></div>
-                    @endif
+                        <p>{{ __('home.legal_service.licensed_trusted') }}</p>
+                    </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-6">
-                    @if(app()->getLocale() === 'ar')
-                        <div class="text-center"><img src="{{asset('assets/images/service-card-ar-2.svg')}}" alt="">
-                        </div>
-                    @else
+                    <div class="service-container">
                         <div class="text-center"><img src="{{asset('assets/images/service-card-2.svg')}}" alt=""></div>
-                    @endif
+                        <p>{{ __('home.legal_service.fully_automated') }}</p>
+                    </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-6">
-                    @if(app()->getLocale() === 'ar')
-                        <div class="text-center"><img src="{{asset('assets/images/service-card-ar-3.svg')}}" alt="">
-                        </div>
-                    @else
+                    <div class="service-container">
                         <div class="text-center"><img src="{{asset('assets/images/service-card-3.svg')}}" alt=""></div>
-                    @endif
+                        <p>{{ __('home.legal_service.digital_platform') }}</p>
+                    </div>
                 </div>
                 <div class="col-lg-3 col-md-12">
-                    @if(app()->getLocale() === 'ar')
-                        <div class="text-center"><img src="{{asset('assets/images/service-card-ar-4.svg')}}" alt="">
-                        </div>
-                    @else
+                    <div class="service-container">
                         <div class="text-center"><img src="{{asset('assets/images/service-card-4.svg')}}" alt=""></div>
-                    @endif
+                        <p>{{ __('home.legal_service.all_in_one') }}</p>
+                    </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col d-none d-lg-block"></div>
                 <div class="col-lg-3 col-md-6 col-6">
-                    <div>
-                        @if(app()->getLocale() === 'ar')
-                            <div class="text-center"><img src="{{asset('assets/images/service-card-ar-5.svg')}}" alt="">
-                            </div>
-                        @else
-                            <div class="text-center"><img src="{{asset('assets/images/service-card-5.svg')}}" alt="">
-                            </div>
-                        @endif
+                    <div class="service-container">
+                        <div class="text-center"><img src="{{asset('assets/images/service-card-5.svg')}}" alt=""></div>
+                        <p>{{ __('home.legal_service.secure_payment') }}</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-6">
-                    <div>
-                        @if(app()->getLocale() === 'ar')
-                            <div class="text-center"><img src="{{asset('assets/images/service-card-ar-6.svg')}}" alt="">
-                            </div>
-                        @else
-                            <div class="text-center"><img src="{{asset('assets/images/service-card-6.svg')}}" alt="">
-                            </div>
-                        @endif
+                    <div class="service-container">
+                        <div class="text-center"><img src="{{asset('assets/images/service-card-6.svg')}}" alt=""></div>
+                        <p>{{ __('home.legal_service.electronic_contracts') }}</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-12 col-12">
-                    <div class="col-lg-3">
-                        @if(app()->getLocale() === 'ar')
-                            <div class="text-center"><img src="{{asset('assets/images/service-card-ar-7.svg')}}" alt="">
-                            </div>
-                        @else
-                            <div class="text-center"><img src="{{asset('assets/images/service-card-7.svg')}}" alt="">
-                            </div>
-                        @endif
+                    <div class="service-container">
+                        <div class="text-center"><img src="{{asset('assets/images/service-card-7.svg')}}" alt=""></div>
+                        <p>{{ __('home.legal_service.fixed_prices') }}</p>
                     </div>
                 </div>
                 <div class="col d-none d-lg-block"></div>

@@ -15,6 +15,13 @@ return [
             'annual' => 'اشتراك سنوي',
             'six_month' => 'اشتراك 6 أشهر'
         ],
+        'second_tabs' => [
+            'annual' => 'سنوي',
+            'six_month' => '٦ أشهر',
+        ],
+        'discount' => [
+            'save_percentage' => 'وفر :percentage٪',
+        ],
         'plans' => [
             'essential' => [
                 'name' => 'أساسي',

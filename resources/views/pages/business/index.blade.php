@@ -35,7 +35,7 @@
         </div>
     </header>
     <section class="business-plan-section" @if(app()->isLocale('ar')) dir="rtl" @endif>
-        <div class="text-start text-md-center container">
+        <div class="text-md-center {{app()->getLocale()=='ar' ? 'text-right' : 'text-start'}} container">
             <h1 class="primary pb-3 fw-bold">
                 {{ __('business.packages.title') }}
             </h1>
@@ -63,8 +63,27 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-lg-4">
-
+                <div class="col-lg-4 text-center">
+                    <div class="business-second-tabs position-relative">
+                        <ul class="nav nav-tabs border-0 mb-0" id="businessSecondTabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="six-month-tab" data-bs-toggle="tab"
+                                        data-bs-target="#six-month" type="button" role="tab" aria-controls="six-month"
+                                        aria-selected="true">
+                                    {{ __('business.packages.second_tabs.six_month') }}
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="annual-tab" data-bs-toggle="tab" data-bs-target="#annual"
+                                        type="button" role="tab" aria-controls="annual" aria-selected="false">
+                                    {{ __('business.packages.second_tabs.annual') }}
+                                </button>
+                            </li>
+                        </ul>
+                        <div class="discount-badge">
+                            <p>{{ __('business.packages.discount.save_percentage', ['percentage' => 15]) }}</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="tab-content mt-5" id="pills-tabContent">
@@ -445,7 +464,8 @@
                                             <li class="dropdown-item" data-value="company">Company</li>
                                             <li class="dropdown-item" data-value="government">Government</li>
                                         </ul>
-                                        <input type="hidden" name="entity_type" id="entity_type" value="{{ old('entity_type') }}">
+                                        <input type="hidden" name="entity_type" id="entity_type"
+                                               value="{{ old('entity_type') }}">
                                         @error('entity_type')
                                         <div class="invalid-feedback d-block">{{ $message }}</div>
                                         @enderror

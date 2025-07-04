@@ -15,6 +15,13 @@ return [
             'annual' => 'Annual Subscription',
             'six_month' => '6 Month Subscription'
         ],
+        'second_tabs' => [
+            'annual' => 'Annual',
+            'six_month' => '6 Month',
+        ],
+        'discount' => [
+            'save_percentage' => 'Save :percentage%',
+        ],
         'plans' => [
             'essential' => [
                 'name' => 'Essential',
