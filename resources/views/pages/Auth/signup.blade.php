@@ -125,9 +125,21 @@
                                                 <label for=""
                                                        class="form-label fw-semibold">{{ __('auth.signup.form.mobile') }}</label>
                                                 <div class="">
-                                                    <input type="number" name="mobile" id="phone" placeholder="{{ __('auth.signup.form.mobile') }}"
-                                                           class="form-control @error('mobile') is-invalid @enderror"
-                                                           value="{{ old('mobile') }}">
+                                                    <div class="input-group">
+                                                        <span class="input-group-text">+966</span>
+                                                        <input
+                                                            type="tel"
+                                                            id="phone"
+                                                            class="form-control @error('phone') is-invalid @enderror"
+                                                            name="phone"
+                                                            value="{{ old('phone') }}" {{-- This will only show 9 digits --}}
+                                                            placeholder="5XXXXXXXX"
+                                                            maxlength="9"
+                                                            pattern="[1-9][0-9]{8}"
+                                                            inputmode="numeric"
+                                                            required
+                                                        >
+                                                    </div>
                                                     @error('mobile')
                                                     <div class="invalid-feedback">{{ $message }}</div>
                                                     @enderror

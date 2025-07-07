@@ -19,15 +19,22 @@
 
                             <!-- Phone Field -->
                             <div class="mb-2">
-                                <input
-                                    type="number"
-                                    id="phone"
-                                    class="form-control @error('name') is-invalid @enderror"
-                                    name="name"
-                                    value="{{ old('name') }}"
-                                    placeholder="{{ __('auth.login.phone') }}"
-                                >
-                                @error('name')
+                                <div class="input-group">
+                                    <span class="input-group-text">+966</span>
+                                    <input
+                                        type="tel"
+                                        id="phone"
+                                        class="form-control @error('phone') is-invalid @enderror"
+                                        name="phone"
+                                        value="{{ old('phone') }}" {{-- This will only show 9 digits --}}
+                                        placeholder="5XXXXXXXX"
+                                        maxlength="9"
+                                        pattern="[1-9][0-9]{8}"
+                                        inputmode="numeric"
+                                        required
+                                    >
+                                </div>
+                                @error('phone')
                                 <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
                             </div>

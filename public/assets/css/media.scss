@@ -331,11 +331,27 @@
     .business-header .header h1 {
         font-size: 40px;
     }
+    .faq-accordion .accordion-button{
+        font-size: 17px;
+        gap: 20px;
+    }
+    .simple-faq-tabs{
+        padding: 0;
+    }
 }
 
 @media (max-width: 576px) {
     .trans-spec-content img {
         max-width: 200px;
+    }
+    .privacy-wrapper, .terms-wrapper, .faq-wrapper {
+        padding: 30px 0;
+    }
+    .privacy-policy-container li, .terms-container li {
+        font-size: 16px;
+    }
+    .privacy-policy-container ul, .terms-container ul {
+        padding: 0;
     }
 }
 

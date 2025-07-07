@@ -285,10 +285,21 @@
                                 {{-- Phone --}}
                                 <div class="mb-3">
                                     <label class="form-label fw-semibold">{{ __('document.form.phone_label') }}</label>
-                                    <input type="number" name="phone" id="phone"
-                                           class="form-control @error('phone') is-invalid @enderror"
-                                           value="{{ old('phone') }}"
-                                           placeholder="{{ __('document.form.phone_placeholder') }}">
+                                    <div class="input-group">
+                                        <span class="input-group-text">+966</span>
+                                        <input
+                                            type="tel"
+                                            id="phone"
+                                            class="form-control @error('phone') is-invalid @enderror"
+                                            name="phone"
+                                            value="{{ old('phone') }}" {{-- This will only show 9 digits --}}
+                                            placeholder="5XXXXXXXX"
+                                            maxlength="9"
+                                            pattern="[1-9][0-9]{8}"
+                                            inputmode="numeric"
+                                            required
+                                        >
+                                    </div>
                                     @error('phone')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                     @enderror

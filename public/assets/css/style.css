@@ -1631,9 +1631,9 @@ input[id=phone] {
   text-transform: lowercase;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
-  position: absolute;
-  top: 15px;
-  right: 15px;
+  position: absolute !important;
+  top: 15px !important;
+  right: 15px !important;
 }
 
 .search-btn:hover {
@@ -1795,10 +1795,107 @@ input[id=phone] {
   color: #565656;
 }
 
-.privacy-wrapper {
+.privacy-wrapper, .terms-wrapper, .faq-wrapper {
   padding: 50px 0;
 }
 
+.simple-faq-tabs {
+  gap: 20px;
+}
+
+.simple-faq-tabs .nav-link {
+  background: #0F898C;
+  color: #fff;
+  border-radius: 6px;
+  margin: 0 12px;
+  padding: 5px 24px;
+  font-weight: 600;
+  font-size: 19px;
+  border: none;
+  transition: background 0.2s;
+}
+
+.simple-faq-tabs .nav-link.active,
+.simple-faq-tabs .nav-link:focus {
+  background: #0b6c6e;
+  color: #fff;
+}
+
+.simple-faq-tabs .nav-link:hover:not(.active) {
+  background: #13a3a6;
+  color: #fff;
+}
+
+.simple-faq-tabs .nav-item {
+  display: inline-block;
+}
+
+/* FAQ Accordions Custom Style */
+.faq-accordion .accordion-item {
+  background: #fff;
+  border-radius: 18px;
+  border: 1px solid #f0f0f0;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(99, 99, 99, 0.06);
+  overflow: hidden;
+}
+
+.faq-accordion .accordion-header {
+  padding: 0;
+}
+
+.faq-accordion .accordion-button {
+  background: none;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #222;
+  padding: 24px 32px 16px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0;
+  transition: background 0.2s;
+}
+
+.faq-accordion .accordion-button:after {
+  display: none;
+}
+
+.faq-accordion .faq-toggle-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #0F898C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
+}
+
+.faq-accordion .accordion-button[aria-expanded=true] .faq-toggle-icon {
+  transform: rotate(180deg);
+}
+
+.faq-accordion .faq-toggle-icon svg {
+  display: block;
+}
+
+.faq-accordion .accordion-body {
+  padding: 0 32px 24px 32px;
+  font-size: 1.08rem;
+  color: #444;
+  font-weight: 400;
+}
+
+@media (max-width: 600px) {
+  .faq-accordion .accordion-button, .faq-accordion .accordion-body {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
 @media (max-width: 1200px) {
   .about-large-content {
     padding: 40px 45px 80px 45px;
@@ -2083,10 +2180,26 @@ input[id=phone] {
   .business-header .header h1 {
     font-size: 40px;
   }
+  .faq-accordion .accordion-button {
+    font-size: 17px;
+    gap: 20px;
+  }
+  .simple-faq-tabs {
+    padding: 0;
+  }
 }
 @media (max-width: 576px) {
   .trans-spec-content img {
     max-width: 200px;
+  }
+  .privacy-wrapper, .terms-wrapper, .faq-wrapper {
+    padding: 30px 0;
+  }
+  .privacy-policy-container li, .terms-container li {
+    font-size: 16px;
+  }
+  .privacy-policy-container ul, .terms-container ul {
+    padding: 0;
   }
 }
 @media (max-width: 450px) {

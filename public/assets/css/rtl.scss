@@ -62,7 +62,7 @@ input[id='phone'] {
 
 .search-btn {
     left: 15px;
-    right: unset;
+    right: unset !important;
 }
 
 .search-input {
@@ -104,6 +104,9 @@ input[id='phone'] {
 .discount-badge{
     right: unset;
     left: -20px;
+}
+.faq-accordion .accordion-button{
+    text-align: right;
 }
 
 @media (max-width: 992px) {
