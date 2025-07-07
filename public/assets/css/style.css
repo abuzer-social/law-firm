@@ -1776,6 +1776,29 @@ input[id=phone] {
   z-index: 100;
 }
 
+.privacy-policy-container li, .terms-container li {
+  margin-bottom: 16px;
+  font-size: 18px;
+  color: #565656;
+  list-style: disc;
+  text-align: justify;
+}
+.privacy-policy-container .list-container, .terms-container .list-container {
+  border: 1px solid #ddd;
+  padding: 40px;
+  border-radius: 8px;
+  max-width: 960px;
+  margin: 20px auto;
+}
+
+.terms-container h6 {
+  color: #565656;
+}
+
+.privacy-wrapper {
+  padding: 50px 0;
+}
+
 @media (max-width: 1200px) {
   .about-large-content {
     padding: 40px 45px 80px 45px;
@@ -2055,6 +2078,9 @@ input[id=phone] {
     font-size: 35px;
   }
   .lawyer-header .header-top h2 {
+    font-size: 40px;
+  }
+  .business-header .header h1 {
     font-size: 40px;
   }
 }

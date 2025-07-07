@@ -51,6 +51,9 @@
                                    href="document">{{ __('navbar.more_options.option_3') }}</a></li>
                             <li><a class="dropdown-item {{ request()->is('lawyer') ? 'active' : '' }}"
                                    href="lawyer">{{ __('navbar.more_options.option_4') }}</a></li>
+                            <li><a class="dropdown-item {{ request()->is('privacy-policy') ? 'active' : '' }}" href="privacy-policy">{{ __('navbar.more_options.option_5') }}</a></li>
+                            <li><a class="dropdown-item {{ request()->is('terms-and-condition') ? 'active' : '' }}" href="terms-and-condition">{{ __('navbar.more_options.option_6') }}</a></li>
+                            <li><a class="dropdown-item {{ request()->is('faq') ? 'active' : '' }}" href="faq">{{ __('navbar.more_options.option_7') }}</a></li>
                         </ul>
                     </li>
                 </ul>

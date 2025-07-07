@@ -1708,4 +1708,31 @@ input[id = 'phone'] {
     z-index: 100;
 }
 
+.privacy-policy-container, .terms-container {
+    li {
+        margin-bottom: 16px;
+        font-size: 18px;
+        color: #565656;
+        list-style: disc;
+        text-align: justify;
+    }
+
+    .list-container {
+        border: 1px solid #ddd;
+        padding: 40px;
+        border-radius: 8px;
+        max-width: 960px;
+        margin: 20px auto;
+    }
+}
+.terms-container{
+    h6{
+        color: #565656;
+    }
+}
+
+.privacy-wrapper{
+    padding: 50px 0;
+}
+
 @import "media";

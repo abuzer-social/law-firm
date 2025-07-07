@@ -9,6 +9,9 @@ use App\Http\Controllers\AccountingController;
 use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\LawyerController;
 use App\Http\Controllers\TranslationController;
+use App\Http\Controllers\PrivacyPolicyController;
+use App\Http\Controllers\TermsAndConditionController;
+use App\Http\Controllers\FaqController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [AuthController::class, 'showLogin'])->name('login');
@@ -38,5 +41,8 @@ Route::get('/accounting', [AccountingController::class, 'showAccounting'])->name
 Route::get('/translation', [TranslationController::class, 'showTranslation'])->name('translation.page');
 Route::post('/translation', [TranslationController::class, 'submitTranslation'])->name('translation.submit');
 
+Route::get('/privacy-policy', [PrivacyPolicyController::class, 'showPrivacyPolicy'])->name('privacy.policy');
+Route::get('/terms-and-condition', [TermsAndConditionController::class, 'showTermsAndCondition'])->name('terms.condition');
+Route::get('/faq', [FaqController::class, 'showFaq'])->name('faq.page');
 
 Route::get('/lang/{locale}', [HomeController::class, 'setLocale'])->name('set.locale');

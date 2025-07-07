@@ -14,6 +14,9 @@ return [
         'option_2' => 'Contact us',
         'option_3' => 'Legal Document',
         'option_4' => 'Ask Lawyer',
+        'option_5' => 'Privacy Policy',
+        'option_6' => 'Terms & Conditions',
+        'option_7' => 'FAQ',
     ],
     'language' => [
         'english' => 'English',
