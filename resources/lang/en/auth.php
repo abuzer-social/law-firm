@@ -36,7 +36,7 @@ return [
                 'account_type' => 'Choose the account type that best fits your profile (Individual / Government / Entity).',
                 'help' => 'Need help? We\'re just a message away!',
                 'review' => 'Double-check your information before submitting.',
-                'terms' => 'Take a moment to read through our <span class="primary">terms and conditions.</span>',
+                'terms' => 'Take a moment to read through our <a href="/terms-and-condition" class="primary">terms and conditions.</a>',
             ],
         ],
         'already_account' => 'Already have an account?',
