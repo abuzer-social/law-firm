@@ -4,7 +4,7 @@
     <div class="about-container margin-top ">
         <div class="padding-top">
             <div class="text-center mb-5">
-                <h2 class="fw-bold primary saudi">{{ __('about.about.title') }}</h2>
+                <h2 class=" primary saudi">{{ __('about.about.title') }}</h2>
             </div>
             <div class="container">
                 @php

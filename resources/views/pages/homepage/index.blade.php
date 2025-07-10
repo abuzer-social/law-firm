@@ -18,10 +18,10 @@
             </div>
             <div class="col-lg-7 col-md-12 order-1 order-lg-2 px-4 px-lg-5">
                 <div>
-                    <h1 class="pb-4 saudi">
+                    <h1 class="pb-2 saudi">
                         {{ __('home.header.title') }}
                     </h1>
-                    <h4 class="primary fw-semibold pb-3 saudi">
+                    <h4 class="primary fw-semibold pb-3 saudi-regular">
                         {{ __('home.header.subtitle') }}
                     </h4>
                     <p class="fw-semibold home-header-desc text-justify">

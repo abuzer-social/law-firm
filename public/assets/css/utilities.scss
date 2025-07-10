@@ -7,7 +7,11 @@ $text-muted: #999;
 
 @font-face {
     font-family: 'Saudi';
-    src: url('/assets/fonts/RTL-Saudi-Bold.ttf')
+    src: url('/assets/fonts/SaudiWeb-Bold.woff')
+}
+@font-face {
+    font-family: 'Saudi-regular';
+    src: url('/assets/fonts/SaudiWeb-Regular.woff')
 }
 
 /* Hide spin buttons in Chrome, Safari, Edge, Opera */
@@ -21,7 +25,9 @@ h1, h2, h3, h4, h5, h6, p {
     margin: 0;
 
 }
-
+.saudi-regular{
+    font-family: 'Saudi-regular';
+}
 .saudi {
     font-family: 'Saudi';
 }

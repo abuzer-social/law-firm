@@ -21,9 +21,10 @@
 
 
                             <div class="mb-2">
-                                <div class="input-group">
+                                <div class="input-group" dir="ltr">
                                     <span class="input-group-text">+966</span>
                                     <input
+                                        dir="ltr"
                                         type="tel"
                                         id="phone"
                                         class="form-control @error('phone') is-invalid @enderror"

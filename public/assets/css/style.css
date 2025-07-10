@@ -2,7 +2,11 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap");
 @font-face {
   font-family: "Saudi";
-  src: url("/assets/fonts/RTL-Saudi-Bold.ttf");
+  src: url("/assets/fonts/SaudiWeb-Bold.woff");
+}
+@font-face {
+  font-family: "Saudi-regular";
+  src: url("/assets/fonts/SaudiWeb-Regular.woff");
 }
 /* Hide spin buttons in Chrome, Safari, Edge, Opera */
 input[type=number]::-webkit-outer-spin-button,
@@ -13,6 +17,10 @@ input[type=number]::-webkit-inner-spin-button {
 
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
+}
+
+.saudi-regular {
+  font-family: "Saudi-regular";
 }
 
 .saudi {
@@ -333,7 +341,6 @@ body {
 .login-title {
   color: #0F898C;
   font-size: 50px;
-  font-weight: 600;
   text-align: center;
   margin-bottom: 1.5rem;
 }
@@ -497,6 +504,9 @@ input[id=phone] {
   align-items: center;
   justify-content: center;
 }
+.signup-header h1 {
+  font-size: 50px;
+}
 
 .signup-card {
   background-color: #FCFBF8;
@@ -617,6 +627,12 @@ input[id=phone] {
 .home-header-container .btn-primary {
   font-size: 20px;
 }
+.home-header-container h1 {
+  font-size: 70px;
+}
+.home-header-container h4 {
+  font-size: 40px;
+}
 
 .home-services-section {
   background-image: url("/assets/images/service-bg.png");
@@ -625,6 +641,9 @@ input[id=phone] {
   background-color: #F9FAFB;
   background-blend-mode: multiply;
   padding: 50px 0;
+}
+.home-services-section h1 {
+  font-size: 45px;
 }
 
 .service-container {
@@ -648,6 +667,9 @@ input[id=phone] {
   background-position: top;
   position: relative;
   background-size: cover;
+}
+.detail-section-container h1 {
+  font-size: 45px;
 }
 
 .detail-card {
@@ -707,6 +729,10 @@ input[id=phone] {
   width: 64px;
   height: 64px;
   margin: 20px auto;
+}
+
+.solution-sections h1 {
+  font-size: 45px;
 }
 
 .footer-section {
@@ -913,6 +939,9 @@ input[id=phone] {
   font-size: 20px;
   border-radius: 18px;
   padding: 15px 25px;
+}
+.process-section h2 {
+  font-size: 45px;
 }
 
 .process-img img {
@@ -1258,6 +1287,9 @@ input[id=phone] {
   background-size: contain;
   background-position: center;
 }
+.about-container h2 {
+  font-size: 70px;
+}
 
 .about-content {
   padding: 50px 30px;
@@ -1305,6 +1337,9 @@ input[id=phone] {
   color: #606060;
   line-height: 31px;
   font-weight: 700;
+}
+.about-content h4 {
+  font-size: 45px;
 }
 
 .accounting-header {
@@ -1796,6 +1831,10 @@ input[id=phone] {
   margin: 20px auto;
 }
 
+.privacy-policy-container h2, .terms-container h2, .faq-wrapper h2 {
+  font-size: 50px;
+}
+
 .terms-container h6 {
   color: #565656;
 }
@@ -1899,6 +1938,7 @@ input[id=phone] {
   display: flex;
   justify-content: center;
   gap: 10px;
+  direction: ltr;
 }
 
 .otp-input {
@@ -2213,7 +2253,7 @@ input[id=phone] {
     padding: 70px 0;
   }
   .contact-container .header h2 {
-    font-size: 35px;
+    font-size: 40px;
   }
   .lawyer-header .header-top h2 {
     font-size: 40px;
@@ -2227,6 +2267,30 @@ input[id=phone] {
   }
   .simple-faq-tabs {
     padding: 0;
+  }
+  .privacy-policy-container h2, .terms-container h2, .faq-wrapper h2 {
+    font-size: 32px;
+  }
+  .home-header-container h1 {
+    font-size: 50px;
+  }
+  .home-header-container h4 {
+    font-size: 30px;
+  }
+  .home-services-section h1 {
+    font-size: 40px;
+  }
+  .detail-section-container h1 {
+    font-size: 40px;
+  }
+  .solution-sections h1 {
+    font-size: 40px;
+  }
+  .process-section h2 {
+    font-size: 40px;
+  }
+  .about-container h2 {
+    font-size: 40px;
   }
 }
 @media (max-width: 576px) {

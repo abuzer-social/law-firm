@@ -166,7 +166,6 @@ body {
 .login-title {
     color: $primary-color;
     font-size: 50px;
-    font-weight: 600;
     text-align: center;
     margin-bottom: 1.5rem;
 }
@@ -345,6 +344,9 @@ input[id = 'phone'] {
     display: flex;
     align-items: center;
     justify-content: center;
+    h1{
+        font-size: 50px;
+    }
 }
 
 .signup-card {
@@ -473,6 +475,12 @@ input[id = 'phone'] {
     .btn-primary {
         font-size: 20px;
     }
+    h1{
+        font-size: 70px;
+    }
+    h4{
+        font-size: 40px
+    }
 }
 
 .home-services-section {
@@ -482,6 +490,9 @@ input[id = 'phone'] {
     background-color: #F9FAFB;
     background-blend-mode: multiply;
     padding: 50px 0;
+    h1{
+        font-size: 45px;
+    }
 }
 
 .service-container {
@@ -506,6 +517,9 @@ input[id = 'phone'] {
     background-position: top;
     position: relative;
     background-size: cover;
+    h1{
+        font-size: 45px;
+    }
 }
 
 .detail-card {
@@ -573,6 +587,11 @@ input[id = 'phone'] {
     height: 64px;
     margin: 20px auto;
 
+}
+.solution-sections{
+    h1{
+        font-size: 45px;
+    }
 }
 
 .footer-section {
@@ -783,6 +802,9 @@ input[id = 'phone'] {
         font-size: 20px;
         border-radius: 18px;
         padding: 15px 25px;
+    }
+    h2{
+        font-size: 45px;
     }
 }
 
@@ -1143,6 +1165,9 @@ input[id = 'phone'] {
     background-image: url("/assets/images/bg-pattern.png");
     background-size: contain;
     background-position: center;
+    h2{
+        font-size: 70px;
+    }
 }
 
 .about-content {
@@ -1197,6 +1222,9 @@ input[id = 'phone'] {
         color: #606060;
         line-height: 31px;
         font-weight: 700;
+    }
+    h4{
+        font-size: 45px;
     }
 }
 
@@ -1725,6 +1753,12 @@ input[id = 'phone'] {
         max-width: 960px;
         margin: 20px auto;
     }
+
+}
+.privacy-policy-container, .terms-container , .faq-wrapper {
+    h2{
+        font-size: 50px;
+    }
 }
 
 .terms-container {
@@ -1832,6 +1866,7 @@ input[id = 'phone'] {
     display: flex;
     justify-content: center;
     gap: 10px;
+    direction: ltr;
 }
 
 .otp-input {
