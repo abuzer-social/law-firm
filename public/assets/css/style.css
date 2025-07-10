@@ -190,6 +190,10 @@ input.is-invalid {
   padding-top: 100px;
 }
 
+.input-group {
+  direction: ltr !important;
+}
+
 body {
   font-family: "Tajawal", sans-serif;
   min-height: 100vh;
