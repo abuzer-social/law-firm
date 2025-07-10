@@ -10,7 +10,10 @@ return [
         'otp_code' => 'OTP Code',
         'submit' => 'Log In',
         'no_account' => 'Don\'t Have An Account?',
-        'signup' => 'Sign Up',
+        'signup' => 'Create a new account',
+        'verification_sent' => 'We have sent a 4-digit verification code to this number',
+        'invalid_otp' => 'Invalid verification code. Please try again.',
+        'verify' => 'Submit',
     ],
     'signup' => [
         'title' => 'Sign Up',

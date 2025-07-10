@@ -77,7 +77,7 @@
     <section class="contract-section">
         <div class="container">
             <div class="pb-5 text-center">
-                <h2 class="fw-bold primary">{{ __('document.create_contract.title') }}</h2>
+                <h2 class="fw-bold primary ibm-plex">{{ __('document.create_contract.title') }}</h2>
             </div>
             <div class="d-flex align-items-center flex-column flex-lg-row gap-5 gap-lg-0">
                 <div>
@@ -114,7 +114,7 @@
     </section>
     <section class="business-plan-section document-section" @if(app()->isLocale('ar')) dir="rtl" @endif>
         <div class="text-center header">
-            <h2 class="primary pb-3 fw-bold">
+            <h2 class="primary pb-3 fw-bold ibm-plex">
                 {{ __('document.packages.title') }}
             </h2>
             <h5>
@@ -252,7 +252,7 @@
                                 <img src="{{asset("assets/images/lawyer-art.svg")}}" alt="">
                             </div>
                             <div class="text-white">
-                                <h2 class="fw-bold pb-4">
+                                <h2 class="fw-bold pb-4 ibm-plex">
                                     {{ __('document.form.found_question') }}
                                 </h2>
                                 <h5 class="fw-bold">
@@ -265,7 +265,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="p-3">
-                            <h5 class="fw-bold pb-4">
+                            <h5 class="fw-bold pb-4 ibm-plex">
                                 {{ __('document.form.title') }}
                             </h5>
                             <form method="POST" action="{{ route('document.submit') }}">

@@ -35,7 +35,7 @@
         </header>
         <section class="business-plan-section acounting-section" @if(app()->isLocale('ar')) dir="rtl" @endif>
             <div class="text-center">
-                <h1 class="primary pb-3 fw-bold">
+                <h1 class="primary pb-3 fw-bold ibm-plex">
                     {{ __('accounting.packages.title') }}
                 </h1>
                 <h5>

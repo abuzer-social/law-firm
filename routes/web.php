@@ -20,6 +20,8 @@ Route::post('/login', [AuthController::class, 'login'])->name('login.submit');
 Route::get('/signup', [AuthController::class, 'showSignup'])->name('signup.page');
 Route::post('/signup', [AuthController::class, 'signup'])->name('signup.submit');
 
+Route::post('/send-otp', [AuthController::class, 'sendOtp'])->name('send.otp');
+Route::post('/verify-otp', [AuthController::class, 'verifyOtp'])->name('verify.otp');
 
 Route::get('/home', [HomeController::class, 'index'])->name('home.index');
 

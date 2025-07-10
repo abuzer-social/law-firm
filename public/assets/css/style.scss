@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap');
 @import "utilities";
 
 body {
@@ -813,7 +814,7 @@ input[id = 'phone'] {
 .business-header-content-span {
     white-space: nowrap;
     background-image: url("/assets/images/red-underline.svg");
-    background-size: 95%;
+    background-size: 88%;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -1827,6 +1828,40 @@ input[id = 'phone'] {
     font-weight: 400;
 }
 
+.otp-input-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.otp-input {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 1.5rem;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+.otp-input:focus {
+    outline: none;
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.verification-message {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+.rtl .spinner-border {
+    margin-right: 0.25rem;
+    margin-left: 0;
+}
+
+.ltr .spinner-border {
+    margin-left: 0.25rem;
+    margin-right: 0;
+}
 @media (max-width: 600px) {
     .faq-accordion .accordion-button, .faq-accordion .accordion-body {
         padding-left: 16px;

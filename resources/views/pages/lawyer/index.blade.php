@@ -11,7 +11,7 @@
                 <div class="row g-4 py-5">
                     <div class="col-lg-6 order-2 order-lg-1">
                         <div @if(app()->isLocale('ar')) style="text-align: right;" @endif>
-                            <h2 class="pb-3 fw-bold">
+                            <h2 class="pb-3 fw-bold ibm-plex">
                                 {{ __('lawyer.header.service_title') }}
                             </h2>
                             <div>
@@ -67,7 +67,7 @@
     </header>
     <section class="business-plan-section lawyer-plan-section" @if(app()->isLocale('ar')) dir="rtl" @endif>
         <div class="text-center mb-5">
-            <h1 class="primary pb-3 fw-bold">
+            <h1 class="primary pb-3 fw-bold ibm-plex">
                 {{ __('lawyer.packages.title') }}
             </h1>
         </div>
@@ -287,9 +287,9 @@
                                 <img src="{{asset("assets/images/lawyer-art.svg")}}" alt="">
                             </div>
                             <div class="text-white">
-                                <h5 class="fw-bold">
+                                <h4 class="fw-bold ibm-plex">
                                     {{ __('lawyer.form.contact_text') }}
-                                </h5>
+                                </h4>
                             </div>
                             <img class="benefit-pattern-left" src="{{asset("assets/images/benefit-pattern-left.svg")}}"
                                  alt="">
@@ -297,7 +297,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="px-4 px-md-5 py-3">
-                            <h5 class="fw-bold pb-4">
+                            <h5 class="fw-bold pb-4 ibm-plex">
                                 {{ __('lawyer.form.title') }}
                             </h5>
                             <form method="POST" action="{{ route('lawyer.submit') }}" enctype="multipart/form-data">

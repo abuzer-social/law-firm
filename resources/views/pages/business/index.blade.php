@@ -11,7 +11,7 @@
                 <div class="row g-4 py-5">
                     <div class="col-lg-6 order-2 order-lg-1">
                         <div>
-                            <h1 class="pb-3 fw-bold position-relative">
+                            <h1 class="pb-3 fw-bold position-relative ibm-plex">
                                 {!! __('business.header.main_title') !!}
                             </h1>
                             <h5 class="pb-4 text-justify d-text-gray">
@@ -36,7 +36,7 @@
     </header>
     <section class="business-plan-section" @if(app()->isLocale('ar')) dir="rtl" @endif>
         <div class="text-md-center {{app()->getLocale()=='ar' ? 'text-right' : 'text-start'}} container">
-            <h1 class="primary pb-3 fw-bold">
+            <h1 class="primary pb-3 fw-bold ibm-plex">
                 {{ __('business.packages.title') }}
             </h1>
             <h5>
@@ -342,10 +342,10 @@
             <div class="row g-3 align-items-center">
                 <div class="col-lg-6 order-2 order-lg-1">
                     <div @if(app()->getLocale() == 'ar') dir="rtl" style="text-align: right;" @endif>
-                        <h1 class="pb-3 primary fw-bold">
+                        <h1 class="pb-3 primary fw-bold ibm-plex">
                             {!! __('business.lawyer_section.title') !!}
                         </h1>
-                        <h2 class="pb-3 fw-semibold">
+                        <h2 class="pb-3 fw-semibold ibm-plex">
                             {{ __('business.lawyer_section.subtitle') }}
                         </h2>
                         <h5 class="pb-4 text-justify">
@@ -370,7 +370,7 @@
                         <div class="benefit-card-left position-relative" @if(app()->getLocale() == 'ar') dir="rtl"
                              style="text-align: right;" @endif>
                             <div>
-                                <h1 class="fw-bold pb-4 text-white">
+                                <h1 class="fw-bold pb-4 text-white ibm-plex">
                                     {{ __('business.benefits_section.title') }}
                                 </h1>
                             </div>
@@ -397,7 +397,7 @@
                     <div class="col-lg-6">
                         <div class="p-5" @if(app()->getLocale() == 'ar') dir="rtl" style="text-align: right;" @endif>
                             <div>
-                                <h2 class="pb-4 fw-bold">
+                                <h2 class="pb-4 fw-bold ibm-plex">
                                     {{ __('business.benefits_section.form_title') }}
                                 </h2>
                             </div>

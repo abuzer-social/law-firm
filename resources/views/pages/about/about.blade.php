@@ -17,7 +17,7 @@
                         <img class="top-right" src="{{ asset('assets/images/top-right.svg') }}" alt="">
                         <img class="top-quote" src="{{ asset('assets/images/top-quote.svg') }}" alt="">
 
-                        <h4 class="primary fw-bold pb-2">
+                        <h4 class="primary fw-bold pb-2 saudi">
                             {{ __('about.about.sections.' . $section . '.title') }}
                         </h4>
 

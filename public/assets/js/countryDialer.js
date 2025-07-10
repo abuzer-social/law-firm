@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.querySelector('form'); // Adjust this selector if needed
     const phoneInput = document.getElementById('phone');
+    phoneInput.addEventListener('input', function(e) {
+        this.value = this.value.replace(/[^0-9]/g, '');
+    });
 
     form.addEventListener('submit', function (e) {
         const rawPhone = phoneInput.value.trim();

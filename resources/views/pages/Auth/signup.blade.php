@@ -10,8 +10,8 @@
                 <div class="card signup-card">
                     <div class="card-body">
                         <div class="text-center mb-4">
-                            <h3 class="primary fw-semibold">{{ __('auth.signup.welcome.title') }}</h3>
-                            <p class="fw-semibold">{{ __('auth.signup.welcome.subtitle') }}</p>
+                            <h3 class="primary fw-semibold ibm-plex pb-3">{{ __('auth.signup.welcome.title') }}</h3>
+                            <p class="fw-semibold ibm-plex">{{ __('auth.signup.welcome.subtitle') }}</p>
                         </div>
                         <div>
                             <div class="d-flex align-items-center gap-3 mb-3">
