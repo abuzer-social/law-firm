@@ -15,7 +15,7 @@
                                 <h5 class="header-desc d-text-gray pb-4 text-justify">
                                     {{ __('accounting.header.description') }}
                                 </h5>
-                                <div class="text-center text-lg-start">
+                                <div class="" @if(app()->isLocale('ar')) style="text-align: right;" @endif>
                                     <button class="btn btn-primary btn-lg px-4 rounded-4 fw-semibold">
                                         {{ __('accounting.header.button') }}
                                     </button>

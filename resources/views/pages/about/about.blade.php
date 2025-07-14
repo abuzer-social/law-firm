@@ -17,12 +17,12 @@
                         <img class="top-right" src="{{ asset('assets/images/top-right.svg') }}" alt="">
                         <img class="top-quote" src="{{ asset('assets/images/top-quote.svg') }}" alt="">
 
-                        <h4 class="primary fw-bold pb-2 saudi">
+                        <h4 class="primary pb-2 saudi">
                             {{ __('about.about.sections.' . $section . '.title') }}
                         </h4>
 
                         <p class="text-justify">
-                            {!! nl2br(e(__('about.about.sections.' . $section . '.content'))) !!}
+                            {!! nl2br(__('about.about.sections.' . $section . '.content')) !!}
                         </p>
 
                         <img class="bottom-left" src="{{ asset('assets/images/bottom-left.svg') }}" alt="">

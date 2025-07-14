@@ -49,7 +49,7 @@
 
                             <!-- OTP Verification Section (Initially Hidden) -->
                             <div id="otpVerificationSection" class="d-none">
-                                <div class="verification-message text-center mb-3">
+                                <div class="verification-message primary fw-semibold text-center mb-3">
                                     {{ __('auth.login.verification_sent') }} <span id="maskedPhone"></span>
                                 </div>
 
@@ -176,7 +176,7 @@
 
                 updateFullOtp();
 
-                // Auto-verify if 4 digits entered (moved here from updateFullOtp)
+                // Auto-verify if 4 digits entered
                 const fullOtp = $('#fullOtp').val();
                 if (fullOtp.length === 4) {
                     verifyOtp();
@@ -252,14 +252,17 @@
                                 $('#loginForm').submit();
                             }, 1500);
                         } else {
-                            showOtpError(isRTL ? 'رمز التحقق غير صحيح' : 'Invalid OTP');
+                            const errorMsg = isRTL
+                                ? 'رمز التحقق غير صحيح أو منتهي الصلاحية'
+                                : 'Invalid or expired OTP';
+                            showOtpError(errorMsg);
                         }
                     },
                     error: (xhr) => {
-                        showOtpError(
-                            xhr.responseJSON?.message ||
-                            (isRTL ? 'حدث خطأ' : 'An error occurred')
-                        );
+                        const errorMsg = isRTL
+                            ? 'رمز التحقق غير صحيح أو منتهي الصلاحية'
+                            : 'Invalid or expired OTP';
+                        showOtpError(xhr.responseJSON?.message || errorMsg);
                     },
                     complete: () => {
                         $btn.prop('disabled', false)
@@ -269,7 +272,7 @@
             }
 
             function showOtpError(message) {
-                $('#otpError').text(message).removeClass('d-none');
+                $('#otpError').text(message).removeClass('d-none').removeClass('text-success').addClass('text-danger');
                 $('.otp-input').val('');
                 $('.otp-input[data-index="1"]').focus();
                 updateFullOtp();
@@ -279,3 +282,4 @@
         });
     </script>
 @endpush
+

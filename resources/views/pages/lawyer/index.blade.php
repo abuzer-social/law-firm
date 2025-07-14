@@ -5,7 +5,7 @@
         <div class="padding-top">
             <div class="text-center header-top">
                 <h2 class="primary pb-3 saudi">{{ __('lawyer.header.title') }}</h2>
-                <h5 class="max-50 m-auto">{{ __('lawyer.header.subtitle') }}</h5>
+                <h5 class="max-50 m-auto d-text-gray">{{ __('lawyer.header.subtitle') }}</h5>
             </div>
             <div class="container">
                 <div class="row g-4 py-5">

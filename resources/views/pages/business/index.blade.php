@@ -202,6 +202,19 @@
                                                 {{ __('business.packages.plans.professional.features.5') }}
                                             </h5>
                                         </div>
+                                        <div class="d-flex align-items-center gap-3 mb-3">
+                                            <div class="plan-counter pro-counter">2</div>
+                                            <h5>
+                                                {{ __('business.packages.plans.professional.features.6') }}
+                                            </h5>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-3 mb-3">
+                                            <div class="plan-counter pro-counter">2</div>
+                                            <h5>
+                                                {{ __('business.packages.plans.professional.features.7') }}
+                                            </h5>
+                                        </div>
+
                                     </div>
                                 </div>
                                 <div class="pro-bottom">
@@ -304,6 +317,90 @@
                                             </div>
                                             <h5>
                                                 {{ __('business.packages.plans.flexible.features.5') }}
+                                            </h5>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-3 mb-3">
+                                            <div>
+                                                <div class="counter-component">
+                                                    <button class="counter-btn decrement" id="decrementBtn">−</button>
+                                                    <div class="counter-display" id="counterDisplay">0</div>
+                                                    <button class="counter-btn increment" id="incrementBtn">+</button>
+                                                </div>
+                                            </div>
+                                            <h5>
+                                                {{ __('business.packages.plans.flexible.features.6') }}
+                                            </h5>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-3 mb-3">
+                                            <div>
+                                                <div class="counter-component">
+                                                    <button class="counter-btn decrement" id="decrementBtn">−</button>
+                                                    <div class="counter-display" id="counterDisplay">0</div>
+                                                    <button class="counter-btn increment" id="incrementBtn">+</button>
+                                                </div>
+                                            </div>
+                                            <h5>
+                                                {{ __('business.packages.plans.flexible.features.7') }}
+                                            </h5>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-3 mb-3">
+                                            <div>
+                                                <div class="counter-component">
+                                                    <button class="counter-btn decrement" id="decrementBtn">−</button>
+                                                    <div class="counter-display" id="counterDisplay">0</div>
+                                                    <button class="counter-btn increment" id="incrementBtn">+</button>
+                                                </div>
+                                            </div>
+                                            <h5>
+                                                {{ __('business.packages.plans.flexible.features.8') }}
+                                            </h5>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-3 mb-3">
+                                            <div>
+                                                <div class="counter-component">
+                                                    <button class="counter-btn decrement" id="decrementBtn">−</button>
+                                                    <div class="counter-display" id="counterDisplay">0</div>
+                                                    <button class="counter-btn increment" id="incrementBtn">+</button>
+                                                </div>
+                                            </div>
+                                            <h5>
+                                                {{ __('business.packages.plans.flexible.features.9') }}
+                                            </h5>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-3 mb-3">
+                                            <div>
+                                                <div class="counter-component">
+                                                    <button class="counter-btn decrement" id="decrementBtn">−</button>
+                                                    <div class="counter-display" id="counterDisplay">0</div>
+                                                    <button class="counter-btn increment" id="incrementBtn">+</button>
+                                                </div>
+                                            </div>
+                                            <h5>
+                                                {{ __('business.packages.plans.flexible.features.10') }}
+                                            </h5>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-3 mb-3">
+                                            <div>
+                                                <div class="counter-component">
+                                                    <button class="counter-btn decrement" id="decrementBtn">−</button>
+                                                    <div class="counter-display" id="counterDisplay">0</div>
+                                                    <button class="counter-btn increment" id="incrementBtn">+</button>
+                                                </div>
+                                            </div>
+                                            <h5>
+                                                {{ __('business.packages.plans.flexible.features.11') }}
+                                            </h5>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-3 mb-3">
+                                            <div>
+                                                <div class="counter-component">
+                                                    <button class="counter-btn decrement" id="decrementBtn">−</button>
+                                                    <div class="counter-display" id="counterDisplay">0</div>
+                                                    <button class="counter-btn increment" id="incrementBtn">+</button>
+                                                </div>
+                                            </div>
+                                            <h5>
+                                                {{ __('business.packages.plans.flexible.features.12') }}
                                             </h5>
                                         </div>
                                     </div>

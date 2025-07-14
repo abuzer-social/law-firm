@@ -1021,7 +1021,7 @@ input[id=phone] {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   border-radius: 30px;
   background-color: white;
-  min-height: 800px;
+  min-height: 1150px;
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -1962,7 +1962,6 @@ input[id=phone] {
 
 .verification-message {
   font-size: 0.9rem;
-  color: #6c757d;
 }
 
 .rtl .spinner-border {

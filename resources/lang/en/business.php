@@ -46,21 +46,30 @@ return [
                     'Legal review of various documents',
                     'Filing a financial claim',
                     'Case study',
-                    'Execution of a "conciliation request" or legal notification'
+                    'Execution of a conciliation request',
+                    'Execution of a legal notification',
+                    'Drafting a legal contract'
                 ],
                 'discount' => 'discount on other cases',
                 'button' => 'Subscribe now'
             ],
             'flexible' => [
-                'name' => 'Professional',
+                'name' => 'Flexible',
                 'price' => '6,900',
                 'features' => [
-                    'Written legal consultations',
-                    'Phone consultations (each lasting 30 minutes)',
-                    'Legal review of various documents',
+                    'Written Legal Consultations',
+                    'Phone Consultation - 30 Minutes',
+                    'Case Study',
                     'Filing a financial claim',
-                    'Case study',
-                    'Execution of a "conciliation request" or legal notification'
+                    'Legal Notice or Settlement Execution',
+                    'Drafting Legal Contract',
+                    'Drafting Lawsuit \'Financial Claim\'',
+                    'Lawyer Visit to Premises',
+                    'Job Contract Drafting',
+                    'Attending Legal Consultation Meeting',
+                    'Administrative Investigation',
+                    'Filing Police Report or Complaint',
+                    'Attending Criminal Investigation'
                 ],
                 'confirm' => 'Confirm',
                 'reset' => 'Reset',
