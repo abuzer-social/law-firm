@@ -362,6 +362,11 @@
     .about-container h2 {
         font-size: 40px;
     }
+    .service-container p{
+        font-size: 14px;
+        white-space: pre-wrap;
+        left: 49%;
+    }
 }
 
 @media (max-width: 576px) {
@@ -377,19 +382,35 @@
     .privacy-policy-container ul, .terms-container ul {
         padding: 0;
     }
+    .home-header-desc{
+        padding: 0;
+    }
+    .detail-section-container h5 {
+        font-size: 20px;
+    }
+    .detail-section-container p {
+        font-size: 18px;
+    }
 }
 
 @media (max-width: 450px) {
     .trans-spec-content p {
         top: 51%;
         left: 49%;
-        font-size: 14px;
+        font-size: 12px;
 
     }
     .trans-spec-content img {
-        max-width: 150px;
+        max-width: 140px;
     }
     .nav-pills.subscription-toggle .nav-link {
         font-size: 12px;
+    }
+    .home-services-section img {
+        max-width: 140px;
+    }
+    .service-container p{
+        font-size: 12px;
+        left: 48%;
     }
 }

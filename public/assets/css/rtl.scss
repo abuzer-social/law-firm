@@ -78,7 +78,7 @@ input[id='phone'] {
 
 .lawyer-underline {
     background-position: left;
-    background-size: 64%;
+    background-size: 100%;
 }
 
 .recommend-tag {
@@ -122,6 +122,9 @@ input[id='phone'] {
     }
     .lf-offcanvas .navbar-nav .nav-link {
         text-align: right;
+    }
+    .home-pattern-img {
+        text-align: left;
     }
 }
 
