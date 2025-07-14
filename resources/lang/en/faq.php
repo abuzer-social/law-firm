@@ -2,6 +2,7 @@
 
 return [
     'title' => 'Frequently Asked Questions',
+    'search_placeholder' => 'Search...',
     'tabs' => [
         'product' => [
             'title' => 'Product',

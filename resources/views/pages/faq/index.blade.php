@@ -8,7 +8,7 @@
             </div>
             <div class="search-container mt-4">
                 <div class="position-relative">
-                    <input type="text" id="faq-search" class="form-control search-input" placeholder="{{ __('Search...') }}">
+                    <input type="text" id="faq-search" class="form-control search-input" placeholder="{{ __('faq.search_placeholder') }}">
                     <button class="btn search-btn position-absolute top-0 end-0" type="button" tabindex="-1">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
                             <path stroke="#fff" stroke-width="2"

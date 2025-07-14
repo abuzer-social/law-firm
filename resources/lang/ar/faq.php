@@ -2,6 +2,7 @@
 
 return [
     'title' => 'الأسئلة الشائعة',
+    'search_placeholder' => 'ابحث...',
     'tabs' => [
         'product' => [
             'title' => ' الخطط القانونية ',
