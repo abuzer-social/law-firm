@@ -5,7 +5,7 @@
         <header class="translation-header margin-top" @if(app()->isLocale('ar')) dir="rtl" @endif>
             <div class="padding-top">
                 <div class="text-center header-top">
-                    <h2 class="primary pb-3 saudi">
+                    <h2 class="primary pb-3 lf-heading">
                         {{ __('translation.header.title') }}
                     </h2>
                     <h5 class="fw-semibold">

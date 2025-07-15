@@ -4,7 +4,7 @@
     <header class="lawyer-header margin-top" @if(app()->isLocale('ar')) dir="rtl" @endif>
         <div class="padding-top">
             <div class="text-center header-top">
-                <h2 class="primary pb-3 saudi">{{ __('lawyer.header.title') }}</h2>
+                <h2 class="primary pb-3 lf-heading">{{ __('lawyer.header.title') }}</h2>
                 <h5 class="max-50 m-auto d-text-gray">{{ __('lawyer.header.subtitle') }}</h5>
             </div>
             <div class="container">

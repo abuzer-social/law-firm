@@ -2,7 +2,7 @@
 
 @section('content')
     <header class="signup-header">
-        <h1 class="text-white saudi">{{ __('auth.signup.title') }}</h1>
+        <h1 class="text-white lf-heading">{{ __('auth.signup.title') }}</h1>
     </header>
     <div class="container signup-bg">
         <div class="row g-3 signup-wrapper">

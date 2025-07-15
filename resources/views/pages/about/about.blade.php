@@ -4,7 +4,7 @@
     <div class="about-container margin-top ">
         <div class="padding-top">
             <div class="text-center mb-5">
-                <h2 class=" primary saudi">{{ __('about.about.title') }}</h2>
+                <h2 class=" primary lf-heading ">{{ __('about.about.title') }}</h2>
             </div>
             <div class="container">
                 @php
@@ -17,7 +17,7 @@
                         <img class="top-right" src="{{ asset('assets/images/top-right.svg') }}" alt="">
                         <img class="top-quote" src="{{ asset('assets/images/top-quote.svg') }}" alt="">
 
-                        <h4 class="primary pb-2 saudi">
+                        <h4 class="primary pb-2 lf-heading">
                             {{ __('about.about.sections.' . $section . '.title') }}
                         </h4>
 

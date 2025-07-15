@@ -4,7 +4,7 @@
     <div class="container privacy-wrapper margin-top">
         <div class="privacy-policy-container padding-top">
             <div class="text-center header max-50 m-auto" @if(app()->getLocale() == 'ar') dir="rtl" @endif>
-                <h2 class="saudi pb-4 primary">{{ __('privacy-policy.title') }}</h2>
+                <h2 class="lf-heading pb-4 primary">{{ __('privacy-policy.title') }}</h2>
             </div>
             <div class="mt-4 list-container">
                 @foreach([

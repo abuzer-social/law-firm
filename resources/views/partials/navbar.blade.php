@@ -26,34 +26,40 @@
                            href="about">{{ __('navbar.about_us') }}</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle nav-select {{ request()->is('accounting') || request()->is('translation') ? 'active' : '' }}"
+                        <a class="nav-link dropdown-toggle nav-select {{ request()->is('business') || request()->is('document') || request()->is('lawyer') || request()->is('translation') || request()->is('accounting') ? 'active' : '' }}"
                            href="#" role="button" data-bs-toggle="dropdown">
                             {{ __('navbar.our_services') }}
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item {{ request()->is('accounting') ? 'active' : '' }}"
-                                   href="accounting">{{ __('navbar.services.service_1') }}</a></li>
-                            <li><a class="dropdown-item {{ request()->is('translation') ? 'active' : '' }}"
-                                   href="translation">{{ __('navbar.services.service_2') }}</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle nav-select {{ request()->is('business') || request()->is('contact') || request()->is('document') || request()->is('lawyer') ? 'active' : '' }}"
-                           href="#" role="button" data-bs-toggle="dropdown">
-                            {{ __('navbar.more') }}
-                        </a>
-                        <ul class="dropdown-menu">
                             <li><a class="dropdown-item {{ request()->is('business') ? 'active' : '' }}"
                                    href="business">{{ __('navbar.more_options.option_1') }}</a></li>
-                            <li><a class="dropdown-item {{ request()->is('contact') ? 'active' : '' }}"
-                                   href="contact">{{ __('navbar.more_options.option_2') }}</a></li>
                             <li><a class="dropdown-item {{ request()->is('document') ? 'active' : '' }}"
                                    href="document">{{ __('navbar.more_options.option_3') }}</a></li>
                             <li><a class="dropdown-item {{ request()->is('lawyer') ? 'active' : '' }}"
                                    href="lawyer">{{ __('navbar.more_options.option_4') }}</a></li>
-                            <li><a class="dropdown-item {{ request()->is('privacy-policy') ? 'active' : '' }}" href="privacy-policy">{{ __('navbar.more_options.option_5') }}</a></li>
-                            <li><a class="dropdown-item {{ request()->is('terms-and-condition') ? 'active' : '' }}" href="terms-and-condition">{{ __('navbar.more_options.option_6') }}</a></li>
-                            <li><a class="dropdown-item {{ request()->is('faq') ? 'active' : '' }}" href="faq">{{ __('navbar.more_options.option_7') }}</a></li>
+                            <li><a class="dropdown-item {{ request()->is('accounting') ? 'active' : '' }}"
+                                   href="accounting">{{ __('navbar.services.service_1') }}</a></li>
+                            <li><a class="dropdown-item {{ request()->is('translation') ? 'active' : '' }}"
+                                   href="translation">{{ __('navbar.services.service_2') }}</a></li>
+
+
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle nav-select {{ request()->is('contact')  || request()->is('privacy-policy') || request()->is('terms-and-condition') || request()->is('faq') ? 'active' : '' }}"
+                           href="#" role="button" data-bs-toggle="dropdown">
+                            {{ __('navbar.more') }}
+                        </a>
+                        <ul class="dropdown-menu">
+
+                            <li><a class="dropdown-item {{ request()->is('contact') ? 'active' : '' }}"
+                                   href="contact">{{ __('navbar.more_options.option_2') }}</a></li>
+                            <li><a class="dropdown-item {{ request()->is('privacy-policy') ? 'active' : '' }}"
+                                   href="privacy-policy">{{ __('navbar.more_options.option_5') }}</a></li>
+                            <li><a class="dropdown-item {{ request()->is('terms-and-condition') ? 'active' : '' }}"
+                                   href="terms-and-condition">{{ __('navbar.more_options.option_6') }}</a></li>
+                            <li><a class="dropdown-item {{ request()->is('faq') ? 'active' : '' }}"
+                                   href="faq">{{ __('navbar.more_options.option_7') }}</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -65,38 +71,37 @@
                     <div class="dropdown lang-drop-container">
                         <div class="language-dropdown dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                             <span>{{ __('navbar.current_language.' . app()->getLocale()) }}</span>
-                            <img src="{{ asset('assets/images/' . app()->getLocale() . '-icon.svg') }}"
-                                 alt="{{ __('navbar.language.' . app()->getLocale() . '_flag') }}">
                         </div>
                         <ul class="dropdown-menu custom-center-dropdown">
                             <li>
                                 <a class="dropdown-item mb-1 {{ app()->getLocale() == 'en' ? 'active' : '' }}"
                                    href="{{ route('set.locale', 'en') }}">
-                                    <img src="{{ asset('assets/images/en-icon.svg') }}" width="20">
                                     {{ __('navbar.language.english') }}
                                 </a>
                             </li>
                             <li>
                                 <a class="dropdown-item {{ app()->getLocale() == 'ar' ? 'active' : '' }}"
                                    href="{{ route('set.locale', 'ar') }}">
-                                    <img src="{{ asset('assets/images/ar-icon.svg') }}" width="20">
                                     {{ __('navbar.language.arabic') }}
                                 </a>
                             </li>
                         </ul>
                     </div>
                     <div class="dropdown d-none d-lg-flex lang-drop-container">
-                        <a href="#" class="user-icon dropdown-toggle no-caret" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a href="#" class="user-icon dropdown-toggle no-caret" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">
                             <img src="{{ asset('assets/images/nav-person-icon.svg') }}" alt="User Icon">
                         </a>
                         <ul class="dropdown-menu custom-center-dropdown">
                             <li>
-                                <a class="dropdown-item mb-1 {{ request()->is('login') ? 'active' : '' }}" href="{{ route('login.page') }}">
+                                <a class="dropdown-item mb-1 {{ request()->is('login') ? 'active' : '' }}"
+                                   href="{{ route('login.page') }}">
                                     {{ __('navbar.auth.login') }}
                                 </a>
                             </li>
                             <li>
-                                <a class="dropdown-item {{ request()->is('signup') ? 'active' : '' }}" href="{{ route('signup.page') }}">
+                                <a class="dropdown-item {{ request()->is('signup') ? 'active' : '' }}"
+                                   href="{{ route('signup.page') }}">
                                     {{ __('navbar.auth.register') }}
                                 </a>
                             </li>

@@ -4,7 +4,7 @@
 @section('content')
     <div class="d-flex flex-column justify-content-center login-wrapper">
         <div>
-            <h1 class="login-title saudi">{{ __('auth.login.title') }}</h1>
+            <h1 class="login-title lf-heading">{{ __('auth.login.title') }}</h1>
             <h5 class="login-subtitle">
                 {{ __('auth.login.subtitle') }}
             </h5>

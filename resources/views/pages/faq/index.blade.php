@@ -4,7 +4,7 @@
     <div class="container faq-wrapper margin-top">
         <div class="padding-top">
             <div class="text-center header max-50 m-auto" @if(app()->getLocale() == 'ar') dir="rtl" @endif>
-                <h2 class="saudi pb-4 primary">{{ __('faq.title') }}</h2>
+                <h2 class="lf-heading pb-4 primary">{{ __('faq.title') }}</h2>
             </div>
             <div class="search-container mt-4">
                 <div class="position-relative">

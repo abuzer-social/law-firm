@@ -5,7 +5,7 @@
         <div class="padding-top">
             <div class="container">
                 <div class="text-center header max-50 m-auto" @if(app()->getLocale() == 'ar') dir="rtl" @endif>
-                    <h2 class="saudi pb-4 primary">
+                    <h2 class="lf-heading pb-4 primary">
                         {{ __('contact.contact_heading.title') }}
                     </h2>
                     <h4 class="fw-semibold">

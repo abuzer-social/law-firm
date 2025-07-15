@@ -19,6 +19,13 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 0;
 }
 
+.lf-heading {
+  font-family: "Saudi";
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 48px;
+}
+
 .saudi-regular {
   font-family: "Saudi-regular";
 }
@@ -217,6 +224,14 @@ body {
 .navbar .navbar-nav .nav-link:hover {
   color: #0F898C !important;
 }
+.navbar .navbar-nav .dropdown-item {
+  color: #8A8A8A;
+  font-weight: 500;
+}
+.navbar .navbar-nav .dropdown-item:hover {
+  background-color: #E4F0FF !important;
+  color: #0F898C;
+}
 .navbar .navbar-collapse {
   justify-content: center;
 }
@@ -241,7 +256,7 @@ body {
 }
 
 .navbar .navbar-nav .dropdown-item.active {
-  background-color: #f8f9fa;
+  background-color: #E4F0FF !important;
 }
 
 .navbar .navbar-nav .nav-link:hover {
@@ -344,7 +359,6 @@ body {
 
 .login-title {
   color: #0F898C;
-  font-size: 50px;
   text-align: center;
   margin-bottom: 1.5rem;
 }
@@ -451,10 +465,11 @@ body {
 .language-dropdown {
   border: 1px solid #DBDFE5;
   border-radius: 10px;
-  padding: 10px;
+  padding: 8px 10px;
   display: flex;
   gap: 10px;
   align-items: center;
+  cursor: pointer;
 }
 
 .lang-drop-container .dropdown-menu.show {
@@ -510,9 +525,6 @@ input[id=phone] {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.signup-header h1 {
-  font-size: 50px;
 }
 
 .signup-card {
@@ -634,11 +646,8 @@ input[id=phone] {
 .home-header-container .btn-primary {
   font-size: 20px;
 }
-.home-header-container h1 {
-  font-size: 70px;
-}
 .home-header-container h4 {
-  font-size: 40px;
+  font-size: 25px;
 }
 
 .home-services-section {
@@ -648,9 +657,6 @@ input[id=phone] {
   background-color: #F9FAFB;
   background-blend-mode: multiply;
   padding: 50px 0;
-}
-.home-services-section h1 {
-  font-size: 45px;
 }
 
 .service-container {
@@ -674,9 +680,6 @@ input[id=phone] {
   background-position: top;
   position: relative;
   background-size: cover;
-}
-.detail-section-container h1 {
-  font-size: 45px;
 }
 
 .detail-card {
@@ -736,10 +739,6 @@ input[id=phone] {
   width: 64px;
   height: 64px;
   margin: 20px auto;
-}
-
-.solution-sections h1 {
-  font-size: 45px;
 }
 
 .footer-section {
@@ -947,9 +946,6 @@ input[id=phone] {
   border-radius: 18px;
   padding: 15px 25px;
 }
-.process-section h2 {
-  font-size: 45px;
-}
 
 .process-img img {
   width: 100%;
@@ -963,9 +959,6 @@ input[id=phone] {
 }
 .business-header .header {
   padding: 0 20px;
-}
-.business-header .header h1 {
-  font-size: 70px;
 }
 .business-header .header p {
   font-size: 20px;
@@ -1294,9 +1287,6 @@ input[id=phone] {
   background-size: contain;
   background-position: center;
 }
-.about-container h2 {
-  font-size: 70px;
-}
 
 .about-content {
   padding: 50px 30px;
@@ -1345,9 +1335,6 @@ input[id=phone] {
   line-height: 31px;
   font-weight: 700;
 }
-.about-content h4 {
-  font-size: 45px;
-}
 
 .accounting-header {
   padding: 50px 0;
@@ -1358,11 +1345,8 @@ input[id=phone] {
 .accounting-header .header-desc {
   line-height: 33px;
 }
-.accounting-header .header-top h2 {
-  font-size: 70px;
-}
 .accounting-header .header-top h5 {
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .acounting-section {
@@ -1389,11 +1373,8 @@ input[id=phone] {
   line-height: 33px;
   color: #565656;
 }
-.translation-header .header-top h2 {
-  font-size: 70px;
-}
 .translation-header .header-top h5 {
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .translation-service {
@@ -1574,9 +1555,6 @@ input[id=phone] {
   background-position: center;
   padding: 100px 0;
 }
-.lawyer-header .header-top h2 {
-  font-size: 70px;
-}
 .lawyer-header .header-top h5 {
   font-size: 25px;
 }
@@ -1615,9 +1593,6 @@ input[id=phone] {
   background-size: contain;
   background-position: center;
   padding: 100px 0;
-}
-.document-header h2 {
-  font-size: 70px;
 }
 
 .legal-section {
@@ -1776,9 +1751,6 @@ input[id=phone] {
   left: 5px !important;
 }
 
-.contact-container .header h2 {
-  font-size: 50px;
-}
 .contact-container .header h4 {
   font-size: 20px;
 }
@@ -1836,10 +1808,6 @@ input[id=phone] {
   border-radius: 8px;
   max-width: 960px;
   margin: 20px auto;
-}
-
-.privacy-policy-container h2, .terms-container h2, .faq-wrapper h2 {
-  font-size: 50px;
 }
 
 .terms-container h6 {
@@ -2001,8 +1969,7 @@ input[id=phone] {
   .navbar .navbar-nav .nav-link:hover {
     color: black !important;
   }
-  .navbar .navbar-nav .nav-link.active,
-  .navbar .navbar-nav .dropdown-item.active {
+  .navbar .navbar-nav .nav-link.active {
     color: black !important;
   }
   .nav-select {
@@ -2100,9 +2067,6 @@ input[id=phone] {
   .benefit-section {
     padding: 80px 0;
   }
-  .document-header h2 {
-    font-size: 35px;
-  }
   .document-header h5 {
     font-size: 18px !important;
   }
@@ -2119,17 +2083,11 @@ input[id=phone] {
   .lawyer-plan-section .plan-card {
     min-height: 100%;
   }
-  .accounting-header .header-top h2 {
-    font-size: 40px;
-  }
   .accounting-header .header-top h5 {
     font-size: 20px;
   }
   .acounting-section h1 {
     font-size: 30px;
-  }
-  .translation-header .header-top h2 {
-    font-size: 40px;
   }
   .translation-header .header-top h5 {
     font-size: 20px;
@@ -2168,9 +2126,6 @@ input[id=phone] {
   .login-card {
     padding: 2rem 1.5rem;
     max-width: 100%;
-  }
-  .login-title {
-    font-size: 35px;
   }
   .login-subtitle {
     font-size: 18px;
@@ -2252,20 +2207,8 @@ input[id=phone] {
     margin-bottom: 0;
     padding: 40px 10px;
   }
-  .lawyer-header .header-top h2 {
-    font-size: 40px;
-  }
   .lawyer-header {
     padding: 70px 0;
-  }
-  .contact-container .header h2 {
-    font-size: 40px;
-  }
-  .lawyer-header .header-top h2 {
-    font-size: 40px;
-  }
-  .business-header .header h1 {
-    font-size: 40px;
   }
   .faq-accordion .accordion-button {
     font-size: 17px;
@@ -2274,34 +2217,25 @@ input[id=phone] {
   .simple-faq-tabs {
     padding: 0;
   }
-  .privacy-policy-container h2, .terms-container h2, .faq-wrapper h2 {
-    font-size: 32px;
-  }
-  .home-header-container h1 {
-    font-size: 50px;
-  }
   .home-header-container h4 {
-    font-size: 30px;
-  }
-  .home-services-section h1 {
-    font-size: 40px;
-  }
-  .detail-section-container h1 {
-    font-size: 40px;
-  }
-  .solution-sections h1 {
-    font-size: 40px;
-  }
-  .process-section h2 {
-    font-size: 40px;
-  }
-  .about-container h2 {
-    font-size: 40px;
+    font-size: 20px;
   }
   .service-container p {
     font-size: 14px;
     white-space: pre-wrap;
     left: 49%;
+  }
+  .business-header h5 {
+    font-size: 20px;
+  }
+  .lawyer-header .header-top h5 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .lf-heading {
+    font-size: 32px;
+    line-height: 38px;
   }
 }
 @media (max-width: 576px) {
@@ -2325,6 +2259,12 @@ input[id=phone] {
   }
   .detail-section-container p {
     font-size: 18px;
+  }
+  .contact-container .max-50 {
+    max-width: 100%;
+  }
+  .contact-card-section {
+    padding: 50px 0px;
   }
 }
 @media (max-width: 450px) {

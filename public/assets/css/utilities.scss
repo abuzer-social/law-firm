@@ -9,6 +9,7 @@ $text-muted: #999;
     font-family: 'Saudi';
     src: url('/assets/fonts/SaudiWeb-Bold.woff')
 }
+
 @font-face {
     font-family: 'Saudi-regular';
     src: url('/assets/fonts/SaudiWeb-Regular.woff')
@@ -21,19 +22,29 @@ input[type="number"]::-webkit-inner-spin-button {
     margin: 0;
 }
 
+
 h1, h2, h3, h4, h5, h6, p {
     margin: 0;
 
 }
-.saudi-regular{
+.lf-heading{
+    font-family: 'Saudi';
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 48px;
+}
+.saudi-regular {
     font-family: 'Saudi-regular';
 }
+
 .saudi {
     font-family: 'Saudi';
 }
-.ibm-plex{
+
+.ibm-plex {
     font-family: "IBM Plex Sans Arabic", sans-serif;
 }
+
 /* Hide in Firefox */
 input[type="number"] {
     -moz-appearance: textfield;
@@ -187,17 +198,21 @@ input.is-invalid {
         background-position: left 0.75rem center !important;
     }
 }
-.form-select.is-invalid:not([multiple]):not([size]){
+
+.form-select.is-invalid:not([multiple]):not([size]) {
     [dir="rtl"] & {
-        background-position: left .75rem center,center left 2.25rem !important
+        background-position: left .75rem center, center left 2.25rem !important
     }
 }
-.margin-top{
+
+.margin-top {
     margin-top: -100px;
 }
-.padding-top{
+
+.padding-top {
     padding-top: 100px;
 }
-.input-group{
-direction: ltr !important;
+
+.input-group {
+    direction: ltr !important;
 }

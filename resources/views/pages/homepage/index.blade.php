@@ -24,7 +24,7 @@
             </div>
             <div class="col-lg-7 col-md-12 order-1 order-lg-2 px-4 px-lg-5">
                 <div>
-                    <h1 class="pb-2 saudi">
+                    <h1 class="pb-2 lf-heading">
                         {{ __('home.header.title') }}
                     </h1>
                     <h4 class="primary fw-semibold pb-3 saudi-regular">
@@ -45,7 +45,7 @@
     </div>
     <section class="home-services-section">
         <div class="text-center pb-5 ">
-            <h1 class="saudi">
+            <h1 class="lf-heading">
                 {{ __('home.services.title') }}
             </h1>
         </div>
@@ -102,7 +102,7 @@
     </section>
     <section class="detail-section-container">
         <div class="pb-5 text-center">
-            <h1 class="saudi">
+            <h1 class="lf-heading">
                 {!! __('home.details.title') !!}
             </h1>
         </div>
@@ -166,7 +166,7 @@
     </section>
     <section class="solution-sections py-5">
         <div class="text-center mb-4">
-            <h1 class="saudi primary">{{ __('home.solutions.title') }}</h1>
+            <h1 class="lf-heading primary">{{ __('home.solutions.title') }}</h1>
         </div>
         <div class="container">
             <div class="row justify-content-between g-3" {{app()->getLocale() == 'ar' ? 'dir=ltr' : 'dir = ltr'}}>
@@ -242,7 +242,7 @@
     </section>
     <section class="process-section">
         <div class="text-center pb-5" @if(app()->getLocale() == 'ar') dir="rtl" @endif>
-            <h2 class="saudi pb-2">
+            <h2 class="lf-heading pb-2">
                 {!! __('home.registration_section.title') !!}
             </h2>
             <h6>

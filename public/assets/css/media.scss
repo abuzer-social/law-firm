@@ -21,7 +21,7 @@
         color: black !important;
     }
     .navbar .navbar-nav .nav-link.active,
-    .navbar .navbar-nav .dropdown-item.active {
+    {
         color: black !important;
     }
     .nav-select {
@@ -131,9 +131,6 @@
     .benefit-section {
         padding: 80px 0;
     }
-    .document-header h2 {
-        font-size: 35px;
-    }
     .document-header h5 {
         font-size: 18px !important;
     }
@@ -153,9 +150,6 @@
         }
     }
     .accounting-header .header-top {
-        h2 {
-            font-size: 40px;
-        }
 
         h5 {
             font-size: 20px;
@@ -167,9 +161,6 @@
         }
     }
     .translation-header .header-top {
-        h2 {
-            font-size: 40px;
-        }
 
         h5 {
             font-size: 20px;
@@ -222,9 +213,6 @@
     .login-card {
         padding: 2rem 1.5rem;
         max-width: 100%;
-    }
-    .login-title {
-        font-size: 35px;
     }
     .login-subtitle {
         font-size: 18px;
@@ -316,56 +304,38 @@
         margin-bottom: 0;
         padding: 40px 10px;
     }
-    .lawyer-header .header-top h2 {
-        font-size: 40px;
-    }
     .lawyer-header {
         padding: 70px 0;
     }
-    .contact-container .header h2 {
-        font-size: 40px;
-    }
-    .lawyer-header .header-top h2 {
-        font-size: 40px;
-    }
-    .business-header .header h1 {
-        font-size: 40px;
-    }
-    .faq-accordion .accordion-button{
+    .faq-accordion .accordion-button {
         font-size: 17px;
         gap: 20px;
     }
-    .simple-faq-tabs{
+    .simple-faq-tabs {
         padding: 0;
     }
-    .privacy-policy-container h2, .terms-container h2, .faq-wrapper h2{
-        font-size: 32px;
-    }
-    .home-header-container h1 {
-        font-size: 50px;
-    }
     .home-header-container h4 {
-        font-size: 30px;
+        font-size: 20px;
     }
-    .home-services-section h1 {
-        font-size: 40px;
-    }
-    .detail-section-container h1 {
-        font-size: 40px;
-    }
-    .solution-sections h1 {
-        font-size: 40px;
-    }
-    .process-section h2 {
-        font-size: 40px;
-    }
-    .about-container h2 {
-        font-size: 40px;
-    }
-    .service-container p{
+    .service-container p {
         font-size: 14px;
         white-space: pre-wrap;
         left: 49%;
+    }
+    .business-header{
+        h5{
+            font-size: 20px;
+        }
+    }
+    .lawyer-header .header-top h5{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .lf-heading {
+        font-size: 32px;
+        line-height: 38px;
     }
 }
 
@@ -382,7 +352,7 @@
     .privacy-policy-container ul, .terms-container ul {
         padding: 0;
     }
-    .home-header-desc{
+    .home-header-desc {
         padding: 0;
     }
     .detail-section-container h5 {
@@ -390,6 +360,14 @@
     }
     .detail-section-container p {
         font-size: 18px;
+    }
+    .contact-container {
+        .max-50 {
+            max-width: 100%;
+        }
+    }
+    .contact-card-section {
+        padding: 50px 0px;
     }
 }
 
@@ -409,7 +387,7 @@
     .home-services-section img {
         max-width: 140px;
     }
-    .service-container p{
+    .service-container p {
         font-size: 12px;
         left: 48%;
     }

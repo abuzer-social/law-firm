@@ -4,7 +4,7 @@
     <header class="business-header margin-top" @if(app()->isLocale('ar')) dir="rtl" @endif>
         <div class="padding-top">
             <div class="text-center header">
-                <h1 class="primary pb-3 saudi">{{ __('business.header.title') }}</h1>
+                <h1 class="primary pb-3 lf-heading">{{ __('business.header.title') }}</h1>
                 <h5 class="fw-semibold">{{ __('business.header.subtitle') }}</h5>
             </div>
             <div class="container">
