@@ -206,6 +206,7 @@ input.is-invalid {
 }
 
 body {
+  font-family: "Tajawal", sans-serif;
   min-height: 100vh;
 }
 
