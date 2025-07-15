@@ -8,9 +8,10 @@
     <link rel="shortcut icon" href="{{asset('assets/images/logo.svg')}}" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/css/intlTelInput.css">
     <link rel="stylesheet" href="{{ asset('assets/bootstrap/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    <link rel="stylesheet"
+          href="{{ asset('assets/css/style.css') }}?v={{ filemtime(public_path('assets/css/style.css')) }}">
     @if(app()->getLocale() === 'ar')
-        <link rel="stylesheet" href="{{ asset('assets/css/rtl.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/rtl.css') }}?v={{ filemtime(public_path('assets/css/rtl.css')) }}">
     @endif
     @stack('styles')
 </head>
