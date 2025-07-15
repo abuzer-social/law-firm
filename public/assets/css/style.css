@@ -201,6 +201,10 @@ input.is-invalid {
   direction: ltr !important;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Tajawal", sans-serif;
   min-height: 100vh;
@@ -430,6 +434,8 @@ body {
   align-items: center;
   justify-content: center;
   transition: background-color 0.3s ease;
+  line-height: 1.5;
+  vertical-align: middle;
 }
 .btn-send-otp:hover {
   background-color: #dee2e6;

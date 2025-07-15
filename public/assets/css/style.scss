@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap');
 @import "utilities";
 
+* {
+    box-sizing: border-box;
+}
 body {
     font-family: "Tajawal", sans-serif;
     min-height: 100vh;
@@ -251,6 +254,8 @@ body {
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s ease;
+    line-height: 1.5;
+    vertical-align: middle;
 
     &:hover {
         background-color: #dee2e6;
