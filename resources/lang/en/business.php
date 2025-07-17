@@ -108,7 +108,13 @@ return [
             'name' => 'Name',
             'phone' => 'Phone Number',
             'city' => 'City',
-            'entity_type' => 'Type of Entity'
+            'riyadh' => 'Riyadh',
+            'jeddah' => 'Jeddah',
+            'dammam' => 'Dammam',
+            'entity_type' => 'Type of Entity',
+            'establishment' => 'Establishment',
+            'company' => 'Company',
+            'other' => 'Other',
         ],
         'submit_button' => 'Send'
     ],

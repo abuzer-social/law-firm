@@ -26,6 +26,13 @@ h1, h2, h3, h4, h5, h6, p {
   line-height: 48px;
 }
 
+.lf-subheading {
+  font-family: "Saudi";
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 40px;
+}
+
 .saudi-regular {
   font-family: "Saudi-regular";
 }
@@ -337,6 +344,9 @@ body {
 
 .signup-card label {
   color: #6C6868;
+}
+.signup-card a {
+  text-decoration: none;
 }
 
 .login-container {
@@ -720,6 +730,7 @@ input[id=phone] {
   font-size: 20px;
   font-weight: 700;
   color: black;
+  text-decoration: none;
 }
 .solution-card .lawyer {
   background-color: #EFE5F9;
@@ -986,6 +997,9 @@ input[id=phone] {
   background-size: cover;
   padding-bottom: 100px;
 }
+.business-plan-section .plan-card {
+  min-height: 1150px;
+}
 
 .nav-pills.subscription-toggle {
   background-color: white;
@@ -1023,7 +1037,6 @@ input[id=phone] {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   border-radius: 30px;
   background-color: white;
-  min-height: 1150px;
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -1430,6 +1443,7 @@ input[id=phone] {
   cursor: pointer;
   color: #6c757d;
   text-align: left;
+  padding-inline: 0;
 }
 
 .custom-dropdown-options .dropdown-item:not(:last-child) {
@@ -1562,7 +1576,7 @@ input[id=phone] {
   padding: 100px 0;
 }
 .lawyer-header .header-top h5 {
-  font-size: 25px;
+  font-size: 20px;
 }
 .lawyer-header .lawyer-points {
   width: 28px;
@@ -1582,6 +1596,9 @@ input[id=phone] {
   background: url(/assets/images/accounting-showcase-bg.svg) left top no-repeat, url(/assets/images/detail-bg.png) bottom no-repeat;
   padding-bottom: 110px;
   background-size: contain;
+}
+.lawyer-plan-section .plan-card {
+  min-height: 650px;
 }
 
 .benefit-pattern-left {
@@ -1817,7 +1834,11 @@ input[id=phone] {
 }
 
 .terms-container h6 {
+  font-size: 18px;
   color: #565656;
+  font-weight: 400;
+  text-align: justify;
+  line-height: 25px;
 }
 
 .privacy-wrapper, .terms-wrapper, .faq-wrapper {

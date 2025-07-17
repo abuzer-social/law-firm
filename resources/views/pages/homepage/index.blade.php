@@ -24,12 +24,14 @@
             </div>
             <div class="col-lg-7 col-md-12 order-1 order-lg-2 px-4 px-lg-5">
                 <div>
-                    <h1 class="pb-2 lf-heading">
-                        {{ __('home.header.title') }}
-                    </h1>
-                    <h4 class="primary fw-semibold pb-3 saudi-regular">
-                        {{ __('home.header.subtitle') }}
-                    </h4>
+                    <div class="home-header-text">
+                        <h1 class="pb-2 lf-heading">
+                            {{ __('home.header.title') }}
+                        </h1>
+                        <h4 class="primary pb-3 lf-subheading">
+                            {{ __('home.header.subtitle') }}
+                        </h4>
+                    </div>
                     <p class="fw-semibold home-header-desc text-justify">
                         {{ __('home.header.description') }}
                     </p>

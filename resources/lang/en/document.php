@@ -52,7 +52,7 @@ return [
             'multiple_documents' => 'Multiple documents monthly',
             'single_user' => 'Single-user login',
             'multiple_users' => 'Login for multiple users',
-            'share_download' => 'Share and download documents anytime',
+            'share_download' => 'Share and download documents',
             'management' => 'Document management',
         ],
     ],

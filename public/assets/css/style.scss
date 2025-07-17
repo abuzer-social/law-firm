@@ -5,6 +5,7 @@
 * {
     box-sizing: border-box;
 }
+
 body {
     font-family: "Tajawal", sans-serif;
     min-height: 100vh;
@@ -32,10 +33,12 @@ body {
                 color: $primary-color !important;
             }
         }
-        .dropdown-item{
+
+        .dropdown-item {
             color: #8A8A8A;
             font-weight: 500;
-            &:hover{
+
+            &:hover {
                 background-color: #E4F0FF !important;
                 color: #0F898C;
             }
@@ -148,6 +151,9 @@ body {
 .signup-card {
     label {
         color: #6C6868;
+    }
+    a{
+        text-decoration: none;
     }
 }
 
@@ -479,6 +485,7 @@ input[id = 'phone'] {
     max-width: 70%;
 }
 
+
 .home-header-container {
     background-image: url("/assets/images/bg-pattern.png");
     background-size: cover;
@@ -562,6 +569,7 @@ input[id = 'phone'] {
         font-size: 20px;
         font-weight: 700;
         color: black;
+        text-decoration: none;
     }
 
     .lawyer {
@@ -846,6 +854,10 @@ input[id = 'phone'] {
     position: relative;
     background-size: cover;
     padding-bottom: 100px;
+
+    .plan-card {
+        min-height: 1150px;
+    }
 }
 
 .nav-pills.subscription-toggle {
@@ -885,7 +897,6 @@ input[id = 'phone'] {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     border-radius: 30px;
     background-color: white;
-    min-height: 1150px;
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -1323,6 +1334,7 @@ input[id = 'phone'] {
     cursor: pointer;
     color: #6c757d;
     text-align: left;
+    padding-inline: 0;
 }
 
 .custom-dropdown-options .dropdown-item:not(:last-child) {
@@ -1462,7 +1474,7 @@ input[id = 'phone'] {
     .header-top {
 
         h5 {
-            font-size: 25px;
+            font-size: 20px;
         }
     }
 
@@ -1487,6 +1499,10 @@ input[id = 'phone'] {
     background: url(/assets/images/accounting-showcase-bg.svg) left top no-repeat, url(/assets/images/detail-bg.png) bottom no-repeat;
     padding-bottom: 110px;
     background-size: contain;
+
+    .plan-card {
+        min-height: 650px;
+    }
 }
 
 .benefit-pattern-left {
@@ -1738,7 +1754,11 @@ input[id = 'phone'] {
 
 .terms-container {
     h6 {
+        font-size: 18px;
         color: #565656;
+        font-weight: 400;
+        text-align: justify;
+        line-height: 25px;
     }
 }
 

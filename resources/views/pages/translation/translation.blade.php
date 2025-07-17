@@ -34,7 +34,7 @@
         </header>
         <section class="translation-specialization">
             <div class="text-center mb-5">
-                <h1 class="fw-bold primary ibm-plex">
+                <h1 class="primary lf-subheading">
                     {{ __('translation.specializations.title') }}
                 </h1>
             </div>
@@ -129,7 +129,7 @@
         <section class="translation-service">
             <div class="container">
                 <div class="pb-5 text-center">
-                    <h2 class="fw-bold primary ibm-plex">{{ __('translation.services.how_service_works') }}</h2>
+                    <h2 class="primary lf-subheading">{{ __('translation.services.how_service_works') }}</h2>
                 </div>
                 <div class="d-flex align-items-center flex-column flex-lg-row gap-5 gap-lg-0">
                     <div>
@@ -179,7 +179,7 @@
                                         <img src="{{asset('assets/images/trans-form-img.svg')}}" alt="">
                                     </div>
                                     <div>
-                                        <h2 class="fw-bold pb-4 ibm-plex">
+                                        <h2 class=" pb-4 lf-subheading">
                                             {{ __('translation.form.cta.heading') }}
                                         </h2>
                                         <h6>
@@ -195,7 +195,7 @@
                             <div class="p-2 p-sm-4" @if(app()->getLocale() == 'ar') dir="rtl"
                                  style="text-align: right;" @endif>
                                 <div>
-                                    <h2 class="pb-4 fw-bold ibm-plex">
+                                    <h2 class="pb-4 lf-subheading">
                                         {{ __('translation.form.title') }}
                                     </h2>
                                 </div>

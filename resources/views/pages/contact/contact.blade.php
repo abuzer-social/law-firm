@@ -21,7 +21,7 @@
                                 <div class="benefit-card-left position-relative" @if(app()->getLocale() == 'ar') dir="rtl"
                                      style="text-align: right;" @endif>
                                     <div>
-                                        <h1 class="fw-bold pb-5 text-white">
+                                        <h1 class="pb-5 text-white lf-subheading">
                                             {{ __('contact.contact_card.title') }}
                                         </h1>
                                     </div>

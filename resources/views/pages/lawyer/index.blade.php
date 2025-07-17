@@ -11,7 +11,7 @@
                 <div class="row g-4 py-5">
                     <div class="col-lg-6 order-2 order-lg-1">
                         <div @if(app()->isLocale('ar')) style="text-align: right;" @endif>
-                            <h2 class="pb-3 fw-bold ibm-plex">
+                            <h2 class="pb-3 lf-subheading">
                                 {{ __('lawyer.header.service_title') }}
                             </h2>
                             <div>
@@ -67,7 +67,7 @@
     </header>
     <section class="business-plan-section lawyer-plan-section" @if(app()->isLocale('ar')) dir="rtl" @endif>
         <div class="text-center mb-5">
-            <h1 class="primary pb-3 fw-bold ibm-plex">
+            <h1 class="primary pb-3 lf-subheading">
                 {{ __('lawyer.packages.title') }}
             </h1>
         </div>
@@ -86,7 +86,7 @@
                             </div>
                             <div>
                                 <div class="d-flex align-items-center gap-3 mb-3">
-                                    <div class="plan-counter essential-counter">2</div>
+                                    <div class="plan-counter essential-counter">1</div>
                                     <h6>
                                         {{ __('lawyer.packages.plans.essential.consultations') }}
                                     </h6>
@@ -116,12 +116,6 @@
                                             <img src="{{ asset('assets/images/white-tick.svg') }}" alt="">
                                         </div>
                                         <h5>{{ __('lawyer.packages.plans.essential.feature4') }}</h5>
-                                    </div>
-                                    <div class="d-flex align-items-center gap-3 mb-3">
-                                        <div class="plan-enable essential-counter">
-                                            <img src="{{ asset('assets/images/white-tick.svg') }}" alt="">
-                                        </div>
-                                        <h5>{{ __('lawyer.packages.plans.essential.feature5') }}</h5>
                                     </div>
                                 </div>
                             </div>
@@ -156,7 +150,7 @@
                                 </h2>
                             </div>
                             <div class="d-flex align-items-center gap-3 mb-3">
-                                <div class="plan-counter pro-counter">1</div>
+                                <div class="plan-counter pro-counter">6</div>
                                 <h6>
                                     {{ __('lawyer.packages.plans.growth.consultations') }}
                                 </h6>
@@ -187,12 +181,6 @@
                                     </div>
                                     <h5>{{ __('lawyer.packages.plans.growth.feature4') }}</h5>
                                 </div>
-                                <div class="d-flex align-items-center gap-3 mb-3">
-                                    <div class="plan-enable pro-counter">
-                                        <img src="{{ asset('assets/images/white-tick.svg') }}" alt="">
-                                    </div>
-                                    <h5>{{ __('lawyer.packages.plans.growth.feature5') }}</h5>
-                                </div>
                             </div>
                         </div>
                         <div class="pro-bottom">
@@ -221,7 +209,7 @@
                                 </h2>
                             </div>
                             <div class="d-flex align-items-center gap-3 mb-3">
-                                <div class="plan-counter premier-counter">6</div>
+                                <div class="plan-counter premier-counter">12</div>
                                 <h6>
                                     {{ __('lawyer.packages.plans.premier.consultations') }}
                                 </h6>
@@ -252,12 +240,6 @@
                                     </div>
                                     <h5>{{ __('lawyer.packages.plans.premier.feature4') }}</h5>
                                 </div>
-                                <div class="d-flex align-items-center gap-3 mb-3">
-                                    <div class="plan-enable premier-counter">
-                                        <img src="{{ asset('assets/images/white-tick.svg') }}" alt="">
-                                    </div>
-                                    <h5>{{ __('lawyer.packages.plans.premier.feature5') }}</h5>
-                                </div>
                             </div>
                         </div>
                         <div class="flexible-bottom">
@@ -287,7 +269,7 @@
                                 <img src="{{asset("assets/images/lawyer-art.svg")}}" alt="">
                             </div>
                             <div class="text-white">
-                                <h4 class="fw-bold ibm-plex">
+                                <h4 class="lf-subheading">
                                     {{ __('lawyer.form.contact_text') }}
                                 </h4>
                             </div>
@@ -297,7 +279,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="px-4 px-md-5 py-3">
-                            <h5 class="fw-bold pb-4 ibm-plex">
+                            <h5 class=" pb-4 lf-subheading">
                                 {{ __('lawyer.form.title') }}
                             </h5>
                             <form method="POST" action="{{ route('lawyer.submit') }}" enctype="multipart/form-data">
@@ -336,10 +318,15 @@
                                             {{ old('consultation_type', __('lawyer.form.select_case_placeholder')) }}
                                         </button>
                                         <ul class="custom-dropdown-options list-unstyled shadow-sm">
-                                            <li class="dropdown-item"
-                                                data-value="commercial">{{ __('lawyer.form.commercial_case') }}</li>
-                                            <li class="dropdown-item"
-                                                data-value="civil">{{ __('lawyer.form.civil_case') }}</li>
+                                            <li class="dropdown-item" data-value="commercial">{{ __('lawyer.form.commercial_case') }}</li>
+                                            <li class="dropdown-item" data-value="civil">{{ __('lawyer.form.civil_case') }}</li>
+                                            <li class="dropdown-item" data-value="labor">{{ __('lawyer.form.labor_case') }}</li>
+                                            <li class="dropdown-item" data-value="personal_status">{{ __('lawyer.form.personal_status_case') }}</li>
+                                            <li class="dropdown-item" data-value="criminal">{{ __('lawyer.form.criminal_case') }}</li>
+                                            <li class="dropdown-item" data-value="administrative">{{ __('lawyer.form.administrative_case') }}</li>
+                                            <li class="dropdown-item" data-value="real_estate">{{ __('lawyer.form.real_estate_case') }}</li>
+                                            <li class="dropdown-item" data-value="enforcement">{{ __('lawyer.form.enforcement_case') }}</li>
+                                            <li class="dropdown-item" data-value="other">{{ __('lawyer.form.other_case') }}</li>
                                         </ul>
                                         <input type="hidden" name="consultation_type" id="consultation_type"
                                                value="{{ old('consultation_type') }}">

@@ -77,7 +77,7 @@
     <section class="contract-section">
         <div class="container">
             <div class="pb-5 text-center">
-                <h2 class="fw-bold primary ibm-plex">{{ __('document.create_contract.title') }}</h2>
+                <h2 class=" primary lf-subheading">{{ __('document.create_contract.title') }}</h2>
             </div>
             <div class="d-flex align-items-center flex-column flex-lg-row gap-5 gap-lg-0">
                 <div>
@@ -114,12 +114,12 @@
     </section>
     <section class="business-plan-section document-section" @if(app()->isLocale('ar')) dir="rtl" @endif>
         <div class="text-center header">
-            <h2 class="primary pb-3 fw-bold ibm-plex">
+            <h2 class="primary pb-3 lf-subheading">
                 {{ __('document.packages.title') }}
             </h2>
-            <h5>
+            <h6>
                 {{ __('document.packages.subtitle') }}
-            </h5>
+            </h6>
         </div>
         <div class="container">
             <div class="row mt-5">
@@ -187,8 +187,8 @@
                                 'bottom_class' => 'flexible-bottom',
                                 'features' => [
                                     'creation',
-                                    'multiple_documents',
-                                    'multiple_users',
+                                    'one_document',
+                                    'single_user',
                                     'share_download',
                                     'management',
                                 ],
@@ -236,7 +236,93 @@
                 </div>
                 <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
                      tabindex="0">
-                    <!-- Monthly subscription content would go here -->
+                    @php
+                        $plans = [
+                            [
+                                'key' => 'launch',
+                                'price' => 200,
+                                'class' => 'essential-plan',
+                                'tag_class' => 'essential',
+                                'counter_class' => 'essential-counter',
+                                'bottom_class' => 'essential-bottom',
+                                'features' => [
+                                    'creation',
+                                    'one_document',
+                                    'single_user',
+                                    'share_download',
+                                    'management',
+                                ],
+                            ],
+                            [
+                                'key' => 'growth',
+                                'price' => 1000,
+                                'class' => 'pro-plan',
+                                'tag_class' => 'pro',
+                                'counter_class' => 'pro-counter',
+                                'bottom_class' => 'pro-bottom',
+                                'features' => [
+                                    'creation',
+                                    'one_document',
+                                    'single_user',
+                                    'share_download',
+                                    'management',
+                                ],
+                            ],
+                            [
+                                'key' => 'premier',
+                                'price' => 2000,
+                                'class' => 'flexible-plan',
+                                'tag_class' => 'flexible',
+                                'counter_class' => 'premier-counter',
+                                'bottom_class' => 'flexible-bottom',
+                                'features' => [
+                                    'creation',
+                                    'one_document',
+                                    'single_user',
+                                    'share_download',
+                                    'management',
+                                ],
+                            ],
+                        ];
+                    @endphp
+
+                    <div class="row g-3">
+                        @foreach($plans as $plan)
+                            <div class="col-lg-4">
+                                <div class="plan-card {{ $plan['class'] }} document-plan-card">
+                                    <div class="flex-grow-1">
+                                        <div class="plan-tag {{ $plan['tag_class'] }}">
+                                            {{ __('document.packages.plans.' . $plan['key'] . '.name') }}
+                                        </div>
+
+                                        <div class="py-4 d-flex align-items-center gap-2 justify-content-center">
+                                            <img src="{{ asset('assets/images/dinar.svg') }}" alt="">
+                                            <h2 class="navy fw-bold">{{ $plan['price'] }}</h2>
+                                        </div>
+
+                                        <div>
+                                            @foreach($plan['features'] as $feature)
+                                                <div class="d-flex align-items-center gap-3 mb-3">
+                                                    <div class="plan-enable {{ $plan['counter_class'] }}">
+                                                        <img src="{{ asset('assets/images/white-tick.svg') }}" alt="">
+                                                    </div>
+                                                    <h5>{{ __('document.packages.features.' . $feature) }}</h5>
+                                                </div>
+                                            @endforeach
+                                        </div>
+                                    </div>
+
+                                    <div class="{{ $plan['bottom_class'] }}">
+                                        <div>
+                                            <button class="btn w-100 rounded-3">
+                                                {{ __('document.packages.subscribe') }}
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
                 </div>
             </div>
         </div>
@@ -252,12 +338,12 @@
                                 <img src="{{asset("assets/images/lawyer-art.svg")}}" alt="">
                             </div>
                             <div class="text-white">
-                                <h2 class="fw-bold pb-4 ibm-plex">
+                                <h2 class="pb-4 lf-subheading">
                                     {{ __('document.form.found_question') }}
                                 </h2>
-                                <h5 class="fw-bold">
+                                <h6 class="fw-bold">
                                     {{ __('document.form.contact_text') }}
-                                </h5>
+                                </h6>
                             </div>
                             <img class="benefit-pattern-left" src="{{asset("assets/images/benefit-pattern-left.svg")}}"
                                  alt="">
@@ -265,7 +351,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="p-3">
-                            <h5 class="fw-bold pb-4 ibm-plex">
+                            <h5 class=" pb-4 lf-subheading">
                                 {{ __('document.form.title') }}
                             </h5>
                             <form method="POST" action="{{ route('document.submit') }}">

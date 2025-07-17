@@ -17,7 +17,7 @@
                         <img class="top-right" src="{{ asset('assets/images/top-right.svg') }}" alt="">
                         <img class="top-quote" src="{{ asset('assets/images/top-quote.svg') }}" alt="">
 
-                        <h4 class="primary pb-2 lf-heading">
+                        <h4 class="primary pb-2 lf-subheading">
                             {{ __('about.about.sections.' . $section . '.title') }}
                         </h4>
 

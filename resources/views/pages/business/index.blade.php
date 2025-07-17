@@ -11,7 +11,7 @@
                 <div class="row g-4 py-5">
                     <div class="col-lg-6 order-2 order-lg-1">
                         <div>
-                            <h1 class="pb-3 fw-bold position-relative ibm-plex">
+                            <h1 class="pb-3 position-relative lf-subheading">
                                 {!! __('business.header.main_title') !!}
                             </h1>
                             <h5 class="pb-4 text-justify d-text-gray">
@@ -36,12 +36,12 @@
     </header>
     <section class="business-plan-section" @if(app()->isLocale('ar')) dir="rtl" @endif>
         <div class="text-md-center {{app()->getLocale()=='ar' ? 'text-right' : 'text-start'}} container">
-            <h1 class="primary pb-3 fw-bold ibm-plex">
+            <h1 class="primary pb-3 lf-subheading">
                 {{ __('business.packages.title') }}
             </h1>
-            <h5>
+            <h6>
                 {{ __('business.packages.subtitle') }}
-            </h5>
+            </h6>
         </div>
         <div class="container">
             <div class="row mt-5">
@@ -439,10 +439,10 @@
             <div class="row g-3 align-items-center">
                 <div class="col-lg-6 order-2 order-lg-1">
                     <div @if(app()->getLocale() == 'ar') dir="rtl" style="text-align: right;" @endif>
-                        <h1 class="pb-3 primary fw-bold ibm-plex">
+                        <h1 class="pb-3 primary  lf-heading">
                             {!! __('business.lawyer_section.title') !!}
                         </h1>
-                        <h2 class="pb-3 fw-semibold ibm-plex">
+                        <h2 class="pb-3 lf-subheading">
                             {{ __('business.lawyer_section.subtitle') }}
                         </h2>
                         <h5 class="pb-4 text-justify">
@@ -467,7 +467,7 @@
                         <div class="benefit-card-left position-relative" @if(app()->getLocale() == 'ar') dir="rtl"
                              style="text-align: right;" @endif>
                             <div>
-                                <h1 class="fw-bold pb-4 text-white ibm-plex">
+                                <h1 class=" pb-4 text-white lf-heading">
                                     {{ __('business.benefits_section.title') }}
                                 </h1>
                             </div>
@@ -494,7 +494,7 @@
                     <div class="col-lg-6">
                         <div class="p-5" @if(app()->getLocale() == 'ar') dir="rtl" style="text-align: right;" @endif>
                             <div>
-                                <h2 class="pb-4 fw-bold ibm-plex">
+                                <h2 class="pb-4 lf-subheading">
                                     {{ __('business.benefits_section.form_title') }}
                                 </h2>
                             </div>
@@ -546,9 +546,12 @@
                                             {{ old('city', __('business.benefits_section.form_labels.city')) }}
                                         </button>
                                         <ul class="custom-dropdown-options list-unstyled shadow-sm">
-                                            <li class="dropdown-item" data-value="Riyadh">Riyadh</li>
-                                            <li class="dropdown-item" data-value="Jeddah">Jeddah</li>
-                                            <li class="dropdown-item" data-value="Dammam">Dammam</li>
+                                            <li class="dropdown-item"
+                                                data-value="riyadh">{{ __('business.benefits_section.form_labels.riyadh') }}</li>
+                                            <li class="dropdown-item"
+                                                data-value="jeddah">{{ __('business.benefits_section.form_labels.jeddah') }}</li>
+                                            <li class="dropdown-item"
+                                                data-value="dammam">{{ __('business.benefits_section.form_labels.dammam') }}</li>
                                         </ul>
                                         <input type="hidden" name="city" id="city" value="{{ old('city') }}">
                                         @error('city')
@@ -568,9 +571,12 @@
                                             {{ old('entity_type', __('business.benefits_section.form_labels.entity_type')) }}
                                         </button>
                                         <ul class="custom-dropdown-options list-unstyled shadow-sm">
-                                            <li class="dropdown-item" data-value="individual">Individual</li>
-                                            <li class="dropdown-item" data-value="company">Company</li>
-                                            <li class="dropdown-item" data-value="government">Government</li>
+                                            <li class="dropdown-item"
+                                                data-value="individual">{{ __('business.benefits_section.form_labels.establishment') }}</li>
+                                            <li class="dropdown-item"
+                                                data-value="company">{{ __('business.benefits_section.form_labels.company') }}</li>
+                                            <li class="dropdown-item"
+                                                data-value="government">{{ __('business.benefits_section.form_labels.other') }}</li>
                                         </ul>
                                         <input type="hidden" name="entity_type" id="entity_type"
                                                value="{{ old('entity_type') }}">

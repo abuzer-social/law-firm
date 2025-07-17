@@ -58,6 +58,12 @@ input[id='phone'] {
 .custom-dropdown-options .dropdown-item {
     text-align: right;
 }
+.home-header-text{
+    max-width: 120px;
+    h1{
+        text-align: center;
+    }
+}
 
 .search-btn {
     left: 15px;
@@ -125,6 +131,9 @@ input[id='phone'] {
     }
     .home-pattern-img {
         text-align: left;
+    }
+    .home-header-text{
+        max-width:100%;
     }
 }
 

@@ -165,8 +165,202 @@
                                     </div>
                                 </form>
                             </div>
-                            <div class="tab-pane fade" id="government" role="tabpanel">Government Content</div>
-                            <div class="tab-pane fade" id="entity" role="tabpanel">Entity Content</div>
+                            <div class="tab-pane fade" id="government" role="tabpanel">
+                                <form method="POST" action="{{ route('signup.submit') }}">
+                                    @csrf
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for=""
+                                                       class="form-label fw-semibold">{{ __('auth.signup.form.name_arabic') }}</label>
+                                                <input type="text" name="name_ar"
+                                                       class="form-control @error('name_ar') is-invalid @enderror"
+                                                       value="{{ old('name_ar') }}">
+                                                @error('name_ar')
+                                                <div class="invalid-feedback">{{ $message }}</div>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for=""
+                                                       class="form-label fw-semibold">{{ __('auth.signup.form.name_english') }}</label>
+                                                <input type="text" name="name_en"
+                                                       class="form-control @error('name_en') is-invalid @enderror"
+                                                       value="{{ old('name_en') }}">
+                                                @error('name_en')
+                                                <div class="invalid-feedback">{{ $message }}</div>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for=""
+                                                       class="form-label fw-semibold">{{ __('auth.signup.form.city') }}</label>
+                                                <input type="text" name="city"
+                                                       class="form-control @error('city') is-invalid @enderror"
+                                                       value="{{ old('city') }}">
+                                                @error('city')
+                                                <div class="invalid-feedback">{{ $message }}</div>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for=""
+                                                       class="form-label fw-semibold">{{ __('auth.signup.form.email') }}</label>
+                                                <input type="email" name="email"
+                                                       class="form-control @error('email') is-invalid @enderror"
+                                                       value="{{ old('email') }}">
+                                                @error('email')
+                                                <div class="invalid-feedback">{{ $message }}</div>
+                                                @enderror
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for=""
+                                                       class="form-label fw-semibold">{{ __('auth.signup.form.mobile') }}</label>
+                                                <div class="">
+                                                    <div class="input-group">
+                                                        <span class="input-group-text">+966</span>
+                                                        <input
+                                                            type="tel"
+                                                            id="phone"
+                                                            class="form-control @error('phone') is-invalid @enderror"
+                                                            name="phone"
+                                                            value="{{ old('phone') }}" {{-- This will only show 9 digits --}}
+                                                            placeholder="5XXXXXXXX"
+                                                            maxlength="9"
+                                                            pattern="[1-9][0-9]{8}"
+                                                            inputmode="numeric"
+                                                            required
+                                                        >
+                                                    </div>
+                                                    @error('mobile')
+                                                    <div class="invalid-feedback">{{ $message }}</div>
+                                                    @enderror
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-check mb-3">
+                                        <input class="form-check-input @error('terms') is-invalid @enderror"
+                                               type="checkbox" name="terms" id="checkDefault"
+                                            {{ old('terms') ? 'checked' : '' }}>
+                                        <label class="form-check-label" for="checkDefault">
+                                            {{ __('auth.signup.form.terms_acceptance') }}
+                                        </label>
+                                        @error('terms')
+                                        <div class="invalid-feedback d-block">{{ $message }}</div>
+                                        @enderror
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-primary fw-bold px-5 rounded-3 btn-load">
+                                            {{ __('auth.signup.form.submit') }}
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="tab-pane fade" id="entity" role="tabpanel">
+                                <form method="POST" action="{{ route('signup.submit') }}">
+                                    @csrf
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for=""
+                                                       class="form-label fw-semibold">{{ __('auth.signup.form.name_arabic') }}</label>
+                                                <input type="text" name="name_ar"
+                                                       class="form-control @error('name_ar') is-invalid @enderror"
+                                                       value="{{ old('name_ar') }}">
+                                                @error('name_ar')
+                                                <div class="invalid-feedback">{{ $message }}</div>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for=""
+                                                       class="form-label fw-semibold">{{ __('auth.signup.form.name_english') }}</label>
+                                                <input type="text" name="name_en"
+                                                       class="form-control @error('name_en') is-invalid @enderror"
+                                                       value="{{ old('name_en') }}">
+                                                @error('name_en')
+                                                <div class="invalid-feedback">{{ $message }}</div>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for=""
+                                                       class="form-label fw-semibold">{{ __('auth.signup.form.city') }}</label>
+                                                <input type="text" name="city"
+                                                       class="form-control @error('city') is-invalid @enderror"
+                                                       value="{{ old('city') }}">
+                                                @error('city')
+                                                <div class="invalid-feedback">{{ $message }}</div>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for=""
+                                                       class="form-label fw-semibold">{{ __('auth.signup.form.email') }}</label>
+                                                <input type="email" name="email"
+                                                       class="form-control @error('email') is-invalid @enderror"
+                                                       value="{{ old('email') }}">
+                                                @error('email')
+                                                <div class="invalid-feedback">{{ $message }}</div>
+                                                @enderror
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for=""
+                                                       class="form-label fw-semibold">{{ __('auth.signup.form.mobile') }}</label>
+                                                <div class="">
+                                                    <div class="input-group">
+                                                        <span class="input-group-text">+966</span>
+                                                        <input
+                                                            type="tel"
+                                                            id="phone"
+                                                            class="form-control @error('phone') is-invalid @enderror"
+                                                            name="phone"
+                                                            value="{{ old('phone') }}" {{-- This will only show 9 digits --}}
+                                                            placeholder="5XXXXXXXX"
+                                                            maxlength="9"
+                                                            pattern="[1-9][0-9]{8}"
+                                                            inputmode="numeric"
+                                                            required
+                                                        >
+                                                    </div>
+                                                    @error('mobile')
+                                                    <div class="invalid-feedback">{{ $message }}</div>
+                                                    @enderror
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-check mb-3">
+                                        <input class="form-check-input @error('terms') is-invalid @enderror"
+                                               type="checkbox" name="terms" id="checkDefault"
+                                            {{ old('terms') ? 'checked' : '' }}>
+                                        <label class="form-check-label" for="checkDefault">
+                                            {{ __('auth.signup.form.terms_acceptance') }}
+                                        </label>
+                                        @error('terms')
+                                        <div class="invalid-feedback d-block">{{ $message }}</div>
+                                        @enderror
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-primary fw-bold px-5 rounded-3 btn-load">
+                                            {{ __('auth.signup.form.submit') }}
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
