@@ -1,9 +1,9 @@
 class Counter {
-    constructor() {
+    constructor(container) {
         this.count = 0;
-        this.decrementBtn = document.getElementById('decrementBtn');
-        this.incrementBtn = document.getElementById('incrementBtn');
-        this.display = document.getElementById('counterDisplay');
+        this.decrementBtn = container.querySelector('.decrement');
+        this.incrementBtn = container.querySelector('.increment');
+        this.display = container.querySelector('.counter-display');
 
         this.init();
     }
@@ -29,7 +29,10 @@ class Counter {
     }
 }
 
-// Initialize counter when DOM is loaded
+// Initialize all counters when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    new Counter();
+    const counterComponents = document.querySelectorAll('.counter-component');
+    counterComponents.forEach(component => {
+        new Counter(component);
+    });
 });

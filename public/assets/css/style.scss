@@ -152,7 +152,8 @@ body {
     label {
         color: #6C6868;
     }
-    a{
+
+    a {
         text-decoration: none;
     }
 }
@@ -857,6 +858,10 @@ input[id = 'phone'] {
 
     .plan-card {
         min-height: 1150px;
+
+        h5 {
+            font-size: 16px;
+        }
     }
 }
 
@@ -1264,7 +1269,7 @@ input[id = 'phone'] {
     }
 }
 
-.accounting-pkg-card {
+.acounting-section .accounting-pkg-card {
     min-height: 950px;
 }
 
@@ -1669,7 +1674,7 @@ input[id = 'phone'] {
     }
 }
 
-.document-plan-card {
+.document-section .document-plan-card {
     min-height: 500px;
 }
 

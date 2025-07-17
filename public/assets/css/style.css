@@ -1000,6 +1000,9 @@ input[id=phone] {
 .business-plan-section .plan-card {
   min-height: 1150px;
 }
+.business-plan-section .plan-card h5 {
+  font-size: 16px;
+}
 
 .nav-pills.subscription-toggle {
   background-color: white;
@@ -1378,7 +1381,7 @@ input[id=phone] {
   font-size: 35px;
 }
 
-.accounting-pkg-card {
+.acounting-section .accounting-pkg-card {
   min-height: 950px;
 }
 
@@ -1761,7 +1764,7 @@ input[id=phone] {
   font-size: 35px;
 }
 
-.document-plan-card {
+.document-section .document-plan-card {
   min-height: 500px;
 }
 
@@ -2147,6 +2150,9 @@ input[id=phone] {
     left: -2px;
     bottom: -1px;
     max-width: 20%;
+  }
+  .business-plan-section .plan-card {
+    min-height: auto;
   }
 }
 @media (max-width: 768px) {

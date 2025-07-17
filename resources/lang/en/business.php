@@ -27,12 +27,12 @@ return [
                 'name' => 'Essential',
                 'price' => '1990',
                 'features' => [
-                    'Written legal consultations',
-                    'Phone consultations (each lasting 30 minutes)',
-                    'Legal review of various documents',
-                    'Filing a financial claim',
-                    'Case study',
-                    'Execution of a "conciliation request" or legal notification'
+                    'Written Legal Consultation',
+                    'Phone Consultation (15 minutes)',
+                    'Legal Document Review',
+                    'Filing Financial Claim',
+                    'Case Study',
+                    'Legal Notice Delivery'
                 ],
                 'discount' => 'discount on other cases',
                 'button' => 'Subscribe now'
@@ -41,14 +41,14 @@ return [
                 'name' => 'Professional',
                 'price' => '6,900',
                 'features' => [
-                    'Written legal consultations',
-                    'Phone consultations (each lasting 30 minutes)',
-                    'Legal review of various documents',
-                    'Filing a financial claim',
-                    'Case study',
-                    'Execution of a conciliation request',
-                    'Execution of a legal notification',
-                    'Drafting a legal contract'
+                    'Written Legal Consultation',
+                    'Phone Consultation (30 minutes)',
+                    'Legal Document Review',
+                    'Filing Financial Claim',
+                    'Case Study',
+                    'Conciliation Request',
+                    'Legal Notice Delivery',
+                    'Drafting Legal Contract'
                 ],
                 'discount' => 'discount on other cases',
                 'button' => 'Subscribe now'
@@ -57,19 +57,19 @@ return [
                 'name' => 'Flexible',
                 'price' => '6,900',
                 'features' => [
-                    'Written Legal Consultations',
-                    'Phone Consultation - 30 Minutes',
+                    'Written Legal Consultation',
+                    'Phone Consultation (30 minutes)',
+                    'Legal Document Review',
                     'Case Study',
-                    'Filing a financial claim',
-                    'Legal Notice or Settlement Execution',
+                    'Filing Financial Claim',
+                    'Legal Notice or Conciliation',
                     'Drafting Legal Contract',
-                    'Drafting Lawsuit \'Financial Claim\'',
+                    'Drafting Financial Claim Lawsuit',
                     'Lawyer Visit to Premises',
                     'Job Contract Drafting',
-                    'Attending Legal Consultation Meeting',
+                    'Legal Consultation Meeting',
                     'Administrative Investigation',
-                    'Filing Police Report or Complaint',
-                    'Attending Criminal Investigation'
+                    'Police Report/Complaint'
                 ],
                 'confirm' => 'Confirm',
                 'reset' => 'Reset',
