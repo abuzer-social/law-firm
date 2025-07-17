@@ -1447,6 +1447,8 @@ input[id=phone] {
   color: #6c757d;
   text-align: left;
   padding-inline: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .custom-dropdown-options .dropdown-item:not(:last-child) {
