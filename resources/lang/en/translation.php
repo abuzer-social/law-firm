@@ -27,7 +27,17 @@ return [
             'translation_quality' => 'Translation Quality',
             'file_upload' => 'File Upload',
             'select_file' => 'Select File',
-            'notes' => 'Notes'
+            'notes' => 'Notes',
+            'arabic' => 'Arabic',
+            'english' => 'English',
+            'certified' => 'Certified (For Official Use)',
+            'standard' => 'For Personal Use',
+            'general' => 'General',
+            'academic' => 'Academic',
+            'legal' => 'Legal',
+            'medical' => 'Medical',
+            'technical' => 'Technical',
+            'literary' => 'Literary',
         ],
         'cta' => [
             'heading' => 'To better serve you!',

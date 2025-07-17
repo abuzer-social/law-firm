@@ -222,10 +222,8 @@
                                                         {{ old('translate_from', __('translation.form.fields.translate_from')) }}
                                                     </button>
                                                     <ul class="custom-dropdown-options list-unstyled shadow-sm">
-                                                        <li class="dropdown-item"
-                                                            data-value="certified">{{ __('translation.form.dropdown_options.certified') }}</li>
-                                                        <li class="dropdown-item"
-                                                            data-value="standard">{{ __('translation.form.dropdown_options.standard') }}</li>
+                                                        <li class="dropdown-item" data-value="certified">{{ __('translation.form.fields.arabic') }}</li>
+                                                        <li class="dropdown-item" data-value="standard">{{ __('translation.form.fields.english') }}</li>
                                                     </ul>
                                                     <input type="hidden" name="translate_from" id="translate_from"
                                                            value="{{ old('translate_from') }}">
@@ -245,10 +243,8 @@
                                                         {{ old('translate_to', __('translation.form.fields.translate_to')) }}
                                                     </button>
                                                     <ul class="custom-dropdown-options list-unstyled shadow-sm">
-                                                        <li class="dropdown-item"
-                                                            data-value="certified">{{ __('translation.form.dropdown_options.certified') }}</li>
-                                                        <li class="dropdown-item"
-                                                            data-value="standard">{{ __('translation.form.dropdown_options.standard') }}</li>
+                                                        <li class="dropdown-item" data-value="certified">{{ __('translation.form.fields.arabic') }}</li>
+                                                        <li class="dropdown-item" data-value="standard">{{ __('translation.form.fields.english') }}</li>
                                                     </ul>
                                                     <input type="hidden" name="translate_to" id="translate_to"
                                                            value="{{ old('translate_to') }}">
@@ -271,10 +267,8 @@
                                                         {{ old('translation_quality', __('translation.form.fields.translation_quality')) }}
                                                     </button>
                                                     <ul class="custom-dropdown-options list-unstyled shadow-sm">
-                                                        <li class="dropdown-item"
-                                                            data-value="certified">{{ __('translation.form.dropdown_options.certified') }}</li>
-                                                        <li class="dropdown-item"
-                                                            data-value="standard">{{ __('translation.form.dropdown_options.standard') }}</li>
+                                                        <li class="dropdown-item" data-value="certified">{{ __('translation.form.fields.certified') }}</li>
+                                                        <li class="dropdown-item" data-value="standard">{{ __('translation.form.fields.standard') }}</li>
                                                     </ul>
                                                     <input type="hidden" name="translation_quality"
                                                            id="translation_quality"
@@ -297,10 +291,12 @@
                                                         {{ old('specialization', __('translation.form.fields.specialization')) }}
                                                     </button>
                                                     <ul class="custom-dropdown-options list-unstyled shadow-sm">
-                                                        <li class="dropdown-item"
-                                                            data-value="certified">{{ __('translation.form.dropdown_options.certified') }}</li>
-                                                        <li class="dropdown-item"
-                                                            data-value="standard">{{ __('translation.form.dropdown_options.standard') }}</li>
+                                                        <li class="dropdown-item" data-value="general">{{ __('translation.form.fields.general') }}</li>
+                                                        <li class="dropdown-item" data-value="academic">{{ __('translation.form.fields.academic') }}</li>
+                                                        <li class="dropdown-item" data-value="legal">{{ __('translation.form.fields.legal') }}</li>
+                                                        <li class="dropdown-item" data-value="medical">{{ __('translation.form.fields.medical') }}</li>
+                                                        <li class="dropdown-item" data-value="technical">{{ __('translation.form.fields.technical') }}</li>
+                                                        <li class="dropdown-item" data-value="literary">{{ __('translation.form.fields.literary') }}</li>
                                                     </ul>
                                                     <input type="hidden" name="specialization" id="specialization"
                                                            value="{{ old('specialization') }}">
