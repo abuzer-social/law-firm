@@ -88,7 +88,7 @@
         <!-- Copyright -->
         <div class="row p-4 bottom-footer">
             <div class="col-12">
-                <h5 class="copyright fw-bold">
+                <h5 class="copyright">
                     {{ __('footer.copyright') }}
                 </h5>
             </div>

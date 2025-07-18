@@ -5,7 +5,7 @@
         <div class="padding-top">
             <div class="text-center header-top">
                 <h2 class="primary pb-3 lf-heading">{{ __('lawyer.header.title') }}</h2>
-                <h5 class="max-50 m-auto d-text-gray">{{ __('lawyer.header.subtitle') }}</h5>
+                <h5 class="max-50 m-auto d-text-gray lf-para-formatting">{{ __('lawyer.header.subtitle') }}</h5>
             </div>
             <div class="container">
                 <div class="row g-4 py-5">
@@ -78,7 +78,7 @@
                     <div class="plan-card essential-plan">
                         <div class="flex-grow-1">
                             <div class="plan-tag essential">{{ __('lawyer.packages.plans.essential.name') }}</div>
-                            <div class="py-4 d-flex align-items-center gap-3 justify-content-center">
+                            <div class="py-4 d-flex align-items-center gap-3 justify-content-center" dir="ltr">
                                 <img src="{{ asset('assets/images/dinar.svg') }}" alt="">
                                 <h2 class="navy fw-bold">
                                     {{ __('lawyer.packages.plans.essential.price') }}
@@ -143,7 +143,7 @@
                     <div class="plan-card pro-plan">
                         <div class="flex-grow-1">
                             <div class="plan-tag pro">{{ __('lawyer.packages.plans.growth.name') }}</div>
-                            <div class="py-4 d-flex align-items-center gap-2 justify-content-center">
+                            <div class="py-4 d-flex align-items-center gap-2 justify-content-center" dir="ltr">
                                 <img src="{{ asset('assets/images/dinar.svg') }}" alt="">
                                 <h2 class="navy fw-bold">
                                     {{ __('lawyer.packages.plans.growth.price') }}
@@ -202,7 +202,7 @@
                     <div class="plan-card flexible-plan">
                         <div class="flex-grow-1">
                             <div class="plan-tag flexible">{{ __('lawyer.packages.plans.premier.name') }}</div>
-                            <div class="py-4 d-flex align-items-center gap-2 justify-content-center">
+                            <div class="py-4 d-flex align-items-center gap-2 justify-content-center" dir="ltr">
                                 <img src="{{ asset('assets/images/dinar.svg') }}" alt="">
                                 <h2 class="navy fw-bold">
                                     {{ __('lawyer.packages.plans.premier.price') }}

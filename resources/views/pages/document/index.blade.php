@@ -197,7 +197,7 @@
                                             {{ __('document.packages.plans.' . $plan['key'] . '.name') }}
                                         </div>
 
-                                        <div class="py-4 d-flex align-items-center gap-2 justify-content-center">
+                                        <div class="py-4 d-flex align-items-center gap-2 justify-content-center" dir="ltr">
                                             <img src="{{ asset('assets/images/dinar.svg') }}" alt="">
                                             <h2 class="navy fw-bold">{{ $plan['price'] }}</h2>
                                         </div>
@@ -287,7 +287,7 @@
                                             {{ __('document.packages.plans.' . $plan['key'] . '.name') }}
                                         </div>
 
-                                        <div class="py-4 d-flex align-items-center gap-2 justify-content-center">
+                                        <div class="py-4 d-flex align-items-center gap-2 justify-content-center" dir="ltr">
                                             <img src="{{ asset('assets/images/dinar.svg') }}" alt="">
                                             <h2 class="navy fw-bold">{{ $plan['price'] }}</h2>
                                         </div>

@@ -73,7 +73,7 @@
                                 <div class="plan-card essential-plan accounting-pkg-card">
                                     <div class="flex-grow-1">
                                         <div class="plan-tag essential">{{ __('accounting.packages.plans.launch.name') }}</div>
-                                        <div class="py-4 d-flex align-items-center gap-2 justify-content-center">
+                                        <div class="py-4 d-flex align-items-center gap-2 justify-content-center" dir="ltr">
                                             <img src="{{asset('assets/images/dinar.svg')}}" alt="">
                                             <h2 class="navy fw-bold">
                                                 {{ __('accounting.packages.plans.launch.price') }}
@@ -146,7 +146,7 @@
                                 <div class="plan-card pro-plan accounting-pkg-card">
                                     <div class="flex-grow-1">
                                         <div class="plan-tag pro">{{ __('accounting.packages.plans.growth.name') }}</div>
-                                        <div class="py-4 d-flex align-items-center gap-2 justify-content-center">
+                                        <div class="py-4 d-flex align-items-center gap-2 justify-content-center" dir="ltr">
                                             <img src="{{asset('assets/images/dinar.svg')}}" alt="">
                                             <h2 class="navy fw-bold">
                                                 {{ __('accounting.packages.plans.growth.price') }}
@@ -215,7 +215,7 @@
                                 <div class="plan-card flexible-plan accounting-pkg-card">
                                     <div class="flex-grow-1">
                                         <div class="plan-tag flexible">{{ __('accounting.packages.plans.premier.name') }}</div>
-                                        <div class="py-4 d-flex align-items-center gap-2 justify-content-center">
+                                        <div class="py-4 d-flex align-items-center gap-2 justify-content-center" dir="ltr">
                                             <img src="{{asset('assets/images/dinar.svg')}}" alt="">
                                             <h2 class="navy fw-bold">
                                                 {{ __('accounting.packages.plans.premier.price') }}
@@ -288,7 +288,7 @@
                                 <div class="plan-card essential-plan accounting-pkg-card">
                                     <div class="flex-grow-1">
                                         <div class="plan-tag essential">{{ __('accounting.packages.plans.launch.name') }}</div>
-                                        <div class="py-4 d-flex align-items-center gap-2 justify-content-center">
+                                        <div class="py-4 d-flex align-items-center gap-2 justify-content-center" dir="ltr">
                                             <img src="{{asset('assets/images/dinar.svg')}}" alt="">
                                             <h2 class="navy fw-bold">
                                                 {{ __('accounting.packages.plans.launch.price') }}
@@ -361,7 +361,7 @@
                                 <div class="plan-card pro-plan accounting-pkg-card">
                                     <div class="flex-grow-1">
                                         <div class="plan-tag pro">{{ __('accounting.packages.plans.growth.name') }}</div>
-                                        <div class="py-4 d-flex align-items-center gap-2 justify-content-center">
+                                        <div class="py-4 d-flex align-items-center gap-2 justify-content-center" dir="ltr">
                                             <img src="{{asset('assets/images/dinar.svg')}}" alt="">
                                             <h2 class="navy fw-bold">
                                                 {{ __('accounting.packages.plans.growth.price') }}
@@ -430,7 +430,7 @@
                                 <div class="plan-card flexible-plan accounting-pkg-card">
                                     <div class="flex-grow-1">
                                         <div class="plan-tag flexible">{{ __('accounting.packages.plans.premier.name') }}</div>
-                                        <div class="py-4 d-flex align-items-center gap-2 justify-content-center">
+                                        <div class="py-4 d-flex align-items-center gap-2 justify-content-center" dir="ltr">
                                             <img src="{{asset('assets/images/dinar.svg')}}" alt="">
                                             <h2 class="navy fw-bold">
                                                 {{ __('accounting.packages.plans.premier.price') }}

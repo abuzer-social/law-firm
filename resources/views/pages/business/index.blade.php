@@ -5,7 +5,7 @@
         <div class="padding-top">
             <div class="text-center header">
                 <h1 class="primary pb-3 lf-heading">{{ __('business.header.title') }}</h1>
-                <h5 class="fw-semibold">{{ __('business.header.subtitle') }}</h5>
+                <h5 class=" d-text-gray">{{ __('business.header.subtitle') }}</h5>
             </div>
             <div class="container">
                 <div class="row g-4 py-5">
@@ -14,7 +14,7 @@
                             <h1 class="pb-3 position-relative lf-subheading">
                                 {!! __('business.header.main_title') !!}
                             </h1>
-                            <h5 class="pb-4 text-justify d-text-gray">
+                            <h5 class="pb-4 text-justify d-text-gray lf-para-formatting">
                                 {{ __('business.header.description') }}
                             </h5>
                             <div>
@@ -96,7 +96,7 @@
                                 <div class="flex-grow-1">
                                     <div
                                         class="plan-tag essential">{{ __('business.packages.plans.essential.name') }}</div>
-                                    <div class="py-4 d-flex align-items-center gap-2 justify-content-center">
+                                    <div class="py-4 d-flex align-items-center gap-2 justify-content-center" dir="ltr">
                                         <img src="{{asset('assets/images/dinar.svg')}}" alt="">
                                         <h2 class="navy fw-bold">
                                             {{ __('business.packages.plans.essential.price') }}
@@ -159,7 +159,7 @@
                                 <div class="flex-grow-1">
                                     <div
                                         class="plan-tag pro">{{ __('business.packages.plans.professional.name') }}</div>
-                                    <div class="py-4 d-flex align-items-center gap-2 justify-content-center">
+                                    <div class="py-4 d-flex align-items-center gap-2 justify-content-center"  dir="ltr">
                                         <img src="{{asset('assets/images/dinar.svg')}}" alt="">
                                         <h2 class="navy fw-bold">
                                             {{ __('business.packages.plans.professional.price') }}
@@ -240,7 +240,7 @@
                                 <div class="flex-grow-1">
                                     <div
                                         class="plan-tag flexible">{{ __('business.packages.plans.flexible.name') }}</div>
-                                    <div class="py-4 d-flex align-items-center gap-2 justify-content-center">
+                                    <div class="py-4 d-flex align-items-center gap-2 justify-content-center"  dir="ltr">
                                         <img src="{{asset('assets/images/dinar.svg')}}" alt="">
                                         <h2 class="navy fw-bold">
                                             {{ __('business.packages.plans.flexible.price') }}
@@ -436,7 +436,7 @@
                                 <div class="flex-grow-1">
                                     <div
                                         class="plan-tag essential">{{ __('business.packages.plans.essential.name') }}</div>
-                                    <div class="py-4 d-flex align-items-center gap-2 justify-content-center">
+                                    <div class="py-4 d-flex align-items-center gap-2 justify-content-center"  dir="ltr">
                                         <img src="{{asset('assets/images/dinar.svg')}}" alt="">
                                         <h2 class="navy fw-bold">
                                             {{ __('business.packages.plans.essential.price') }}
@@ -499,7 +499,7 @@
                                 <div class="flex-grow-1">
                                     <div
                                         class="plan-tag pro">{{ __('business.packages.plans.professional.name') }}</div>
-                                    <div class="py-4 d-flex align-items-center gap-2 justify-content-center">
+                                    <div class="py-4 d-flex align-items-center gap-2 justify-content-center"  dir="ltr">
                                         <img src="{{asset('assets/images/dinar.svg')}}" alt="">
                                         <h2 class="navy fw-bold">
                                             {{ __('business.packages.plans.professional.price') }}
@@ -580,7 +580,7 @@
                                 <div class="flex-grow-1">
                                     <div
                                         class="plan-tag flexible">{{ __('business.packages.plans.flexible.name') }}</div>
-                                    <div class="py-4 d-flex align-items-center gap-2 justify-content-center">
+                                    <div class="py-4 d-flex align-items-center gap-2 justify-content-center"  dir="ltr">
                                         <img src="{{asset('assets/images/dinar.svg')}}" alt="">
                                         <h2 class="navy fw-bold">
                                             {{ __('business.packages.plans.flexible.price') }}
@@ -782,7 +782,7 @@
                         <h2 class="pb-3 lf-subheading">
                             {{ __('business.lawyer_section.subtitle') }}
                         </h2>
-                        <h5 class="pb-4 text-justify">
+                        <h5 class=" text-justify lf-para-formatting">
                             {{ __('business.lawyer_section.description') }}
                         </h5>
                     </div>

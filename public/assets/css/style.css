@@ -212,6 +212,12 @@ input.is-invalid {
   list-style-type: none !important;
 }
 
+.lf-para-formatting {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -931,6 +937,10 @@ input[id=phone] {
 
 .bottom-footer {
   border-top: 1px solid #C3C3C3;
+}
+.bottom-footer h5 {
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .registering-section {
