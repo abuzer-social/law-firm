@@ -208,6 +208,10 @@ input.is-invalid {
   direction: ltr !important;
 }
 
+.list-style-none {
+  list-style-type: none !important;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -1403,6 +1407,12 @@ input[id=phone] {
   padding: 100px 0;
 }
 
+.custom-dropdown-toggle {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 /* RTL specific styles */
 [dir=rtl] .custom-dropdown-wrapper {
   text-align: right;
@@ -1430,25 +1440,28 @@ input[id=phone] {
   border: 1px solid #dee2e6;
   border-radius: 7px;
   z-index: 1000;
-  padding: 0.5rem 0;
-  text-align: right; /* Add this for RTL */
+  text-align: right;
+  padding: 0;
 }
 
 .custom-dropdown-wrapper.show .custom-dropdown-options {
   display: block;
-  animation: fadeIn 0.15s ease-in-out;
+  animation: fadeIn 0.09s ease-in-out;
   top: 110%;
-  padding: 0 15px;
 }
 
 .custom-dropdown-options .dropdown-item {
-  padding: 0.6rem 1rem;
   cursor: pointer;
   color: #6c757d;
   text-align: left;
   padding-inline: 0;
   text-overflow: ellipsis;
   overflow: hidden;
+  padding: 10px 20px;
+}
+.custom-dropdown-options .dropdown-item:hover {
+  background-color: #E4F0FF !important;
+  color: #0F898C;
 }
 
 .custom-dropdown-options .dropdown-item:not(:last-child) {
@@ -1725,13 +1738,15 @@ input[id=phone] {
 .contract-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
   justify-content: center;
-  max-width: 90%;
+  gap: 1rem;
+  max-width: 900px;
   margin: 0 auto;
 }
 
 .contract-tag {
+  flex: 1 1 calc(33.333% - 1rem);
+  max-width: calc(33.333% - 1rem);
   background: white;
   border: 2px solid #A3A3A3;
   border-radius: 25px;
@@ -1742,6 +1757,7 @@ input[id=phone] {
   transition: all 0.3s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   font-size: 17px;
+  text-align: center;
 }
 
 .contract-tag:hover {
@@ -1900,15 +1916,16 @@ input[id=phone] {
   border: none;
   box-shadow: none;
   outline: none;
-  font-size: 1.35rem;
-  font-weight: 700;
-  color: #222;
-  padding: 24px 32px 16px 32px;
+  font-size: 19px;
+  font-weight: 400;
+  color: #0F898C;
+  padding: 24px 32px 24px 32px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-radius: 0;
   transition: background 0.2s;
+  line-height: 22px;
 }
 
 .faq-accordion .accordion-button:after {
@@ -2266,6 +2283,10 @@ input[id=phone] {
   .lawyer-header .header-top h5 {
     font-size: 20px;
   }
+  .contract-tag {
+    flex: 1 1 calc(50% - 1rem);
+    max-width: calc(50% - 1rem);
+  }
 }
 @media (max-width: 600px) {
   .lf-heading {
@@ -2300,6 +2321,10 @@ input[id=phone] {
   }
   .contact-card-section {
     padding: 50px 0px;
+  }
+  .contract-tag {
+    flex: 1 1 100%;
+    max-width: 100%;
   }
 }
 @media (max-width: 450px) {

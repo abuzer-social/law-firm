@@ -804,7 +804,7 @@
                         <div class="benefit-card-left position-relative" @if(app()->getLocale() == 'ar') dir="rtl"
                              style="text-align: right;" @endif>
                             <div>
-                                <h1 class=" pb-4 text-white lf-heading">
+                                <h1 class=" pb-4 text-white lf-subheading text-center">
                                     {{ __('business.benefits_section.title') }}
                                 </h1>
                             </div>
@@ -829,9 +829,9 @@
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="p-5" @if(app()->getLocale() == 'ar') dir="rtl" style="text-align: right;" @endif>
+                        <div class="px-5 py-4" @if(app()->getLocale() == 'ar') dir="rtl" style="text-align: right;" @endif>
                             <div>
-                                <h2 class="pb-4 lf-subheading">
+                                <h2 class="pb-4 lf-subheading text-center">
                                     {{ __('business.benefits_section.form_title') }}
                                 </h2>
                             </div>

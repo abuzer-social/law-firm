@@ -195,7 +195,7 @@
                             <div class="p-2 p-sm-4" @if(app()->getLocale() == 'ar') dir="rtl"
                                  style="text-align: right;" @endif>
                                 <div>
-                                    <h2 class="pb-4 lf-subheading">
+                                    <h2 class="pb-4 lf-subheading text-center">
                                         {{ __('translation.form.title') }}
                                     </h2>
                                 </div>

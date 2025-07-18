@@ -122,8 +122,8 @@
                         </div>
                         <div class="essential-bottom lawyer-bottom">
                             <div class="ticket-container">
-                                <div class="d-flex gap-2 align-items-start">
-                                    <img class="mt-1" src="{{ asset('assets/images/essential-clock.svg') }}" alt="">
+                                <div class="d-flex gap-2 align-items-center">
+                                    <img  src="{{ asset('assets/images/flexible-ticket.svg') }}" alt="">
                                     <p class="fw-bold">
                                         {{ __('lawyer.packages.plans.essential.additional_time') }}
                                     </p>
@@ -279,7 +279,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="px-4 px-md-5 py-3">
-                            <h5 class=" pb-4 lf-subheading">
+                            <h5 class=" pb-4 lf-subheading text-center">
                                 {{ __('lawyer.form.title') }}
                             </h5>
                             <form method="POST" action="{{ route('lawyer.submit') }}" enctype="multipart/form-data">

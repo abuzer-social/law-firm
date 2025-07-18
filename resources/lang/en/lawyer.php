@@ -19,7 +19,7 @@ return [
             'premier' => [
                 'name' => 'Premier',
                 'price' => '2700',
-                'consultations' => 'One 15-minute phone consultation for:',
+                'consultations' => '15-minute phone consultation for:',
                 'feature1' => 'Guidance on an urgent legal issue',
                 'feature2' => 'Answers to a specific legal question',
                 'feature3' => 'Reviewing a document or contract before signing',
@@ -31,7 +31,7 @@ return [
             'growth' => [
                 'name' => 'Growth',
                 'price' => '1350',
-                'consultations' => 'One 15-minute phone consultation for:',
+                'consultations' => '15-minute phone consultation for:',
                 'feature1' => 'Guidance on an urgent legal issue',
                 'feature2' => 'Answers to a specific legal question',
                 'feature3' => 'Reviewing a document or contract before signing',
@@ -43,13 +43,13 @@ return [
             'essential' => [
                 'name' => 'Essential',
                 'price' => '250',
-                'consultations' => 'One 15-minute phone consultation for:',
+                'consultations' => '15-minute phone consultation for:',
                 'feature1' => 'Guidance on an urgent legal issue',
                 'feature2' => 'Answers to a specific legal question ',
                 'feature3' => 'Reviewing a document or contract before signing',
                 'feature4' => 'Quick analysis of a document',
                 'feature5' => 'Reviewing a document or contract before signing',
-                'additional_time' => 'Additional time: available at extra cost upon coordination with the client',
+                'additional_time' => '10% discount on additional consultations',
                 'button' => 'Get Started'
             ],
             'includes' => 'Includes',
@@ -59,7 +59,7 @@ return [
         'title' => 'Please fill out this form',
         'contact_text' => 'If you do not find what you are looking for, contact us and we will fulfill your request immediately.',
         'lawsuit_question' => 'Do you need to file a lawsuit?',
-        'yes_no_placeholder' => 'yes / no',
+        'yes_no_placeholder' => 'Select',
         'yes' => 'yes',
         'no' => 'no',
         'consultation_type' => 'Type of consultation required:',

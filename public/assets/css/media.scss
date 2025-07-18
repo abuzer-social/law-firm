@@ -204,7 +204,7 @@
             max-width: 20%;
         }
     }
-    .business-plan-section .plan-card{
+    .business-plan-section .plan-card {
         min-height: auto;
     }
 }
@@ -325,13 +325,17 @@
         white-space: pre-wrap;
         left: 49%;
     }
-    .business-header{
-        h5{
+    .business-header {
+        h5 {
             font-size: 20px;
         }
     }
-    .lawyer-header .header-top h5{
+    .lawyer-header .header-top h5 {
         font-size: 20px;
+    }
+    .contract-tag {
+        flex: 1 1 calc(50% - 1rem);
+        max-width: calc(50% - 1rem);
     }
 }
 
@@ -371,6 +375,10 @@
     }
     .contact-card-section {
         padding: 50px 0px;
+    }
+    .contract-tag {
+        flex: 1 1 100%;
+        max-width: 100%;
     }
 }
 

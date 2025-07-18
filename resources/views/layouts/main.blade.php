@@ -35,6 +35,7 @@
 <script src="{{asset('assets/js/fileUploader.js')}}"></script>
 <script src="{{asset('assets/js/btnLoader.js')}}"></script>
 <script src="{{asset('assets/js/faqTabs.js')}}"></script>
+<script src="{{asset('assets/js/sound.js')}}"></script>
 <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
 @stack('scripts')
 </body>

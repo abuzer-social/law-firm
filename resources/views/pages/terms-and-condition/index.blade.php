@@ -10,10 +10,12 @@
                 {{-- First Section: Introduction --}}
                 <div class="section mb-4">
                     <h4 class="primary fw-semibold mb-3">{{ __('terms-and-condition.sections.introduction.title') }}</h4>
+                    <ul>
+                        @foreach(trans('terms-and-condition.sections.introduction.content') as $paragraph)
+                            <li class="fs-18 list-style-none">{!! $paragraph !!}</li>
+                        @endforeach
+                    </ul>
 
-                    @foreach(trans('terms-and-condition.sections.introduction.content') as $paragraph)
-                        <h6 class="fs-18">{!! $paragraph !!}</h6>
-                    @endforeach
                 </div>
 
                 {{-- Second Section: Definitions --}}

@@ -58,15 +58,7 @@
                     <div class="contract-tags fade-in">
                         <a href="#" class="contract-tag">{{ __('document.contracts.freelance') }}</a>
                         <a href="#" class="contract-tag">{{ __('document.contracts.website_development') }}</a>
-                        <a href="#" class="contract-tag">{{ __('document.contracts.website_development') }}</a>
                         <a href="#" class="contract-tag">{{ __('document.contracts.equipment_rental') }}</a>
-                        <a href="#" class="contract-tag">{{ __('document.contracts.equipment_rental') }}</a>
-                        <a href="#" class="contract-tag">{{ __('document.contracts.marketing') }}</a>
-                        <a href="#" class="contract-tag">{{ __('document.contracts.supply') }}</a>
-                        <a href="#" class="contract-tag">{{ __('document.contracts.confidentiality') }}</a>
-                        <a href="#" class="contract-tag">{{ __('document.contracts.consultation') }}</a>
-                        <a href="#" class="contract-tag">{{ __('document.contracts.dates') }}</a>
-                        <a href="#" class="contract-tag">{{ __('document.contracts.goods_transport') }}</a>
                         <a href="#" class="contract-tag">{{ __('document.contracts.marketing') }}</a>
                         <a href="#" class="contract-tag">{{ __('document.contracts.supply') }}</a>
                     </div>
@@ -351,7 +343,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="p-3">
-                            <h5 class=" pb-4 lf-subheading">
+                            <h5 class=" pb-4 lf-subheading text-center">
                                 {{ __('document.form.title') }}
                             </h5>
                             <form method="POST" action="{{ route('document.submit') }}">
