@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container faq-wrapper margin-top">
-        <div class="padding-top">
+        <div class="padding-top px-4 px-md-0">
             <div class="text-center header max-50 m-auto" @if(app()->getLocale() == 'ar') dir="rtl" @endif>
                 <h2 class="lf-heading pb-4 primary">{{ __('faq.title') }}</h2>
             </div>

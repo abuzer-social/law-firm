@@ -343,7 +343,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="p-3">
-                            <h5 class=" pb-4 lf-subheading text-center">
+                            <h5 class=" pb-4 lf-subheading">
                                 {{ __('document.form.title') }}
                             </h5>
                             <form method="POST" action="{{ route('document.submit') }}">

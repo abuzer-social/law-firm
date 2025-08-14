@@ -8,7 +8,7 @@ return [
         'button' => 'Start with us',
     ],
     'legal_service' => [
-        'licensed_trusted' => 'Licensed and trusted',
+        'licensed_trusted' => 'Licenced and Trusted',
         'fully_automated' => 'Fully automated',
         'digital_platform' => 'Digital platform',
         'all_in_one' => 'All-in-one',

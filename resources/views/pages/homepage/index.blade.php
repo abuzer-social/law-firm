@@ -32,7 +32,7 @@
                             {{ __('home.header.subtitle') }}
                         </h4>
                     </div>
-                    <p class="fw-semibold home-header-desc text-justify">
+                    <p class="fw-semibold home-header-desc text-center {{app()->getLocale() == "ar" ? 'text-lg-end' : 'text-lg-start'}}">
                         {{ __('home.header.description') }}
                     </p>
                     <div class="mt-5 d-flex justify-content-center justify-content-lg-start">
@@ -247,7 +247,7 @@
             <h2 class="lf-heading pb-2">
                 {!! __('home.registration_section.title') !!}
             </h2>
-            <h6>
+            <h6 class="px-5 px-md-0">
                 {{ __('home.registration_section.subtitle') }}
             </h6>
         </div>

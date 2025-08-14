@@ -10,7 +10,7 @@
                 </div>
                 <div class="container">
                     <div class="row g-4 align-items-center py-5">
-                        <div class="col-lg-6 order-2 order-lg-1">
+                        <div class="col-lg-6 order-2 order-lg-1 text-center text-lg-start">
                             <div @if(app()->isLocale('ar')) style="text-align: right;" @endif>
                                 <h5 class="header-desc d-text-gray pb-4 text-justify">
                                     {{ __('accounting.header.description') }}
@@ -38,7 +38,7 @@
                 <h1 class="primary pb-3 lf-subheading">
                     {{ __('accounting.packages.title') }}
                 </h1>
-                <h6>
+                <h6 class="px-5 px-md-0">
                     {{ __('accounting.packages.subtitle') }}
                 </h6>
             </div>

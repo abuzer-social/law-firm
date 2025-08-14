@@ -16,7 +16,7 @@
                     <div class="row align-items-center g-4 py-5">
                         <div class="col-lg-6 order-2 order-lg-1">
                             <div @if(app()->isLocale('ar')) style="text-align: right;" @endif>
-                                <h5 class="header-desc text-justify pb-4">
+                                <h5 class="header-desc text-center {{app()->getLocale() == "ar" ? 'text-lg-end' : 'text-lg-start'}} pb-4">
                                     {{ __('translation.header.description') }}
                                 </h5>
                             </div>
@@ -195,7 +195,7 @@
                             <div class="p-2 p-sm-4" @if(app()->getLocale() == 'ar') dir="rtl"
                                  style="text-align: right;" @endif>
                                 <div>
-                                    <h2 class="pb-4 lf-subheading text-center">
+                                    <h2 class="pb-4 lf-subheading">
                                         {{ __('translation.form.title') }}
                                     </h2>
                                 </div>

@@ -9,12 +9,12 @@
             </div>
             <div class="container">
                 <div class="row g-4 py-5">
-                    <div class="col-lg-6 order-2 order-lg-1">
+                    <div class="col-lg-6 order-2 order-lg-1 text-center text-lg-start">
                         <div>
-                            <h1 class="pb-3 position-relative lf-subheading">
+                            <h1 class="pb-3 text-center {{app()->getLocale() == "ar" ? 'text-lg-end' : 'text-lg-start'}} position-relative lf-subheading">
                                 {!! __('business.header.main_title') !!}
                             </h1>
-                            <h5 class="pb-4 text-justify d-text-gray lf-para-formatting">
+                            <h5 class="pb-4 text-center {{app()->getLocale() == "ar" ? 'text-lg-end' : 'text-lg-start'}} d-text-gray lf-para-formatting">
                                 {{ __('business.header.description') }}
                             </h5>
                             <div>
@@ -35,7 +35,7 @@
         </div>
     </header>
     <section class="business-plan-section" @if(app()->isLocale('ar')) dir="rtl" @endif>
-        <div class="text-md-center {{app()->getLocale()=='ar' ? 'text-right' : 'text-start'}} container">
+        <div class="text-center container">
             <h1 class="primary pb-3 lf-subheading">
                 {{ __('business.packages.title') }}
             </h1>
@@ -63,7 +63,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-lg-4 text-center">
+                <div class="col-lg-4 text-center d-none d-lg-block">
                     <div class="business-second-tabs position-relative">
                         <ul class="nav nav-tabs border-0 mb-0" id="businessSecondTabs" role="tablist">
                             <li class="nav-item" role="presentation">
@@ -231,6 +231,23 @@
                             </div>
                         </div>
                         <div class="col-lg-4">
+                            <div class="business-second-tabs position-relative d-block d-lg-none my-5 text-center mx-auto">
+                                <ul class="nav nav-tabs border-0 mb-0 justify-content-center" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" data-bs-toggle="tab" type="button" aria-selected="true">
+                                            {{ __('business.packages.second_tabs.six_month') }}
+                                        </button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" data-bs-toggle="tab" type="button" aria-selected="false">
+                                            {{ __('business.packages.second_tabs.annual') }}
+                                        </button>
+                                    </li>
+                                </ul>
+                                <div class="discount-badge">
+                                    <p>{{ __('business.packages.discount.save_percentage', ['percentage' => 15]) }}</p>
+                                </div>
+                            </div>
                             <div class="plan-card flexible-plan">
                                 @if(app()->getLocale() === 'ar')
                                     <img class="recommend-tag" src="{{asset("assets/images/recommend-ar.svg")}}" alt="">
@@ -571,6 +588,23 @@
                             </div>
                         </div>
                         <div class="col-lg-4">
+                            <div class="business-second-tabs position-relative d-block d-lg-none my-4 text-center m-auto">
+                                <ul class="nav nav-tabs border-0 mb-0 justify-content-center" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" data-bs-toggle="tab" type="button" aria-selected="true">
+                                            {{ __('business.packages.second_tabs.six_month') }}
+                                        </button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" data-bs-toggle="tab" type="button" aria-selected="false">
+                                            {{ __('business.packages.second_tabs.annual') }}
+                                        </button>
+                                    </li>
+                                </ul>
+                                <div class="discount-badge">
+                                    <p>{{ __('business.packages.discount.save_percentage', ['percentage' => 15]) }}</p>
+                                </div>
+                            </div>
                             <div class="plan-card flexible-plan">
                                 @if(app()->getLocale() === 'ar')
                                     <img class="recommend-tag" src="{{asset("assets/images/recommend-ar.svg")}}" alt="">
@@ -774,7 +808,7 @@
     <section class="lawyer-section">
         <div class="container">
             <div class="row g-3 align-items-center">
-                <div class="col-lg-6 order-2 order-lg-1">
+                <div class="col-lg-6 order-2 order-lg-1 text-center text-lg-start">
                     <div @if(app()->getLocale() == 'ar') dir="rtl" style="text-align: right;" @endif>
                         <h1 class="pb-3 primary  lf-heading">
                             {!! __('business.lawyer_section.title') !!}
@@ -782,7 +816,7 @@
                         <h2 class="pb-3 lf-subheading">
                             {{ __('business.lawyer_section.subtitle') }}
                         </h2>
-                        <h5 class=" text-justify lf-para-formatting">
+                        <h5 class=" text-center {{app()->getLocale() == "ar" ? 'text-lg-end' : 'text-lg-start'}} lf-para-formatting">
                             {{ __('business.lawyer_section.description') }}
                         </h5>
                     </div>
@@ -829,9 +863,9 @@
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="px-5 py-4" @if(app()->getLocale() == 'ar') dir="rtl" style="text-align: right;" @endif>
+                        <div class="px-3 px-md-5 py-4" @if(app()->getLocale() == 'ar') dir="rtl" style="text-align: right;" @endif>
                             <div>
-                                <h2 class="pb-4 lf-subheading text-center">
+                                <h2 class="pb-4 lf-subheading">
                                     {{ __('business.benefits_section.form_title') }}
                                 </h2>
                             </div>
