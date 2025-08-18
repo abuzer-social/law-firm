@@ -1026,6 +1026,7 @@ input[id=phone] {
   padding: 4px;
   display: inline-flex;
   width: auto;
+  flex-wrap: nowrap;
 }
 
 .nav-pills.subscription-toggle .nav-link {
@@ -2295,6 +2296,12 @@ input[id=phone] {
     flex: 1 1 calc(50% - 1rem);
     max-width: calc(50% - 1rem);
   }
+  /* Ensure homepage sections have same mobile horizontal padding as global */
+  .detail-section-container,
+  .solution-sections {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 @media (max-width: 600px) {
   .lf-heading {
@@ -2360,6 +2367,13 @@ input[id=phone] {
   .service-container p::after {
     content: "\a"; /* line break */
     white-space: pre;
+  }
+}
+
+/* Ensure headings and paragraphs are full-width on mobile */
+@media (max-width: 768px) {
+  h1, h2, h3, h4, h5, h6, p {
+    max-width: 100% !important;
   }
 }
 

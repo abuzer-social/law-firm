@@ -18,7 +18,7 @@
 <body class="d-flex flex-column overflow-x-hidden @yield('body-class')">
 @include('partials.navbar')
 
-<main class="flex-grow-1">
+<main class="flex-grow-1 @unless(Route::is('home.index')) px-4 px-md-4 px-lg-5 @endunless">
     @yield('content')
 </main>
 
