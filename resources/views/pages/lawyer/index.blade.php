@@ -279,7 +279,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="px-4 px-md-5 py-3">
-                            <h5 class=" pb-4 lf-subheading text-center">
+                            <h5 class=" pb-4 lf-subheading">
                                 {{ __('lawyer.form.title') }}
                             </h5>
                             <form method="POST" action="{{ route('lawyer.submit') }}" enctype="multipart/form-data">

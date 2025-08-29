@@ -2,13 +2,13 @@
 
 @section('content')
     <div class="container-fluid home-header-container margin-top">
-        <div class="row align-items-center padding-top">
+        <div class="row align-items-start padding-top mt-5">
             <div class="col-lg-5 col-md-12 order-2 order-lg-1 home-img-section p-0">
                 <div class="d-flex justify-content-center mb-3">
                     <img class=" max-100 d-block d-lg-none" src="{{asset('assets/images/horizontal-divider.svg')}}"
                          alt="">
                 </div>
-                <div class="d-block d-lg-flex justify-content-between align-items-end gap-3">
+                <div class="d-block d-lg-flex justify-content-between align-items-start gap-3">
                     <div class="home-pattern-img">
 
                         @if(app()->getLocale() === 'ar')
@@ -32,7 +32,7 @@
                             {{ __('home.header.subtitle') }}
                         </h4>
                     </div>
-                    <p class="fw-semibold home-header-desc text-justify">
+                    <p class="fw-semibold home-header-desc text-center {{app()->getLocale() == "ar" ? 'text-lg-end' : 'text-lg-start'}}">
                         {{ __('home.header.description') }}
                     </p>
                     <div class="mt-5 d-flex justify-content-center justify-content-lg-start">
@@ -247,7 +247,7 @@
             <h2 class="lf-heading pb-2">
                 {!! __('home.registration_section.title') !!}
             </h2>
-            <h6>
+            <h6 class="px-5 px-md-0">
                 {{ __('home.registration_section.subtitle') }}
             </h6>
         </div>

@@ -66,7 +66,7 @@
 
                 <div class="d-flex align-items-center flex-column flex-lg-row gap-3 mt-4 mt-lg-0">
                     <div class="mob-btn-full">
-                        <a href="{{ route('login.page') }}" class="btn btn-primary login-btn-mob w-100">Login</a>
+                        <a href="{{ route('login.page') }}" class="btn btn-primary login-btn-mob w-100">{{ __('navbar.auth.login') }}</a>
                     </div>
                     <div class="dropdown lang-drop-container">
                         <div class="language-dropdown dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">

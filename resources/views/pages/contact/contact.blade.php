@@ -14,7 +14,7 @@
                 </div>
             </div>
             <section class="benefit-section contact-card-section">
-                <div class="container">
+                <div class="container p-0">
                     <div class="card benefit-card">
                         <div class="row">
                             <div class="col-lg-6">
@@ -55,7 +55,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-6">
-                                <div class="px-4 px-lg-5 py-3" @if(app()->getLocale() == 'ar') dir="rtl"
+                                <div class="px-0 px-lg-5 py-3" @if(app()->getLocale() == 'ar') dir="rtl"
                                      style="text-align: right;" @endif>
                                     <form method="POST" action="{{ route('contact.submit') }}">
                                         @csrf
