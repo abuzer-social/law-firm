@@ -2,13 +2,13 @@
 
 @section('content')
     <div class="container-fluid home-header-container margin-top">
-        <div class="row align-items-center padding-top">
+        <div class="row align-items-start padding-top mt-5">
             <div class="col-lg-5 col-md-12 order-2 order-lg-1 home-img-section p-0">
                 <div class="d-flex justify-content-center mb-3">
                     <img class=" max-100 d-block d-lg-none" src="{{asset('assets/images/horizontal-divider.svg')}}"
                          alt="">
                 </div>
-                <div class="d-block d-lg-flex justify-content-between align-items-end gap-3">
+                <div class="d-block d-lg-flex justify-content-between align-items-start gap-3">
                     <div class="home-pattern-img">
 
                         @if(app()->getLocale() === 'ar')
